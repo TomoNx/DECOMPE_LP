@@ -76,7 +76,7 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
           point: 'bg-red-600 border-red-400 shadow-lg shadow-red-600/30 animate-pulse',
           text: 'text-red-400',
           dot: 'bg-white animate-ping',
-          card: 'border-red-900/30 bg-red-900/10',
+          card: 'border-red-900/30',
           icon: <AlertCircle className="w-5 h-5 text-red-400 animate-pulse" />
         };
       default:
@@ -96,7 +96,7 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
   return (
     <div className="flex flex-col items-center group h-full">
       {/* Timeline Point */}
-      <div className="relative flex flex-col items-center justify-start pt-2">
+      <div className="relative flex flex-col items-center justify-start pt-2 z-20">
         <div className={`w-8 h-8 rounded-full border-4 flex items-center justify-center transition-all duration-300 ${styles.point} ${isActive ? 'scale-110' : ''}`}>
           {item.status !== 'upcoming' && (
             <div className={`w-3 h-3 rounded-full ${styles.dot}`}></div>
@@ -104,7 +104,7 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
         </div>
         
         {/* Status Card */}
-        <div className={`absolute top-12 left-1/2 transform -translate-x-1/2 w-48 p-3 rounded-lg border backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 pointer-events-none ${styles.card}`}>
+        <div className={`absolute top-12 left-1/2 transform -translate-x-1/2 w-48 p-3 rounded-lg border backdrop-blur-lg transition-all duration-300 opacity-0 group-hover:opacity-100 pointer-events-none z-50 ${styles.card}`}>
           <div className="flex items-center gap-2 mb-2">
             {styles.icon}
             <span className={`text-xs font-bold ${styles.text}`}>
@@ -136,7 +136,7 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
       </div>
       
       {/* Label */}
-      <div className="mt-4 text-center max-w-[120px]">
+      <div className="mt-4 text-center max-w-[120px] relative z-10">
         <div className={`text-sm font-bold mb-1 ${styles.text} ${isActive ? 'animate-pulse' : ''}`}>
           {item.phase}
         </div>
