@@ -169,7 +169,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation - Tidak ada perubahan */}
+        {/* Mobile Navigation*/}
         {isOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-red-600/20 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-red-600/5 to-transparent"></div>

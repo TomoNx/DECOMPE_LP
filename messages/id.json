@@ -12,7 +12,8 @@
     "subtitle": "Digital Revolution Interface",
     "description": "Masuki era baru desain digital di mana inovasi bertemu dengan antarmuka masa depan. Bersainglah dengan para visioner muda Indonesia dan ciptakan desain yang akan mendefinisikan ulang dunia digital!",
     "registerButton": "Daftar Sekarang",
-    "exploreButton": "Explore The Future"
+    "exploreButton": "Explore The Future",
+    "nationalCompetition": "KOMPETISI UI/UX NASIONAL"
   },
   "sections": {
     "innovation": {
@@ -31,14 +32,96 @@
   "about": {
     "title": "Evolution of DECOMPE",
     "subtitle": "Jejak perjalanan inovasi desain yang menginspirasi generasi digital Indonesia",
-    "badge": "ABOUT DECOMPE"
+    "badge": "ABOUT DECOMPE",
+    "themeTitle": "Digital Revolution Interface",
+    "themeSubtitle": "Tema DECOMPE 4.0",
+    "themeDescription1": "Di tengah revolusi digital yang tak terbendung, antarmuka menjadi medan perang antara manusia dan teknologi. DECOMPE 4.0 memanggil para pionir digital untuk menciptakan desain yang tidak hanya memukau secara visual, tetapi juga transformatif secara fungsional.",
+    "themeDescription2": "Tema ini menantang kita untuk merancang masa depan di mana setiap interaksi digital menjadi pengalaman yang tak terlupakan, setiap interface menjadi karya seni, dan setiap inovasi menjadi warisan peradaban.",
+    "targetTitle": "Target Visionaries",
+    "targetSubtitle": "Siapa saja yang siap menjadi agen perubahan digital?",
+    "evolution": {
+      "decompe1": {
+        "title": "DECOMPE 1.0",
+        "subtitle": "The Beginning",
+        "description": "Genesis era desain digital. Fondasi pertama yang membangun ekosistem kreativitas UI/UX di kalangan mahasiswa Indonesia.",
+        "achievements": "Key Achievements:",
+        "participants": "50+ peserta pertama",
+        "universities": "5 universitas terlibat",
+        "mentors": "3 mentor industri"
+      },
+      "decompe2": {
+        "title": "DECOMPE 2.0",
+        "subtitle": "Business Integration", 
+        "description": "\"Shaping Creative Business Technology\" - Fusi antara desain, strategi bisnis, dan teknologi untuk solusi komprehensif.",
+        "achievements": "Key Achievements:",
+        "participants": "120+ peserta",
+        "partners": "10+ perusahaan partner",
+        "workshops": "8 workshop intensif"
+      },
+      "decompe3": {
+        "title": "DECOMPE 3.0",
+        "subtitle": "Complete Ecosystem",
+        "description": "Ekosistem lengkap: bootcamp intensif, kompetisi ketat, dan webinar inspiratif untuk pengalaman transformasi penuh.",
+        "achievements": "Key Achievements:",
+        "participants": "200+ peserta",
+        "mentors": "15+ mentor expert",
+        "alumni": "50+ alumni bekerja di tech"
+      }
+    },
+    "targets": {
+      "digitalNatives": {
+        "title": "Digital Natives",
+        "subtitle": "Siswa SMA/SMK",
+        "description": "Generasi muda yang lahir di era digital, siap menjelajahi batas-batas kreativitas teknologi."
+      },
+      "students": {
+        "title": "Mahasiswa",
+        "subtitle": "D3/D4/S1",
+        "description": "Calon profesional yang ingin mengasah skill dan membangun portfolio impian."
+      },
+      "professionals": {
+        "title": "Profesional",
+        "subtitle": "Fresh Graduate",
+        "description": "Para profesional muda yang ingin meningkatkan kompetensi dan berkontribusi pada industri."
+      },
+      "hobbyists": {
+        "title": "Hobbyist",
+        "subtitle": "Self-taught",
+        "description": "Para penggemar desain yang belajar mandiri dan ingin mengukur kemampuan di kompetisi nasional."
+      }
+    }
   },
   "timeline": {
     "title": "Mission Timeline",
     "subtitle": "Jadwal operasional untuk revolusi digital Anda", 
     "badge": "MISSION TIMELINE",
     "importantDates": "Important Dates",
-    "importantDatesDesc": "Catat tanggal-tanggal penting ini untuk mempersiapkan revolusi digital Anda"
+    "importantDatesDesc": "Catat tanggal-tanggal penting ini untuk mempersiapkan revolusi digital Anda",
+    "readyToStart": "Ready to Start Your Journey?",
+    "readyToStartDesc": "Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0 - tempat di mana mimpi digital menjadi kenyataan.",
+    "registerNow": "REGISTER NOW",
+    "events": {
+      "registrationPeriod": {
+        "title": "Registration Period",
+        "date": "01 - 30 November 2024",
+        "description": "Daftar sekarang untuk mendapatkan early bird discount dan akses ke materi persiapan eksklusif."
+      },
+      "selectionAnnouncement": {
+        "title": "Selection Announcement",
+        "date": "05 December 2024", 
+        "description": "Pengumuman peserta yang lolos seleksi dan pembagian kelompok untuk bootcamp."
+      },
+      "bootcampTraining": {
+        "title": "Bootcamp Training",
+        "date": "10 - 20 December 2024",
+        "description": "Pelatihan intensif dengan mentor expert dari industri teknologi terdepan."
+      },
+      "competitionWeek": {
+        "title": "Competition Week",
+        "date": "05 - 15 January 2025",
+        "description": "Seminggu penuh kompetisi desain dengan tantangan real-world dari perusahaan partner."
+      }
+    }
   },
   "registration": {
     "title": "Registration",
@@ -49,7 +132,88 @@
     "investmentPackages": "Investment Packages", 
     "investmentDesc": "Pilih paket investasi yang sesuai dengan kebutuhan revolusi digital Anda",
     "requirements": "Requirements",
-    "requirementsDesc": "Persyaratan untuk bergabung dengan DECOMPE 4.0"
+    "requirementsDesc": "Persyaratan untuk bergabung dengan DECOMPE 4.0",
+    "packages": {
+      "earlyAccess": {
+        "title": "Early Access",
+        "price": "75K",
+        "period": "Until 15 NOV 2024",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Digital certificate",
+          "mentorship": "Mentorship opportunity", 
+          "resources": "Exclusive resources"
+        },
+        "savings": "SAVE 25K FROM STANDARD PRICE",
+        "button": "Secure Early Access"
+      },
+      "standard": {
+        "title": "Standard",
+        "price": "100K",
+        "period": "16 - 30 NOV 2024",
+        "popular": "POPULAR",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Premium certificate",
+          "mentorship": "Priority mentorship",
+          "ebook": "Free UI/UX ebook", 
+          "placement": "Job placement assistance"
+        },
+        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+        "button": "Join Standard"
+      },
+      "squad": {
+        "title": "Squad (3x)",
+        "price": "250K",
+        "period": "Until 30 NOV 2024",
+        "features": {
+          "allStandard": "All standard benefits",
+          "discount": "Squad discount (save 50K)",
+          "groupMentorship": "Group mentorship sessions",
+          "projectGuidance": "Team project guidance",
+          "squadChannel": "Dedicated squad channel"
+        },
+        "perPerson": "PER PERSON: ~83K ONLY",
+        "button": "Build Squad"
+      }
+    },
+    "steps": {
+      "fillForm": {
+        "title": "Fill Form",
+        "description": "Lengkapi formulir pendaftaran dengan data diri dan portofolio (jika ada)",
+        "time": "Estimasi waktu: 15 menit"
+      },
+      "payment": {
+        "title": "Payment",
+        "description": "Pilih paket investasi dan lakukan pembayaran melalui metode yang tersedia",
+        "time": "Estimasi waktu: 10 menit"
+      },
+      "confirmation": {
+        "title": "Confirmation",
+        "description": "Tunggu konfirmasi dan akses ke materi persiapan eksklusif",
+        "time": "Konfirmasi dalam 1x24 jam"
+      }
+    },
+    "requirementsSections": {
+      "technical": {
+        "title": "Technical Requirements",
+        "items": {
+          "laptop": "Laptop atau komputer dengan spesifikasi minimal",
+          "software": "Software desain (Figma, Adobe XD, atau Sketch)",
+          "internet": "Koneksi internet stabil untuk online sessions", 
+          "equipment": "Webcam dan microphone untuk mentoring sessions"
+        }
+      },
+      "participant": {
+        "title": "Participant Requirements",
+        "items": {
+          "education": "Siswa SMA/SMK, mahasiswa, atau profesional muda",
+          "experience": "Pengalaman kurang dari 2 tahun di bidang UI/UX",
+          "portfolio": "Portfolio (tidak wajib, diutamakan)",
+          "commitment": "Komitmen untuk mengikuti seluruh program"
+        }
+      }
+    }
   },
   "common": {
     "readyToJoin": "Ready to Join the Revolution?",
@@ -58,6 +222,7 @@
     "transformDescription": "Bergabunglah dengan DECOMPE 4.0 dan mulailah perjalanan Anda menjadi desainer interface masa depan yang akan mengubah dunia digital.",
     "backToHome": "Back to Home",
     "learnMore": "LEARN MORE", 
-    "viewSchedule": "VIEW SCHEDULE"
+    "viewSchedule": "VIEW SCHEDULE",
+    "joinRevolutionNow": "JOIN REVOLUTION NOW"
   }
 }

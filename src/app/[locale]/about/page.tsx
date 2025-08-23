@@ -29,19 +29,19 @@ export default function About() {
                   <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
                     <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">1.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">DECOMPE 1.0</CardTitle>
-                  <CardDescription className="text-gray-400">The Beginning</CardDescription>
+                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe1.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('evolution.decompe1.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    Genesis era desain digital. Fondasi pertama yang membangun ekosistem kreativitas UI/UX di kalangan mahasiswa Indonesia.
+                    {t('evolution.decompe1.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">Key Achievements:</h4>
+                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe1.achievements')}</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
-                      <li>• 50+ peserta pertama</li>
-                      <li>• 5 universitas terlibat</li>
-                      <li>• 3 mentor industri</li>
+                      <li>• {t('evolution.decompe1.participants')}</li>
+                      <li>• {t('evolution.decompe1.universities')}</li>
+                      <li>• {t('evolution.decompe1.mentors')}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -53,19 +53,19 @@ export default function About() {
                   <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
                     <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">2.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">DECOMPE 2.0</CardTitle>
-                  <CardDescription className="text-gray-400">Business Integration</CardDescription>
+                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe2.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('evolution.decompe2.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    "Shaping Creative Business Technology" - Fusi antara desain, strategi bisnis, dan teknologi untuk solusi komprehensif.
+                    {t('evolution.decompe2.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">Key Achievements:</h4>
+                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe2.achievements')}</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
-                      <li>• 120+ peserta</li>
-                      <li>• 10+ perusahaan partner</li>
-                      <li>• 8 workshop intensif</li>
+                      <li>• {t('evolution.decompe2.participants')}</li>
+                      <li>• {t('evolution.decompe2.partners')}</li>
+                      <li>• {t('evolution.decompe2.workshops')}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -76,19 +76,19 @@ export default function About() {
                   <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
                     <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">3.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">DECOMPE 3.0</CardTitle>
-                  <CardDescription className="text-gray-400">Complete Ecosystem</CardDescription>
+                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe3.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('evolution.decompe3.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    Ekosistem lengkap: bootcamp intensif, kompetisi ketat, dan webinar inspiratif untuk pengalaman transformasi penuh.
+                    {t('evolution.decompe3.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">Key Achievements:</h4>
+                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe3.achievements')}</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
-                      <li>• 200+ peserta</li>
-                      <li>• 15+ mentor expert</li>
-                      <li>• 50+ alumni bekerja di tech</li>
+                      <li>• {t('evolution.decompe3.participants')}</li>
+                      <li>• {t('evolution.decompe3.mentors')}</li>
+                      <li>• {t('evolution.decompe3.alumni')}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -103,12 +103,12 @@ export default function About() {
             <div className="text-center mb-16 scroll-animate">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
-                  Digital Revolution Interface
+                  {t('themeTitle')}
                 </span>
               </h2>
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600/20 to-red-800/20 px-8 py-4 rounded-full border border-red-600/30 backdrop-blur-sm">
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                <h3 className="text-2xl font-bold text-red-300">Tema DECOMPE 4.0</h3>
+                <h3 className="text-2xl font-bold text-red-300">{t('themeSubtitle')}</h3>
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse delay-75"></div>
               </div>
             </div>
@@ -116,14 +116,10 @@ export default function About() {
             <div className="max-w-5xl mx-auto scroll-animate">
               <div className="bg-gradient-to-br from-red-900/10 to-black border border-red-900/30 rounded-2xl p-8 backdrop-blur-sm">
                 <p className="text-lg text-gray-300 text-center leading-relaxed mb-6">
-                  Di tengah revolusi digital yang tak terbendung, <span className="text-red-400 font-semibold">antarmuka menjadi medan perang</span> antara manusia dan teknologi. 
-                  DECOMPE 4.0 memanggil para <span className="text-red-400 font-semibold">pionir digital</span> untuk menciptakan desain yang tidak hanya memukau secara visual, 
-                  tetapi juga <span className="text-red-400 font-semibold">transformatif secara fungsional</span>.
+                  {t('themeDescription1')}
                 </p>
                 <p className="text-lg text-gray-300 text-center leading-relaxed">
-                  Tema ini menantang kita untuk merancang masa depan di mana setiap interaksi digital menjadi pengalaman yang 
-                  <span className="text-red-400 font-semibold">tak terlupakan</span>, setiap interface menjadi <span className="text-red-400 font-semibold">karya seni</span>, 
-                  dan setiap inovasi menjadi <span className="text-red-400 font-semibold">warisan peradaban</span>.
+                  {t('themeDescription2')}
                 </p>
               </div>
             </div>
@@ -135,10 +131,10 @@ export default function About() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 scroll-animate">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-                Target Visionaries
+                {t('targetTitle')}
               </h2>
               <p className="text-lg text-gray-400">
-                Siapa saja yang siap menjadi agen perubahan digital?
+                {t('targetSubtitle')}
               </p>
             </div>
             
@@ -148,12 +144,12 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Users className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">Digital Natives</CardTitle>
-                  <CardDescription className="text-gray-400">Siswa SMA/SMK</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.digitalNatives.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.digitalNatives.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    Generasi muda yang lahir di era digital, siap menjelajahi batas-batas kreativitas teknologi.
+                    {t('targets.digitalNatives.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -163,12 +159,12 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">Mahasiswa</CardTitle>
-                  <CardDescription className="text-gray-400">D3/D4/S1</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.students.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.students.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    Calon profesional yang ingin mengasah skill dan membangun portfolio impian.
+                    {t('targets.students.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -178,12 +174,12 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Shield className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">Profesional</CardTitle>
-                  <CardDescription className="text-gray-400">Fresh Graduate</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.professionals.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.professionals.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    Para profesional muda yang ingin meningkatkan kompetensi dan berkontribusi pada industri.
+                    {t('targets.professionals.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -193,12 +189,12 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Users className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">Hobbyist</CardTitle>
-                  <CardDescription className="text-gray-400">Self-taught</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.hobbyists.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.hobbyists.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    Para penggemar desain yang belajar mandiri dan ingin mengukur kemampuan di kompetisi nasional.
+                    {t('targets.hobbyists.description')}
                   </p>
                 </CardContent>
               </Card>

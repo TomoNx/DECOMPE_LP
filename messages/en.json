@@ -12,7 +12,8 @@
     "subtitle": "Digital Revolution Interface",
     "description": "Enter a new era of digital design where innovation meets the interface of the future. Compete with young visionaries from Indonesia and create designs that will redefine the digital world!",
     "registerButton": "Register Now",
-    "exploreButton": "Explore The Future"
+    "exploreButton": "Explore The Future",
+    "nationalCompetition": "NATIONAL UI/UX COMPETITION"
   },
   "sections": {
     "innovation": {
@@ -31,14 +32,96 @@
   "about": {
     "title": "Evolution of DECOMPE",
     "subtitle": "The journey of design innovation that inspires Indonesia's digital generation",
-    "badge": "ABOUT DECOMPE"
+    "badge": "ABOUT DECOMPE",
+    "themeTitle": "Digital Revolution Interface",
+    "themeSubtitle": "DECOMPE 4.0 Theme",
+    "themeDescription1": "In the midst of an unstoppable digital revolution, the interface becomes the battlefield between humans and technology. DECOMPE 4.0 calls digital pioneers to create designs that are not only visually stunning, but also functionally transformative.",
+    "themeDescription2": "This theme challenges us to design the future where every digital interaction becomes an unforgettable experience, every interface becomes a work of art, and every innovation becomes a legacy of civilization.",
+    "targetTitle": "Target Visionaries",
+    "targetSubtitle": "Who is ready to become an agent of digital change?",
+    "evolution": {
+      "decompe1": {
+        "title": "DECOMPE 1.0",
+        "subtitle": "The Beginning",
+        "description": "Genesis era of digital design. The first foundation that built the UI/UX creativity ecosystem among Indonesian students.",
+        "achievements": "Key Achievements:",
+        "participants": "50+ first participants",
+        "universities": "5 universities involved",
+        "mentors": "3 industry mentors"
+      },
+      "decompe2": {
+        "title": "DECOMPE 2.0", 
+        "subtitle": "Business Integration",
+        "description": "\"Shaping Creative Business Technology\" - Fusion between design, business strategy, and technology for comprehensive solutions.",
+        "achievements": "Key Achievements:",
+        "participants": "120+ participants",
+        "partners": "10+ partner companies",
+        "workshops": "8 intensive workshops"
+      },
+      "decompe3": {
+        "title": "DECOMPE 3.0",
+        "subtitle": "Complete Ecosystem", 
+        "description": "Complete ecosystem: intensive bootcamp, tight competition, and inspirational webinars for a full transformation experience.",
+        "achievements": "Key Achievements:",
+        "participants": "200+ participants",
+        "mentors": "15+ expert mentors",
+        "alumni": "50+ alumni working in tech"
+      }
+    },
+    "targets": {
+      "digitalNatives": {
+        "title": "Digital Natives",
+        "subtitle": "High School Students",
+        "description": "Young generation born in the digital era, ready to explore the boundaries of technological creativity."
+      },
+      "students": {
+        "title": "Students",
+        "subtitle": "D3/D4/S1",
+        "description": "Future professionals who want to sharpen skills and build their dream portfolio."
+      },
+      "professionals": {
+        "title": "Professionals",
+        "subtitle": "Fresh Graduate",
+        "description": "Young professionals who want to improve competence and contribute to the industry."
+      },
+      "hobbyists": {
+        "title": "Hobbyists",
+        "subtitle": "Self-taught",
+        "description": "Design enthusiasts who learn independently and want to measure their abilities in national competitions."
+      }
+    }
   },
   "timeline": {
     "title": "Mission Timeline",
     "subtitle": "Operational schedule for your digital revolution",
     "badge": "MISSION TIMELINE",
     "importantDates": "Important Dates",
-    "importantDatesDesc": "Mark these important dates to prepare for your digital revolution"
+    "importantDatesDesc": "Mark these important dates to prepare for your digital revolution",
+    "readyToStart": "Ready to Start Your Journey?",
+    "readyToStartDesc": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality.",
+    "registerNow": "REGISTER NOW",
+    "events": {
+      "registrationPeriod": {
+        "title": "Registration Period",
+        "date": "01 - 30 November 2024",
+        "description": "Register now to get early bird discount and access to exclusive preparation materials."
+      },
+      "selectionAnnouncement": {
+        "title": "Selection Announcement", 
+        "date": "05 December 2024",
+        "description": "Announcement of participants who passed the selection and group division for bootcamp."
+      },
+      "bootcampTraining": {
+        "title": "Bootcamp Training",
+        "date": "10 - 20 December 2024", 
+        "description": "Intensive training with expert mentors from leading technology industry."
+      },
+      "competitionWeek": {
+        "title": "Competition Week",
+        "date": "05 - 15 January 2025",
+        "description": "A full week of design competition with real-world challenges from partner companies."
+      }
+    }
   },
   "registration": {
     "title": "Registration", 
@@ -49,7 +132,88 @@
     "investmentPackages": "Investment Packages",
     "investmentDesc": "Choose an investment package that suits your digital revolution needs",
     "requirements": "Requirements",
-    "requirementsDesc": "Requirements to join DECOMPE 4.0"
+    "requirementsDesc": "Requirements to join DECOMPE 4.0",
+    "packages": {
+      "earlyAccess": {
+        "title": "Early Access",
+        "price": "75K",
+        "period": "Until 15 NOV 2024",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Digital certificate", 
+          "mentorship": "Mentorship opportunity",
+          "resources": "Exclusive resources"
+        },
+        "savings": "SAVE 25K FROM STANDARD PRICE",
+        "button": "Secure Early Access"
+      },
+      "standard": {
+        "title": "Standard",
+        "price": "100K",
+        "period": "16 - 30 NOV 2024",
+        "popular": "POPULAR",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Premium certificate",
+          "mentorship": "Priority mentorship", 
+          "ebook": "Free UI/UX ebook",
+          "placement": "Job placement assistance"
+        },
+        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+        "button": "Join Standard"
+      },
+      "squad": {
+        "title": "Squad (3x)",
+        "price": "250K", 
+        "period": "Until 30 NOV 2024",
+        "features": {
+          "allStandard": "All standard benefits",
+          "discount": "Squad discount (save 50K)",
+          "groupMentorship": "Group mentorship sessions",
+          "projectGuidance": "Team project guidance",
+          "squadChannel": "Dedicated squad channel"
+        },
+        "perPerson": "PER PERSON: ~83K ONLY",
+        "button": "Build Squad"
+      }
+    },
+    "steps": {
+      "fillForm": {
+        "title": "Fill Form",
+        "description": "Complete the registration form with personal data and portfolio (if any)",
+        "time": "Estimated time: 15 minutes"
+      },
+      "payment": {
+        "title": "Payment",
+        "description": "Choose an investment package and make payment through available methods",
+        "time": "Estimated time: 10 minutes"
+      },
+      "confirmation": {
+        "title": "Confirmation",
+        "description": "Wait for confirmation and access to exclusive preparation materials",
+        "time": "Confirmation within 24 hours"
+      }
+    },
+    "requirementsSections": {
+      "technical": {
+        "title": "Technical Requirements",
+        "items": {
+          "laptop": "Laptop or computer with minimum specifications",
+          "software": "Design software (Figma, Adobe XD, or Sketch)",
+          "internet": "Stable internet connection for online sessions",
+          "equipment": "Webcam and microphone for mentoring sessions"
+        }
+      },
+      "participant": {
+        "title": "Participant Requirements", 
+        "items": {
+          "education": "High school/vocational students, university students, or young professionals",
+          "experience": "Less than 2 years experience in UI/UX field",
+          "portfolio": "Portfolio (not mandatory, preferred)",
+          "commitment": "Commitment to follow the entire program"
+        }
+      }
+    }
   },
   "common": {
     "readyToJoin": "Ready to Join the Revolution?",
@@ -58,6 +222,7 @@
     "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
     "backToHome": "Back to Home",
     "learnMore": "Learn More",
-    "viewSchedule": "View Schedule"
+    "viewSchedule": "View Schedule",
+    "joinRevolutionNow": "JOIN REVOLUTION NOW"
   }
 }

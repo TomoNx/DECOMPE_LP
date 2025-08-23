@@ -24,7 +24,7 @@ export default function Home() {
             <div className="mb-8 scroll-animate">
               <Badge className="mb-4 bg-red-600/20 text-red-400 border-red-600/50 hover:bg-red-600/30 backdrop-blur-sm">
                 <Cpu className="w-4 h-4 mr-2" />
-                KOMPETISI UI/UX NASIONAL
+                {t('nationalCompetition')}
               </Badge>
             </div>
 
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 scroll-animate">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
                   <Shield className="mr-2 h-6 w-6" />
-                  JOIN REVOLUTION NOW
+                  {tCommon('joinRevolutionNow')}
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">

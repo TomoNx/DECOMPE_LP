@@ -10,10 +10,13 @@ import PageHeader from "@/components/page-header"
 import ContactSection from "@/components/contact-section"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 
 export default function Registration() {
   const t = useTranslations('registration')
   const tCommon = useTranslations('common')
+  const params = useParams()
+  const locale = params.locale as string
   return (
     <>
       <Navbar />
@@ -23,14 +26,9 @@ export default function Registration() {
           subtitle={t('subtitle')}
           badgeText={t('badge')}
           badgeIcon={<Target className="w-4 h-4 mr-2" />}
-        >
-          <Link href="/timeline">
-            <Button variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
-              <CalendarDays className="mr-2 h-5 w-5" />
-              {tCommon('viewSchedule')}
-            </Button>
-          </Link>
-        </PageHeader>
+          showBackButton={true}
+          showRegisterButton={false}
+        />
 
         {/* Investment Packages */}
         <section className="relative z-10 py-20 bg-black">
@@ -48,76 +46,76 @@ export default function Registration() {
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">Early Access</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">75K</div>
-                  <CardDescription className="text-red-400">Until 15 NOV 2024</CardDescription>
+                  <CardTitle className="text-xl text-white mb-2">{t('packages.earlyAccess.title')}</CardTitle>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.earlyAccess.price')}</div>
+                  <CardDescription className="text-red-400">{t('packages.earlyAccess.period')}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Full bootcamp access
+                      {t('packages.earlyAccess.features.bootcamp')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Digital certificate
+                      {t('packages.earlyAccess.features.certificate')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Mentorship opportunity
+                      {t('packages.earlyAccess.features.mentorship')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Exclusive resources
+                      {t('packages.earlyAccess.features.resources')}
                     </li>
                   </ul>
                   <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
-                    <p className="text-xs text-red-400 font-semibold">SAVE 25K FROM STANDARD PRICE</p>
+                    <p className="text-xs text-red-400 font-semibold">{t('packages.earlyAccess.savings')}</p>
                   </div>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
-                    Secure Early Access
+                    {t('packages.earlyAccess.button')}
                   </Button>
                 </CardContent>
               </Card>
 
               <Card className="bg-black/40 border-2 border-red-600/50 backdrop-blur-sm hover:border-red-500/70 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
                 <div className="absolute top-0 right-0 bg-red-600 text-black px-3 py-1 text-xs font-bold rounded-bl-lg">
-                  POPULAR
+                  {t('packages.standard.popular')}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">Standard</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">100K</div>
-                  <CardDescription className="text-red-400">16 - 30 NOV 2024</CardDescription>
+                  <CardTitle className="text-xl text-white mb-2">{t('packages.standard.title')}</CardTitle>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.standard.price')}</div>
+                  <CardDescription className="text-red-400">{t('packages.standard.period')}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Full bootcamp access
+                      {t('packages.standard.features.bootcamp')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Premium certificate
+                      {t('packages.standard.features.certificate')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Priority mentorship
+                      {t('packages.standard.features.mentorship')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Free UI/UX ebook
+                      {t('packages.standard.features.ebook')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Job placement assistance
+                      {t('packages.standard.features.placement')}
                     </li>
                   </ul>
                   <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
-                    <p className="text-xs text-red-400 font-semibold">BEST VALUE FOR COMPLETE EXPERIENCE</p>
+                    <p className="text-xs text-red-400 font-semibold">{t('packages.standard.value')}</p>
                   </div>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
-                    Join Standard
+                    {t('packages.standard.button')}
                   </Button>
                 </CardContent>
               </Card>
@@ -125,38 +123,38 @@ export default function Registration() {
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">Squad (3x)</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">250K</div>
-                  <CardDescription className="text-red-400">Until 30 NOV 2024</CardDescription>
+                  <CardTitle className="text-xl text-white mb-2">{t('packages.squad.title')}</CardTitle>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.squad.price')}</div>
+                  <CardDescription className="text-red-400">{t('packages.squad.period')}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      All standard benefits
+                      {t('packages.squad.features.allStandard')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Squad discount (save 50K)
+                      {t('packages.squad.features.discount')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Group mentorship sessions
+                      {t('packages.squad.features.groupMentorship')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Team project guidance
+                      {t('packages.squad.features.projectGuidance')}
                     </li>
                     <li className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-red-400" />
-                      Dedicated squad channel
+                      {t('packages.squad.features.squadChannel')}
                     </li>
                   </ul>
                   <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
-                    <p className="text-xs text-red-400 font-semibold">PER PERSON: ~83K ONLY</p>
+                    <p className="text-xs text-red-400 font-semibold">{t('packages.squad.perPerson')}</p>
                   </div>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
-                    Build Squad
+                    {t('packages.squad.button')}
                   </Button>
                 </CardContent>
               </Card>
@@ -183,14 +181,14 @@ export default function Registration() {
                     <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30">
                       <span className="text-2xl font-bold text-red-400">1</span>
                     </div>
-                    <CardTitle className="text-lg text-white">Fill Form</CardTitle>
+                    <CardTitle className="text-lg text-white">{t('steps.fillForm.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-300 mb-4">
-                      Lengkapi formulir pendaftaran dengan data diri dan portofolio (jika ada)
+                      {t('steps.fillForm.description')}
                     </p>
                     <div className="text-xs text-gray-400">
-                      Estimasi waktu: 15 menit
+                      {t('steps.fillForm.time')}
                     </div>
                   </CardContent>
                 </Card>
@@ -200,14 +198,14 @@ export default function Registration() {
                     <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30">
                       <span className="text-2xl font-bold text-red-400">2</span>
                     </div>
-                    <CardTitle className="text-lg text-white">Payment</CardTitle>
+                    <CardTitle className="text-lg text-white">{t('steps.payment.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-300 mb-4">
-                      Pilih paket investasi dan lakukan pembayaran melalui metode yang tersedia
+                      {t('steps.payment.description')}
                     </p>
                     <div className="text-xs text-gray-400">
-                      Estimasi waktu: 10 menit
+                      {t('steps.payment.time')}
                     </div>
                   </CardContent>
                 </Card>
@@ -217,14 +215,14 @@ export default function Registration() {
                     <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30">
                       <span className="text-2xl font-bold text-red-400">3</span>
                     </div>
-                    <CardTitle className="text-lg text-white">Confirmation</CardTitle>
+                    <CardTitle className="text-lg text-white">{t('steps.confirmation.title')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-300 mb-4">
-                      Tunggu konfirmasi dan akses ke materi persiapan eksklusif
+                      {t('steps.confirmation.description')}
                     </p>
                     <div className="text-xs text-gray-400">
-                      Konfirmasi dalam 1x24 jam
+                      {t('steps.confirmation.time')}
                     </div>
                   </CardContent>
                 </Card>
@@ -248,25 +246,25 @@ export default function Registration() {
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 scroll-animate enhanced-hover neon-border">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Technical Requirements</CardTitle>
+                  <CardTitle className="text-lg text-red-400">{t('requirementsSections.technical.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Laptop atau komputer dengan spesifikasi minimal
+                      {t('requirementsSections.technical.items.laptop')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Software desain (Figma, Adobe XD, atau Sketch)
+                      {t('requirementsSections.technical.items.software')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Koneksi internet stabil untuk online sessions
+                      {t('requirementsSections.technical.items.internet')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Webcam dan microphone untuk mentoring sessions
+                      {t('requirementsSections.technical.items.equipment')}
                     </li>
                   </ul>
                 </CardContent>
@@ -274,25 +272,25 @@ export default function Registration() {
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 scroll-animate enhanced-hover neon-border">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Participant Requirements</CardTitle>
+                  <CardTitle className="text-lg text-red-400">{t('requirementsSections.participant.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Siswa SMA/SMK, mahasiswa, atau profesional muda
+                      {t('requirementsSections.participant.items.education')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Pengalaman kurang dari 2 tahun di bidang UI/UX
+                      {t('requirementsSections.participant.items.experience')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Portfolio (tidak wajib, diutamakan)
+                      {t('requirementsSections.participant.items.portfolio')}
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      Komitmen untuk mengikuti seluruh program
+                      {t('requirementsSections.participant.items.commitment')}
                     </li>
                   </ul>
                 </CardContent>
@@ -316,10 +314,10 @@ export default function Registration() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 scroll-animate">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
                   <Shield className="mr-2 h-6 w-6" />
-                  REGISTER NOW
+                  {tCommon('joinRevolutionNow')}
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
-                <Link href="/timeline">
+                <Link href={`/${locale}/timeline`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <CalendarDays className="mr-2 h-6 w-6" />
                     {tCommon('viewSchedule')}

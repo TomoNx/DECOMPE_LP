@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 
 interface PageHeaderProps {
   title: string
@@ -22,6 +23,8 @@ export default function PageHeader({
   showRegisterButton = false 
 }: PageHeaderProps) {
   const t = useTranslations('common')
+  const params = useParams()
+  const locale = params.locale as string
   return (
     <section className="relative z-10 overflow-hidden min-h-[60vh] flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-black to-red-600/20"></div>
@@ -45,7 +48,7 @@ export default function PageHeader({
         
         <div className="flex justify-center gap-4 scroll-animate">
           {showBackButton && (
-            <Link href="/">
+            <Link href={`/${locale}`}>
               <Button variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
                 <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
                 {t('backToHome')}
@@ -53,7 +56,7 @@ export default function PageHeader({
             </Link>
           )}
           {showRegisterButton && (
-            <Link href="/registration">
+            <Link href={`/${locale}/registration`}>
               <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105 enhanced-hover neon-border">
                 Register Now
               </Button>

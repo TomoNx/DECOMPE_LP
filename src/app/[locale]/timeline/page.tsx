@@ -13,10 +13,13 @@ import TimelineCard from "@/components/timeline-card";
 import { timelineItems } from "@/config/timeline";
 import Link from "next/link";
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function TimelinePage() {
   const t = useTranslations('timeline')
   const tCommon = useTranslations('common')
+  const params = useParams()
+  const locale = params.locale as string
   return (
     <>
       <Navbar />
@@ -59,48 +62,48 @@ export default function TimelinePage() {
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Registration Period</CardTitle>
-                  <CardDescription className="text-gray-400">01 - 30 November 2024</CardDescription>
+                  <CardTitle className="text-lg text-red-400">{t('events.registrationPeriod.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('events.registrationPeriod.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300">
-                    Daftar sekarang untuk mendapatkan early bird discount dan akses ke materi persiapan eksklusif.
+                    {t('events.registrationPeriod.description')}
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Selection Announcement</CardTitle>
-                  <CardDescription className="text-gray-400">05 December 2024</CardDescription>
+                  <CardTitle className="text-lg text-red-400">{t('events.selectionAnnouncement.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('events.selectionAnnouncement.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300">
-                    Pengumuman peserta yang lolos seleksi dan pembagian kelompok untuk bootcamp.
+                    {t('events.selectionAnnouncement.description')}
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Bootcamp Training</CardTitle>
-                  <CardDescription className="text-gray-400">10 - 20 December 2024</CardDescription>
+                  <CardTitle className="text-lg text-red-400">{t('events.bootcampTraining.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('events.bootcampTraining.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300">
-                    Pelatihan intensif dengan mentor expert dari industri teknologi terdepan.
+                    {t('events.bootcampTraining.description')}
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">Competition Week</CardTitle>
-                  <CardDescription className="text-gray-400">05 - 15 January 2025</CardDescription>
+                  <CardTitle className="text-lg text-red-400">{t('events.competitionWeek.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('events.competitionWeek.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300">
-                    Seminggu penuh kompetisi desain dengan tantangan real-world dari perusahaan partner.
+                    {t('events.competitionWeek.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -114,22 +117,21 @@ export default function TimelinePage() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-                  Ready to Start Your Journey?
+                  {t('readyToStart')}
                 </span>
               </h2>
               <p className="text-xl mb-8 text-gray-300 leading-relaxed">
-                Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0 - 
-                <span className="text-red-400 font-semibold"> tempat di mana mimpi digital menjadi kenyataan</span>.
+                {t('readyToStartDesc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <Link href="/registration">
+                <Link href={`/${locale}/registration`}>
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
                     <Shield className="mr-2 h-6 w-6" />
-                    REGISTER NOW
+                    {t('registerNow')}
                     <ArrowRight className="ml-2 h-6 w-6" />
                   </Button>
                 </Link>
-                <Link href="/about">
+                <Link href={`/${locale}/about`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <Cpu className="mr-2 h-6 w-6" />
                     {tCommon('learnMore')}
