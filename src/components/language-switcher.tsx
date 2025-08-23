@@ -1,30 +1,21 @@
 'use client'
 
-import { useState } from 'react'
 import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from 'next/navigation'
-import { Button } from "@/components/ui/button"
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Globe, Check } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import { locales } from '@/routing'
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' }
+  { code: 'en', name: 'EN', flag: '🇺🇸' },
+  { code: 'id', name: 'ID', flag: '🇮🇩' }
 ]
 
 export default function LanguageSwitcher() {
   const locale = useLocale()
-  const router = useRouter()
   const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
 
   const handleLanguageChange = (newLocale: string) => {
+    if (newLocale === locale) return
+    
     // Remove current locale from pathname if it exists
     const currentPath = pathname.replace(`/${locale}`, '') || '/'
     
@@ -33,44 +24,34 @@ export default function LanguageSwitcher() {
     
     // Use window.location.href for a clean page transition
     window.location.href = newUrl
-    setIsOpen(false)
   }
 
-  const currentLanguage = languages.find(lang => lang.code === locale)
-
   return (
-    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-      <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border"
-        >
-          <Globe className="w-4 h-4 mr-2" />
-          <span className="hidden sm:inline">{currentLanguage?.name}</span>
-          <span className="sm:hidden">{currentLanguage?.flag}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align="end" 
-        className="bg-black/90 border-red-900/30 backdrop-blur-sm"
-      >
+    <div className="relative">
+      {/* Toggle Switch Container */}
+      <div className="relative flex items-center bg-black/40 border border-red-600/30 rounded-full p-1 backdrop-blur-sm">
+        {/* Background Slider */}
+        <div 
+          className={`absolute top-1 bottom-1 w-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full transition-all duration-300 ease-in-out shadow-lg shadow-red-600/25 ${
+            locale === 'en' ? 'left-1' : 'left-12'
+          }`}
+        />
+        
+        {/* Language Options */}
         {languages.map((language) => (
-          <DropdownMenuItem
+          <button
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
-            className="text-gray-300 hover:text-red-400 hover:bg-red-900/20 cursor-pointer flex items-center justify-between"
+            className={`relative z-10 flex items-center justify-center w-12 h-8 rounded-full transition-all duration-300 cursor-pointer ${
+              locale === language.code 
+                ? 'text-white font-medium' 
+                : 'text-gray-400 hover:text-red-300'
+            }`}
           >
-            <div className="flex items-center gap-2">
-              <span>{language.flag}</span>
-              <span>{language.name}</span>
-            </div>
-            {locale === language.code && (
-              <Check className="w-4 h-4 text-red-400" />
-            )}
-          </DropdownMenuItem>
+            <span className="text-xs font-medium">{language.name}</span>
+          </button>
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </div>
+    </div>
   )
 }
