@@ -1,10 +1,5 @@
 {
   "buildCommand": "npm run build",
   "framework": "nextjs",
-  "regions": ["sin1"],
-  "functions": {
-    "src/app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "regions": ["iad1"]
 }
