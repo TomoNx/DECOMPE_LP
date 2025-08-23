@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
+import { defaultLocale } from '@/routing';
 
 export default function RootPage() {
-  // This page should not be reached in normal navigation
-  // as the custom server handles locale redirection
-  return null;
+  // Redirect to default locale for Vercel deployment
+  redirect(`/${defaultLocale}`);
 }
