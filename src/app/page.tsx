@@ -23,6 +23,9 @@ export default function Home() {
                 KOMPETISI UI/UX NASIONAL
               </Badge>
             </div>
+
+            <div className="absolute top-20 left-10 w-20 h-20 border-2 border-red-600/30 rotate-45"></div>
+            <div className="absolute bottom-20 right-10 w-16 h-16 border-2 border-red-600/30 rotate-12"></div>
             
             <div className="relative scroll-animate">
               <h1 className="text-5xl md:text-8xl font-bold mb-6 tracking-tight">
@@ -64,8 +67,8 @@ export default function Home() {
           
           {/* Geometric Decorations */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
-          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-red-600/30 rotate-45"></div>
-          <div className="absolute bottom-20 right-10 w-16 h-16 border-2 border-red-600/30 rotate-12"></div>
+
+          
         </section>
 
         {/* Quick Info Section */}

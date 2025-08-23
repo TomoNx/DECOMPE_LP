@@ -140,7 +140,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #FF3333 0%, #FF0000 100%);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
 }
 
 ::-webkit-scrollbar-corner {
@@ -191,18 +191,18 @@ html {
   visibility: visible;
 }
 
-.scroll-to-top:hover {
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.4) 0%, rgba(139, 0, 0, 0.4) 100%);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
-}
-
 .scroll-to-top::before {
   content: '↑';
   color: #FF0000;
   font-size: 20px;
   font-weight: bold;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.4) 0%, rgba(139, 0, 0, 0.4) 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
 }
 
 /* Scroll Animations */
@@ -239,7 +239,7 @@ html {
 
 .scroll-dot.active {
   background: #FF0000;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
   transform: scale(1.2);
 }
 
@@ -305,7 +305,7 @@ html {
 }
 
 .glow-scroll.scrolled {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
 /* Floating animation */
@@ -368,33 +368,35 @@ html {
 
 .enhanced-hover:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.15);
 }
 
 /* Cyberpunk text effect */
 .cyber-text {
   text-shadow: 
-    0 0 10px rgba(255, 0, 0, 0.8),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 30px rgba(255, 0, 0, 0.4),
-    0 0 40px rgba(255, 0, 0, 0.2);
+    0 0 5px rgba(255, 0, 0, 0.4),
+    0 0 10px rgba(255, 0, 0, 0.3),
+    0 0 15px rgba(255, 0, 0, 0.2),
+    0 0 20px rgba(255, 0, 0, 0.1);
   animation: cyberPulse 2s ease-in-out infinite alternate;
+  line-height: 1.2;
+  padding-bottom: 0.1em;
 }
 
 @keyframes cyberPulse {
   0% {
     text-shadow: 
-      0 0 10px rgba(255, 0, 0, 0.8),
-      0 0 20px rgba(255, 0, 0, 0.6),
-      0 0 30px rgba(255, 0, 0, 0.4),
-      0 0 40px rgba(255, 0, 0, 0.2);
+      0 0 5px rgba(255, 0, 0, 0.4),
+      0 0 10px rgba(255, 0, 0, 0.3),
+      0 0 15px rgba(255, 0, 0, 0.2),
+      0 0 20px rgba(255, 0, 0, 0.1);
   }
   100% {
     text-shadow: 
-      0 0 15px rgba(255, 0, 0, 1),
-      0 0 25px rgba(255, 0, 0, 0.8),
-      0 0 35px rgba(255, 0, 0, 0.6),
-      0 0 45px rgba(255, 0, 0, 0.4);
+      0 0 8px rgba(255, 0, 0, 0.6),
+      0 0 12px rgba(255, 0, 0, 0.4),
+      0 0 18px rgba(255, 0, 0, 0.3),
+      0 0 25px rgba(255, 0, 0, 0.2);
   }
 }
 
@@ -459,4 +461,23 @@ html {
     opacity: 1;
     transform: translateX(50px) rotate(var(--rotation, 0deg));
   }
+}
+
+/* Fix for gradient text with descenders */
+.bg-clip-text {
+  line-height: 1.2;
+  padding-bottom: 0.1em;
+  display: inline-block;
+}
+
+/* Ensure proper spacing for large headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* Specific fix for text with descenders in titles */
+h1.text-4xl, h1.text-5xl, h1.text-7xl,
+h2.text-4xl, h2.text-5xl, h2.text-7xl {
+  line-height: 1.1;
+  padding-bottom: 0.05em;
 }
