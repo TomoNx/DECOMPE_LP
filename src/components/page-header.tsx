@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from 'next-intl'
 
 interface PageHeaderProps {
   title: string
@@ -20,6 +21,7 @@ export default function PageHeader({
   showBackButton = true,
   showRegisterButton = false 
 }: PageHeaderProps) {
+  const t = useTranslations('common')
   return (
     <section className="relative z-10 overflow-hidden min-h-[60vh] flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-black to-red-600/20"></div>
@@ -46,7 +48,7 @@ export default function PageHeader({
             <Link href="/">
               <Button variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
                 <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
-                Back to Home
+                {t('backToHome')}
               </Button>
             </Link>
           )}

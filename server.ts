@@ -24,6 +24,35 @@ async function createCustomServer() {
       if (req.url?.startsWith('/api/socketio')) {
         return;
       }
+      
+      // Handle locale redirection
+      const url = req.url || '';
+      const locales = ['en', 'id'];
+      const defaultLocale = 'en';
+      
+      // Check if URL starts with a locale
+      const hasLocale = locales.some(locale => 
+        url.startsWith(`/${locale}/`) || url === `/${locale}`
+      );
+      
+      // If no locale and not static files/API, redirect to default locale
+      if (!hasLocale && !url.startsWith('/_next') && !url.startsWith('/api') && 
+          !url.includes('.') && url.length >= 1) {
+        // Special case for root path
+        if (url === '/') {
+          res.writeHead(307, { Location: `/${defaultLocale}` });
+          res.end();
+          return;
+        }
+        // Other non-localized paths
+        if (url.length > 1) {
+          const redirectUrl = `/${defaultLocale}${url}`;
+          res.writeHead(307, { Location: redirectUrl });
+          res.end();
+          return;
+        }
+      }
+      
       handle(req, res);
     });
 

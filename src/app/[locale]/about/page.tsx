@@ -5,16 +5,18 @@ import { Shield, Users, Zap } from "lucide-react"
 import Navbar from "@/components/navbar"
 import LazyAnimatedBackground from "@/components/lazy-animated-background"
 import PageHeader from "@/components/page-header"
+import { useTranslations } from 'next-intl'
 
 export default function About() {
+  const t = useTranslations('about')
   return (
     <>
       <Navbar />
       <LazyAnimatedBackground>
         <PageHeader
-          title="Evolution of DECOMPE"
-          subtitle="Jejak perjalanan inovasi desain yang menginspirasi generasi digital Indonesia"
-          badgeText="ABOUT DECOMPE"
+          title={t('title')}
+          subtitle={t('subtitle')}
+          badgeText={t('badge')}
           badgeIcon={<Shield className="w-4 h-4 mr-2" />}
         />
 

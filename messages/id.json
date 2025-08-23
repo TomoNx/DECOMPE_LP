@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "timeline": "Timeline",
+    "registration": "Pendaftaran", 
+    "register": "Daftar Sekarang",
+    "joinNow": "Gabung Sekarang"
+  },
+  "hero": {
+    "title": "DECOMPE",
+    "subtitle": "Digital Revolution Interface",
+    "description": "Masuki era baru desain digital di mana inovasi bertemu dengan antarmuka masa depan. Bersainglah dengan para visioner muda Indonesia dan ciptakan desain yang akan mendefinisikan ulang dunia digital!",
+    "registerButton": "Daftar Sekarang",
+    "exploreButton": "Explore The Future"
+  },
+  "sections": {
+    "innovation": {
+      "title": "Innovation",
+      "description": "Desain interface yang revolusioner untuk masa depan digital"
+    },
+    "community": {
+      "title": "Community",
+      "description": "Bergabung dengan visioner muda dari seluruh Indonesia"
+    },
+    "impact": {
+      "title": "Impact", 
+      "description": "Ciptakan perubahan nyata di industri teknologi"
+    }
+  },
+  "about": {
+    "title": "Evolution of DECOMPE",
+    "subtitle": "Jejak perjalanan inovasi desain yang menginspirasi generasi digital Indonesia",
+    "badge": "ABOUT DECOMPE"
+  },
+  "timeline": {
+    "title": "Mission Timeline",
+    "subtitle": "Jadwal operasional untuk revolusi digital Anda", 
+    "badge": "MISSION TIMELINE",
+    "importantDates": "Important Dates",
+    "importantDatesDesc": "Catat tanggal-tanggal penting ini untuk mempersiapkan revolusi digital Anda"
+  },
+  "registration": {
+    "title": "Registration",
+    "subtitle": "Investasi untuk transformasi karir digital Anda",
+    "badge": "JOIN THE REVOLUTION",
+    "process": "Registration Process",
+    "processDesc": "3 langkah mudah untuk bergabung dengan revolusi digital",
+    "investmentPackages": "Investment Packages", 
+    "investmentDesc": "Pilih paket investasi yang sesuai dengan kebutuhan revolusi digital Anda",
+    "requirements": "Requirements",
+    "requirementsDesc": "Persyaratan untuk bergabung dengan DECOMPE 4.0"
+  },
+  "common": {
+    "readyToJoin": "Ready to Join the Revolution?",
+    "readyToTransform": "Ready to Transform Your Future?",
+    "joinDescription": "Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0 - tempat di mana mimpi digital menjadi kenyataan dan visioner seperti Anda menemukan panggungnya.",
+    "transformDescription": "Bergabunglah dengan DECOMPE 4.0 dan mulailah perjalanan Anda menjadi desainer interface masa depan yang akan mengubah dunia digital.",
+    "backToHome": "Back to Home",
+    "learnMore": "LEARN MORE", 
+    "viewSchedule": "VIEW SCHEDULE"
+  }
+}

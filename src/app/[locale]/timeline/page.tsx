@@ -12,16 +12,19 @@ import Timeline from "@/components/timeline";
 import TimelineCard from "@/components/timeline-card";
 import { timelineItems } from "@/config/timeline";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 export default function TimelinePage() {
+  const t = useTranslations('timeline')
+  const tCommon = useTranslations('common')
   return (
     <>
       <Navbar />
       <LazyAnimatedBackground>
         <PageHeader
-          title="Mission Timeline"
-          subtitle="Jadwal operasional untuk revolusi digital Anda"
-          badgeText="MISSION TIMELINE"
+          title={t('title')}
+          subtitle={t('subtitle')}
+          badgeText={t('badge')}
           badgeIcon={<CalendarDays className="w-4 h-4 mr-2" />}
           showRegisterButton={true}
         />
@@ -46,10 +49,10 @@ export default function TimelinePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-                Important Dates
+                {t('importantDates')}
               </h2>
               <p className="text-lg text-gray-400">
-                Catat tanggal-tanggal penting ini untuk mempersiapkan revolusi digital Anda
+                {t('importantDatesDesc')}
               </p>
             </div>
             
@@ -129,7 +132,7 @@ export default function TimelinePage() {
                 <Link href="/about">
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <Cpu className="mr-2 h-6 w-6" />
-                    LEARN MORE
+                    {tCommon('learnMore')}
                   </Button>
                 </Link>
               </div>

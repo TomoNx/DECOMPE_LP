@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "timeline": "Timeline", 
+    "registration": "Registration",
+    "register": "Register Now",
+    "joinNow": "Join Now"
+  },
+  "hero": {
+    "title": "DECOMPE",
+    "subtitle": "Digital Revolution Interface",
+    "description": "Enter a new era of digital design where innovation meets the interface of the future. Compete with young visionaries from Indonesia and create designs that will redefine the digital world!",
+    "registerButton": "Register Now",
+    "exploreButton": "Explore The Future"
+  },
+  "sections": {
+    "innovation": {
+      "title": "Innovation",
+      "description": "Revolutionary interface design for the digital future"
+    },
+    "community": {
+      "title": "Community", 
+      "description": "Join young visionaries from all over Indonesia"
+    },
+    "impact": {
+      "title": "Impact",
+      "description": "Create real change in the technology industry"
+    }
+  },
+  "about": {
+    "title": "Evolution of DECOMPE",
+    "subtitle": "The journey of design innovation that inspires Indonesia's digital generation",
+    "badge": "ABOUT DECOMPE"
+  },
+  "timeline": {
+    "title": "Mission Timeline",
+    "subtitle": "Operational schedule for your digital revolution",
+    "badge": "MISSION TIMELINE",
+    "importantDates": "Important Dates",
+    "importantDatesDesc": "Mark these important dates to prepare for your digital revolution"
+  },
+  "registration": {
+    "title": "Registration", 
+    "subtitle": "Investment for your digital career transformation",
+    "badge": "JOIN THE REVOLUTION",
+    "process": "Registration Process",
+    "processDesc": "3 easy steps to join the digital revolution",
+    "investmentPackages": "Investment Packages",
+    "investmentDesc": "Choose an investment package that suits your digital revolution needs",
+    "requirements": "Requirements",
+    "requirementsDesc": "Requirements to join DECOMPE 4.0"
+  },
+  "common": {
+    "readyToJoin": "Ready to Join the Revolution?",
+    "readyToTransform": "Ready to Transform Your Future?",
+    "joinDescription": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality and visionaries like you find their stage.",
+    "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
+    "backToHome": "Back to Home",
+    "learnMore": "Learn More",
+    "viewSchedule": "View Schedule"
+  }
+}
