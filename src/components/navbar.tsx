@@ -159,19 +159,28 @@ export default function Navbar() {
             >
               <div className="absolute inset-0 bg-red-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
-                {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+                <div className={`transition-all duration-300 transform ${
+                  isOpen ? 'rotate-180 scale-105' : 'rotate-0 scale-100'
+                }`}>
+                  {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+                </div>
               </div>
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation*/}
-        {isOpen && (
-          <div className="lg:hidden bg-black/95 backdrop-blur-lg border-t border-red-600/20 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-red-600/5 to-transparent"></div>
-            <div className="container mx-auto px-4 py-6 relative z-10">
-              <div className="flex flex-col gap-2">
-                {navItems.map((item, index) => {
+        <div className={`lg:hidden bg-black/95 backdrop-blur-lg border-t border-red-600/20 relative overflow-hidden transition-all duration-500 ease-in-out transform ${
+          isOpen 
+            ? 'max-h-96 opacity-100 translate-y-0' 
+            : 'max-h-0 opacity-0 -translate-y-4'
+        }`}>
+          <div className="absolute inset-0 bg-gradient-to-b from-red-600/5 to-transparent"></div>
+          <div className={`container mx-auto px-4 py-6 relative z-10 transition-all duration-500 ${
+            isOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
+          }`}>
+            <div className="flex flex-col gap-2">
+              {navItems.map((item, index) => {
                   if (item.path === '/') {
                     return (
                       <div
@@ -180,11 +189,18 @@ export default function Navbar() {
                           window.location.href = '/'
                           setIsOpen(false)
                         }}
-                        className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 overflow-hidden cursor-pointer ${
+                        className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-500 overflow-hidden cursor-pointer transform ${
+                          isOpen 
+                            ? 'translate-x-0 opacity-100' 
+                            : 'translate-x-4 opacity-0'
+                        } ${
                           currentPath === item.path
                             ? 'text-red-400'
                             : 'text-gray-400 hover:text-red-400'
                         }`}
+                        style={{
+                          transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+                        }}
                       >
                         <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
                           currentPath === item.path
@@ -213,11 +229,18 @@ export default function Navbar() {
                       key={item.path}
                       href={`/${locale}${item.path}`}
                       onClick={() => setIsOpen(false)}
-                      className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 overflow-hidden ${
+                      className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-500 overflow-hidden transform ${
+                        isOpen 
+                          ? 'translate-x-0 opacity-100' 
+                          : 'translate-x-4 opacity-0'
+                      } ${
                         currentPath === item.path
                           ? 'text-red-400'
                           : 'text-gray-400 hover:text-red-400'
                       }`}
+                      style={{
+                        transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+                      }}
                     >
                       <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
                         currentPath === item.path
@@ -240,15 +263,21 @@ export default function Navbar() {
                     </Link>
                   )
                 })}
-              </div>
-              <div className="mt-4 pt-4 border-t border-red-600/20">
-                <div className="flex justify-center">
-                  <LanguageSwitcher />
-                </div>
+            </div>
+            <div className={`mt-4 pt-4 border-t border-red-600/20 transition-all duration-500 transform ${
+              isOpen 
+                ? 'translate-y-0 opacity-100' 
+                : 'translate-y-4 opacity-0'
+            }`}
+            style={{
+              transitionDelay: isOpen ? `${navItems.length * 100 + 200}ms` : '0ms'
+            }}>
+              <div className="flex justify-center">
+                <LanguageSwitcher />
               </div>
             </div>
           </div>
-        )}
+        </div>
       </nav>
 
       {/* Spacer for fixed navbar */}

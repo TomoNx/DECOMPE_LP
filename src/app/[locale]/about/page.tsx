@@ -48,7 +48,6 @@ export default function About() {
               </Card>
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group relative scroll-animate enhanced-hover neon-border">
-                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-red-600 rounded-full animate-pulse"></div>
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
                     <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">2.0</span>
