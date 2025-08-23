@@ -18,51 +18,51 @@ export default function Home() {
       <Navbar />
       <LazyAnimatedBackground>
         {/* Hero Section */}
-        <section className="relative z-10 overflow-hidden min-h-screen flex items-center">
+        <section className="relative z-10 overflow-hidden min-h-[85vh] flex items-center">
           <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-black to-red-600/20"></div>
-          <div className="relative container mx-auto px-4 py-24 md:py-32 text-center">
-            <div className="mb-8 scroll-animate">
-              <Badge className="mb-4 bg-red-600/20 text-red-400 border-red-600/50 hover:bg-red-600/30 backdrop-blur-sm">
+          <div className="relative container mx-auto px-4 py-8 md:py-12 text-center flex flex-col justify-center min-h-[75vh]">
+            <div className="mb-6 scroll-animate -mt-4">
+              <Badge className="mb-3 bg-red-600/20 text-red-400 border-red-600/50 hover:bg-red-600/30 backdrop-blur-sm">
                 <Cpu className="w-4 h-4 mr-2" />
                 {t('nationalCompetition')}
               </Badge>
             </div>
 
-            <div className="absolute top-20 left-10 w-20 h-20 border-2 border-red-600/30 rotate-45"></div>
-            <div className="absolute bottom-20 right-10 w-16 h-16 border-2 border-red-600/30 rotate-12"></div>
+            <div className="absolute top-16 left-8 w-16 h-16 border-2 border-red-600/30 rotate-45"></div>
+            <div className="absolute bottom-16 right-8 w-14 h-14 border-2 border-red-600/30 rotate-12"></div>
             
-            <div className="relative scroll-animate">
-              <h1 className="text-5xl md:text-8xl font-bold mb-6 tracking-tight">
+            <div className="relative scroll-animate -mt-3">
+              <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight">
                 <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent animate-pulse cyber-text">
                   DECOMPE
                 </span>
                 <span className="text-white ml-4">4.0</span>
               </h1>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-red-600/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-red-700/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              <div className="absolute -top-2 -right-2 w-20 h-20 bg-red-600/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-24 h-24 bg-red-700/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             </div>
             
-            <div className="relative mb-8 scroll-animate">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600/20 to-red-800/20 px-6 py-3 rounded-full border border-red-600/30 backdrop-blur-sm">
-                <Cpu className="w-6 h-6 text-red-400" />
-                <p className="text-xl md:text-2xl font-light text-red-300">
+            <div className="relative mb-6 scroll-animate -mt-2">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600/20 to-red-800/20 px-5 py-2 rounded-full border border-red-600/30 backdrop-blur-sm">
+                <Cpu className="w-5 h-5 text-red-400" />
+                <p className="text-lg md:text-xl font-light text-red-300">
                   {t('subtitle')}
                 </p>
               </div>
             </div>
             
-            <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-300 leading-relaxed scroll-animate">
+            <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-gray-300 leading-relaxed scroll-animate -mt-1">
               {t('description')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center scroll-animate">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-10 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105 enhanced-hover neon-border">
-                <Shield className="mr-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center scroll-animate">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105 enhanced-hover neon-border">
+                <Shield className="mr-2 h-4 w-4" />
                 {t('registerButton')}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-10 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
-                <Target className="mr-2 h-5 w-5" />
+              <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
+                <Target className="mr-2 h-4 w-4" />
                 {t('exploreButton')}
               </Button>
             </div>
@@ -75,9 +75,9 @@ export default function Home() {
         </section>
 
         {/* Quick Info Section */}
-        <section className="relative z-10 py-20 bg-black">
+        <section className="relative z-10 py-16 bg-black">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center scroll-animate enhanced-hover neon-border">
                 <CardHeader>
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30">
@@ -124,25 +124,25 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative z-10 py-20 bg-gradient-to-r from-red-900/20 via-black to-red-900/20">
+        <section className="relative z-10 py-16 bg-gradient-to-r from-red-900/20 via-black to-red-900/20">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 scroll-animate">
+              <h2 className="text-3xl md:text-4xl font-bold mb-5 scroll-animate">
                 <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                   {tCommon('readyToJoin')}
                 </span>
               </h2>
-              <p className="text-xl mb-8 text-gray-300 leading-relaxed scroll-animate">
+              <p className="text-lg mb-6 text-gray-300 leading-relaxed scroll-animate">
                 {tCommon('joinDescription')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 scroll-animate">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
-                  <Shield className="mr-2 h-6 w-6" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 scroll-animate">
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
+                  <Shield className="mr-2 h-5 w-5" />
                   {tCommon('joinRevolutionNow')}
-                  <ArrowRight className="ml-2 h-6 w-6" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
-                  <Cpu className="mr-2 h-6 w-6" />
+                <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-10 py-3 rounded-lg backdrop-blur-sm transition-all duration-300">
+                  <Cpu className="mr-2 h-5 w-5" />
                   {tCommon('learnMore')}
                 </Button>
               </div>
