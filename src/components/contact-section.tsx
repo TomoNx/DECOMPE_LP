@@ -5,11 +5,11 @@ export default function ContactSection() {
   const contactPersons = [
     {
       name: "Rayssa Ameyliananda",
-      phone: "081210913466"
+      phone: "6281210913466"
     },
     {
       name: "Widhy Fadhiil Aldino",
-      phone: "0895386891729"
+      phone: "62895386891729"
     }
   ]
 
@@ -38,7 +38,7 @@ export default function ContactSection() {
                 <div className="flex items-center justify-center gap-3 text-gray-300 group-hover:text-red-200 transition-colors">
                   <Phone className="w-5 h-5 text-red-400 group-hover:text-red-300 transition-colors" />
                   <a 
-                    href={`tel:${person.phone}`}
+                    href={`https://wa.me/${person.phone}`}
                     className="hover:text-red-400 transition-colors font-mono tracking-wider"
                   >
                     {person.phone}
