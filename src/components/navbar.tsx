@@ -56,36 +56,34 @@ export default function Navbar() {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent"></div>
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 lg:px-6 relative z-10">
           <div className="flex items-center justify-between h-16">
             
-            {/* Newgrub (Mix Logo and Nav)*/}
-            <div className="flex items-center">
-              {/* Logo */}
-              <div 
-                onClick={() => window.location.href = '/'}
-                className="flex items-center group transition-all duration-300 hover:scale-105 cursor-pointer ml-2"
-              >
-                <Image 
-                  src="/logo.svg" 
-                  alt="DECOMPE Logo" 
-                  width={85}
-                  height={85} 
-                  className="transition-all duration-300 group-hover:scale-110" 
-                  priority
-                />
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent leading-tight">
-                    DECOMPE
-                  </span>
-                  <span className="text-xs text-red-400 font-mono tracking-wider">
-                    v4.0
-                  </span>
-                </div>
+            {/* Logo */}
+            <div 
+              onClick={() => window.location.href = '/'}
+              className="flex items-center group transition-all duration-300 hover:scale-105 cursor-pointer flex-shrink-0"
+            >
+              <Image 
+                src="/logo.svg" 
+                alt="DECOMPE Logo" 
+                width={70}
+                height={70} 
+                className="sm:w-[85px] sm:h-[85px] transition-all duration-300 group-hover:scale-110" 
+                priority
+              />
+              <div className="flex flex-col ml-1 sm:ml-2">
+                <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent leading-tight">
+                  DECOMPE
+                </span>
+                <span className="text-[10px] sm:text-xs text-red-400 font-mono tracking-wider">
+                  v4.0
+                </span>
               </div>
+            </div>
 
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-1 ml-16">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-1 flex-1 justify-center">
                 {navItems.map((item, index) => {
                   if (item.path === '/') {
                     return (
@@ -146,24 +144,22 @@ export default function Navbar() {
                       </div>
                     </Link>
                   )
-                })}
-              </div>
+                })}              
             </div>
 
-
-            {/* Language Switcher*/}
-            <div className="hidden md:flex items-center justify-end mr-2">
+            {/* Language Switcher - Desktop */}
+            <div className="hidden lg:flex items-center justify-end flex-shrink-0">
               <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-600/10 transition-all duration-300 relative overflow-hidden group"
+              className="lg:hidden p-2 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-600/10 transition-all duration-300 relative overflow-hidden group flex-shrink-0"
             >
               <div className="absolute inset-0 bg-red-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
               </div>
             </button>
           </div>
@@ -171,10 +167,10 @@ export default function Navbar() {
 
         {/* Mobile Navigation*/}
         {isOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-red-600/20 relative overflow-hidden">
+          <div className="lg:hidden bg-black/95 backdrop-blur-lg border-t border-red-600/20 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-red-600/5 to-transparent"></div>
             <div className="container mx-auto px-4 py-6 relative z-10">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 {navItems.map((item, index) => {
                   if (item.path === '/') {
                     return (
@@ -184,19 +180,19 @@ export default function Navbar() {
                           window.location.href = '/'
                           setIsOpen(false)
                         }}
-                        className={`group relative flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden cursor-pointer ${
+                        className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 overflow-hidden cursor-pointer ${
                           currentPath === item.path
                             ? 'text-red-400'
                             : 'text-gray-400 hover:text-red-400'
                         }`}
                       >
-                        <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                        <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
                           currentPath === item.path
                             ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
                             : 'bg-transparent group-hover:bg-red-600/10'
                         }`}></div>
                         <div className="relative flex items-center gap-3 w-full">
-                          <div className={`p-2 rounded-lg ${
+                          <div className={`p-1.5 rounded-lg ${
                             currentPath === item.path 
                               ? 'bg-red-600/20 text-red-400' 
                               : 'bg-gray-800/50 text-gray-500 group-hover:bg-red-600/20 group-hover:text-red-400'
@@ -217,19 +213,19 @@ export default function Navbar() {
                       key={item.path}
                       href={`/${locale}${item.path}`}
                       onClick={() => setIsOpen(false)}
-                      className={`group relative flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden ${
+                      className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-300 overflow-hidden ${
                         currentPath === item.path
                           ? 'text-red-400'
                           : 'text-gray-400 hover:text-red-400'
                       }`}
                     >
-                      <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                      <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
                         currentPath === item.path
                           ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
                           : 'bg-transparent group-hover:bg-red-600/10'
                       }`}></div>
                       <div className="relative flex items-center gap-3 w-full">
-                        <div className={`p-2 rounded-lg ${
+                        <div className={`p-1.5 rounded-lg ${
                           currentPath === item.path 
                             ? 'bg-red-600/20 text-red-400' 
                             : 'bg-gray-800/50 text-gray-500 group-hover:bg-red-600/20 group-hover:text-red-400'
@@ -245,7 +241,7 @@ export default function Navbar() {
                   )
                 })}
               </div>
-              <div className="mt-6 pt-6 border-t border-red-600/20">
+              <div className="mt-4 pt-4 border-t border-red-600/20">
                 <div className="flex justify-center">
                   <LanguageSwitcher />
                 </div>

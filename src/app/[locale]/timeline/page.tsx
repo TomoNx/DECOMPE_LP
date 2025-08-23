@@ -33,13 +33,13 @@ export default function TimelinePage() {
         />
 
         {/* Timeline Progress Section */}
-        <section className="relative z-10 py-20 bg-black">
+        <section className="relative z-10 py-16 sm:py-20 bg-black">
           <div className="container mx-auto px-4">
             {/* Timeline Component */}
             <Timeline />
 
             {/* Timeline Cards - Desktop Only */}
-            <div className="hidden md:block max-w-4xl mx-auto space-y-6">
+            <div className="hidden md:block max-w-4xl mx-auto space-y-4 sm:space-y-6">
               {timelineItems.map((item, index) => (
                 <TimelineCard key={item.id} item={item} index={index} />
               ))}
@@ -48,25 +48,25 @@ export default function TimelinePage() {
         </section>
 
         {/* Important Dates */}
-        <section className="relative z-10 py-20 bg-gradient-to-r from-black via-red-900/10 to-black">
+        <section className="relative z-10 py-16 sm:py-20 bg-gradient-to-r from-black via-red-900/10 to-black">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                 {t('importantDates')}
               </h2>
-              <p className="text-lg text-gray-400">
+              <p className="text-base sm:text-lg text-gray-400">
                 {t('importantDatesDesc')}
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-4 sm:gap-6">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">{t('events.registrationPeriod.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('events.registrationPeriod.date')}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg text-red-400">{t('events.registrationPeriod.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('events.registrationPeriod.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-xs sm:text-sm text-gray-300">
                     {t('events.registrationPeriod.description')}
                   </p>
                 </CardContent>
@@ -74,11 +74,11 @@ export default function TimelinePage() {
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">{t('events.selectionAnnouncement.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('events.selectionAnnouncement.date')}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg text-red-400">{t('events.selectionAnnouncement.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('events.selectionAnnouncement.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-xs sm:text-sm text-gray-300">
                     {t('events.selectionAnnouncement.description')}
                   </p>
                 </CardContent>
@@ -86,11 +86,11 @@ export default function TimelinePage() {
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">{t('events.bootcampTraining.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('events.bootcampTraining.date')}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg text-red-400">{t('events.bootcampTraining.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('events.bootcampTraining.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-xs sm:text-sm text-gray-300">
                     {t('events.bootcampTraining.description')}
                   </p>
                 </CardContent>
@@ -98,11 +98,11 @@ export default function TimelinePage() {
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg text-red-400">{t('events.competitionWeek.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('events.competitionWeek.date')}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg text-red-400">{t('events.competitionWeek.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('events.competitionWeek.date')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-xs sm:text-sm text-gray-300">
                     {t('events.competitionWeek.description')}
                   </p>
                 </CardContent>

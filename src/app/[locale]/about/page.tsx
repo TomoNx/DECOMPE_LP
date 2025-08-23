@@ -21,24 +21,24 @@ export default function About() {
         />
 
         {/* Evolution Content */}
-        <section className="relative z-10 py-20 bg-black">
+        <section className="relative z-10 py-16 sm:py-20 bg-black">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group scroll-animate enhanced-hover neon-border">
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
-                    <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">1.0</span>
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
+                    <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">1.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe1.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('evolution.decompe1.subtitle')}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe1.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('evolution.decompe1.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe1.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe1.achievements')}</h4>
-                    <ul className="text-sm text-gray-400 space-y-1">
+                    <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe1.achievements')}</h4>
+                    <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe1.participants')}</li>
                       <li>• {t('evolution.decompe1.universities')}</li>
                       <li>• {t('evolution.decompe1.mentors')}</li>
@@ -48,21 +48,21 @@ export default function About() {
               </Card>
 
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group relative scroll-animate enhanced-hover neon-border">
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-600 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-red-600 rounded-full animate-pulse"></div>
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
-                    <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">2.0</span>
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
+                    <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">2.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe2.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('evolution.decompe2.subtitle')}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe2.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('evolution.decompe2.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe2.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe2.achievements')}</h4>
-                    <ul className="text-sm text-gray-400 space-y-1">
+                    <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe2.achievements')}</h4>
+                    <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe2.participants')}</li>
                       <li>• {t('evolution.decompe2.partners')}</li>
                       <li>• {t('evolution.decompe2.workshops')}</li>
@@ -71,21 +71,21 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group scroll-animate enhanced-hover neon-border">
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group scroll-animate enhanced-hover neon-border sm:col-span-2 lg:col-span-1">
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
-                    <span className="text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">3.0</span>
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300">
+                    <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cyber-text">3.0</span>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe3.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('evolution.decompe3.subtitle')}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl text-white group-hover:text-red-400 transition-colors duration-300">{t('evolution.decompe3.title')}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-gray-400">{t('evolution.decompe3.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe3.description')}
                   </p>
                   <div className="mt-4">
-                    <h4 className="font-semibold text-red-400 mb-2">{t('evolution.decompe3.achievements')}</h4>
-                    <ul className="text-sm text-gray-400 space-y-1">
+                    <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe3.achievements')}</h4>
+                    <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe3.participants')}</li>
                       <li>• {t('evolution.decompe3.mentors')}</li>
                       <li>• {t('evolution.decompe3.alumni')}</li>

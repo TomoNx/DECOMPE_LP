@@ -31,90 +31,90 @@ export default function Registration() {
         />
 
         {/* Investment Packages */}
-        <section className="relative z-10 py-20 bg-black">
+        <section className="relative z-10 py-16 sm:py-20 bg-black">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16 scroll-animate">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+            <div className="text-center mb-12 sm:mb-16 scroll-animate">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                 {t('investmentPackages')}
               </h2>
-              <p className="text-lg text-gray-400">
+              <p className="text-base sm:text-lg text-gray-400">
                 {t('investmentDesc')}
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">{t('packages.earlyAccess.title')}</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.earlyAccess.price')}</div>
-                  <CardDescription className="text-red-400">{t('packages.earlyAccess.period')}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl text-white mb-2">{t('packages.earlyAccess.title')}</CardTitle>
+                  <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.earlyAccess.price')}</div>
+                  <CardDescription className="text-sm sm:text-base text-red-400">{t('packages.earlyAccess.period')}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
+                  <ul className="text-left space-y-2 sm:space-y-3 text-sm text-gray-300 mb-4 sm:mb-6">
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.earlyAccess.features.bootcamp')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.bootcamp')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.earlyAccess.features.certificate')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.certificate')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.earlyAccess.features.mentorship')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.mentorship')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.earlyAccess.features.resources')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.resources')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
+                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
                     <p className="text-xs text-red-400 font-semibold">{t('packages.earlyAccess.savings')}</p>
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
+                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base">
                     {t('packages.earlyAccess.button')}
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 border-2 border-red-600/50 backdrop-blur-sm hover:border-red-500/70 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
-                <div className="absolute top-0 right-0 bg-red-600 text-black px-3 py-1 text-xs font-bold rounded-bl-lg">
+              <Card className="bg-black/40 border-2 border-red-600/50 backdrop-blur-sm hover:border-red-500/70 transition-all duration-300 text-center relative overflow-hidden group scroll-animate sm:col-span-2 lg:col-span-1">
+                <div className="absolute top-0 right-0 bg-red-600 text-black px-2 sm:px-3 py-1 text-xs font-bold rounded-bl-lg">
                   {t('packages.standard.popular')}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">{t('packages.standard.title')}</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.standard.price')}</div>
-                  <CardDescription className="text-red-400">{t('packages.standard.period')}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl text-white mb-2">{t('packages.standard.title')}</CardTitle>
+                  <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.standard.price')}</div>
+                  <CardDescription className="text-sm sm:text-base text-red-400">{t('packages.standard.period')}</CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
+                  <ul className="text-left space-y-2 sm:space-y-3 text-sm text-gray-300 mb-4 sm:mb-6">
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.standard.features.bootcamp')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.standard.features.bootcamp')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.standard.features.certificate')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.standard.features.certificate')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.standard.features.mentorship')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.standard.features.mentorship')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.standard.features.ebook')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.standard.features.ebook')}</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.standard.features.placement')}
+                      <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{t('packages.standard.features.placement')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
+                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
                     <p className="text-xs text-red-400 font-semibold">{t('packages.standard.value')}</p>
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
+                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base">
                     {t('packages.standard.button')}
                   </Button>
                 </CardContent>

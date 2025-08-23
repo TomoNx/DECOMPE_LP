@@ -32,8 +32,8 @@ export default function LanguageSwitcher() {
       <div className="relative flex items-center bg-black/40 border border-red-600/30 rounded-full p-1 backdrop-blur-sm">
         {/* Background Slider */}
         <div 
-          className={`absolute top-1 bottom-1 w-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full transition-all duration-300 ease-in-out shadow-lg shadow-red-600/25 ${
-            locale === 'en' ? 'left-1' : 'left-12'
+          className={`absolute top-1 bottom-1 w-10 sm:w-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full transition-all duration-300 ease-in-out shadow-lg shadow-red-600/25 ${
+            locale === 'en' ? 'left-1' : 'left-10 sm:left-12'
           }`}
         />
         
@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
           <button
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
-            className={`relative z-10 flex items-center justify-center w-12 h-8 rounded-full transition-all duration-300 cursor-pointer ${
+            className={`relative z-10 flex items-center justify-center w-10 h-6 sm:w-12 sm:h-8 rounded-full transition-all duration-300 cursor-pointer touch-manipulation ${
               locale === language.code 
                 ? 'text-white font-medium' 
                 : 'text-gray-400 hover:text-red-300'
