@@ -100,6 +100,18 @@
     "readyToStart": "Ready to Start Your Journey?",
     "readyToStartDesc": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality.",
     "registerNow": "REGISTER NOW",
+    "projectProgress": "Project Progress",
+    "trackJourney": "Track our journey through each phase of the competition",
+    "trackJourneyMobile": "Track our journey through each phase",
+    "phase": "Phase",
+    "progress": "Progress",
+    "active": "ACTIVE",
+    "completed": "COMPLETED",
+    "inProgress": "IN PROGRESS",
+    "upcoming": "UPCOMING",
+    "currentActivities": "Current Activities:",
+    "achievements": "Achievements:",
+    "whatToExpect": "What to Expect:",
     "events": {
       "registrationPeriod": {
         "title": "Registration Period",
@@ -121,6 +133,85 @@
         "date": "05 - 15 January 2025",
         "description": "A full week of design competition with real-world challenges from partner companies."
       }
+    },
+    "phases": {
+      "recruitment": {
+        "title": "Recruitment",
+        "date": "01-30 NOV",
+        "description": "Opening registration for all digital change agents",
+        "details": [
+          "150+ active registrants",
+          "20+ educational institutions", 
+          "Early bird sold out in 2 weeks"
+        ]
+      },
+      "selection": {
+        "title": "Selection",
+        "date": "05 DEC",
+        "description": "Announcement of agents who passed digital selection",
+        "details": [
+          "80 participants passed selection",
+          "Portfolio review by 10+ experts",
+          "Diversification of participant backgrounds"
+        ]
+      },
+      "training": {
+        "title": "Training",
+        "date": "10-20 DEC",
+        "description": "Intensive bootcamp and mentoring with digital masters",
+        "details": [
+          "UI/UX Design Fundamentals (Completed)",
+          "User Research & Testing (In Progress)",
+          "Prototyping with Figma (Upcoming)"
+        ]
+      },
+      "competition": {
+        "title": "Competition",
+        "date": "05-15 JAN",
+        "description": "Elimination round and final battle of interfaces",
+        "details": [
+          "48-hour design challenge",
+          "Real-world case studies",
+          "Live judging session"
+        ]
+      },
+      "victory": {
+        "title": "Victory",
+        "date": "20 JAN",
+        "description": "Winner announcement and legacy awards presentation",
+        "details": [
+          "Award presentation ceremony",
+          "Networking with industry leaders",
+          "Alumni induction program"
+        ]
+      }
+    },
+    "phaseTranslations": {
+      "recruitment": "Recruitment",
+      "selection": "Selection",
+      "training": "Training",
+      "competition": "Competition",
+      "victory": "Victory",
+      "recruitment_desc": "Opening registration for all digital change agents",
+      "selection_desc": "Announcement of agents who passed digital selection",
+      "training_desc": "Intensive bootcamp and mentoring with digital masters",
+      "competition_desc": "Elimination round and final battle of interfaces",
+      "victory_desc": "Winner announcement and legacy awards presentation",
+      "recruitment_detail1": "150+ active registrants",
+      "recruitment_detail2": "20+ educational institutions",
+      "recruitment_detail3": "Early bird sold out in 2 weeks",
+      "selection_detail1": "80 participants passed selection",
+      "selection_detail2": "Portfolio review by 10+ experts",
+      "selection_detail3": "Diversification of participant backgrounds",
+      "training_detail1": "UI/UX Design Fundamentals (Completed)",
+      "training_detail2": "User Research & Testing (In Progress)",
+      "training_detail3": "Prototyping with Figma (Upcoming)",
+      "competition_detail1": "48-hour design challenge",
+      "competition_detail2": "Real-world case studies",
+      "competition_detail3": "Live judging session",
+      "victory_detail1": "Award presentation ceremony",
+      "victory_detail2": "Networking with industry leaders",
+      "victory_detail3": "Alumni induction program"
     }
   },
   "registration": {

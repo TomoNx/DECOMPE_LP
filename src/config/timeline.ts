@@ -9,7 +9,7 @@ export interface TimelineItem {
   id: string;
   phase: string;
   date: string;
-  description: string;
+  description?: string;
   status: TimelineStatus;
   progress: number;
   details?: string[];
@@ -32,68 +32,48 @@ export const timelineSettings: TimelineSettings = {
   items: [
     {
       id: 'recruitment',
-      phase: 'Recruitment',
+      phase: 'recruitment', // This will be used as translation key
       date: '01-30 NOV',
-      description: 'Pembukaan pendaftaran untuk semua agen perubahan digital',
+      description: 'recruitment_desc',
       status: 'completed',
       progress: 100,
-      details: [
-        '150+ pendaftar aktif',
-        '20+ institusi pendidikan', 
-        'Early bird sold out dalam 2 minggu'
-      ]
+      details: ['recruitment_detail1', 'recruitment_detail2', 'recruitment_detail3']
     },
     {
       id: 'selection',
-      phase: 'Selection',
+      phase: 'selection',
       date: '05 DEC',
-      description: 'Pengumuman agen yang lolos seleksi digital',
+      description: 'selection_desc',
       status: 'completed',
       progress: 100,
-      details: [
-        '80 peserta lolos seleksi',
-        'Portfolio review oleh 10+ expert',
-        'Diversifikasi background peserta'
-      ]
+      details: ['selection_detail1', 'selection_detail2', 'selection_detail3']
     },
     {
       id: 'training',
-      phase: 'Training',
+      phase: 'training',
       date: '10-20 DEC',
-      description: 'Bootcamp intensif dan mentoring dengan master digital',
+      description: 'training_desc',
       status: 'current',
       progress: 60,
-      details: [
-        'UI/UX Design Fundamentals (Completed)',
-        'User Research & Testing (In Progress)',
-        'Prototyping with Figma (Upcoming)'
-      ]
+      details: ['training_detail1', 'training_detail2', 'training_detail3']
     },
     {
       id: 'competition',
-      phase: 'Competition',
+      phase: 'competition',
       date: '05-15 JAN',
-      description: 'Babak penyisihan dan final battle of interfaces',
+      description: 'competition_desc',
       status: 'upcoming',
       progress: 0,
-      details: [
-        '48-hour design challenge',
-        'Real-world case studies',
-        'Live judging session'
-      ]
+      details: ['competition_detail1', 'competition_detail2', 'competition_detail3']
     },
     {
       id: 'victory',
-      phase: 'Victory',
+      phase: 'victory',
       date: '20 JAN',
-      description: 'Pengumuman pemenang dan penyerahan legacy awards',
+      description: 'victory_desc',
       status: 'upcoming',
       progress: 0,
-      details: [
-        'Award presentation ceremony',
-        'Networking with industry leaders',
-        'Alumni induction program'
-      ]
+      details: ['victory_detail1', 'victory_detail2', 'victory_detail3']
     }
   ]
 };

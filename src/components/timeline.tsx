@@ -2,16 +2,19 @@
 
 import { timelineItems, progressWidth } from '@/config/timeline';
 import { CheckCircle, Clock, AlertCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Timeline() {
+  const t = useTranslations('timeline');
+  const tPhases = useTranslations('timeline.phaseTranslations');
   return (
     <div className="max-w-6xl mx-auto mb-16 px-4">
       {/* Progress Bar - Desktop */}
       <div className="hidden md:block relative mb-16">
         {/* Progress Header */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">Project Progress</h2>
-          <p className="text-gray-400">Track our journey through each phase of the competition</p>
+          <h2 className="text-2xl font-bold text-white mb-2">{t('projectProgress')}</h2>
+          <p className="text-gray-400">{t('trackJourney')}</p>
         </div>
         
         {/* Main Progress Container */}
@@ -37,8 +40,8 @@ export default function Timeline() {
       {/* Timeline - Mobile (Vertical) */}
       <div className="md:hidden space-y-6">
         <div className="text-center mb-8">
-          <h2 className="text-xl font-bold text-white mb-2">Project Progress</h2>
-          <p className="text-gray-400 text-sm">Track our journey through each phase</p>
+          <h2 className="text-xl font-bold text-white mb-2">{t('projectProgress')}</h2>
+          <p className="text-gray-400 text-sm">{t('trackJourneyMobile')}</p>
         </div>
         {timelineItems.map((item, index) => (
           <MobileTimelineItem key={item.id} item={item} index={index} totalItems={timelineItems.length} />
@@ -55,12 +58,25 @@ interface TimelinePointProps {
     date: string;
     status: 'completed' | 'current' | 'upcoming';
     progress: number;
+    description?: string;
+    details?: string[];
   };
   index: number;
   totalItems: number;
 }
 
 function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
+  const t = useTranslations('timeline');
+  const tPhases = useTranslations('timeline.phaseTranslations');
+  
+  // Translate the item data
+  const translatedItem = {
+    ...item,
+    phase: tPhases(item.phase) || item.phase,
+    description: item.description ? (tPhases(item.description) || item.description) : '',
+    details: item.details?.map(detail => tPhases(detail) || detail) || []
+  };
+  
   const getStatusStyles = () => {
     switch (item.status) {
       case 'completed':
@@ -108,20 +124,20 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
           <div className="flex items-center gap-2 mb-2">
             {styles.icon}
             <span className={`text-xs font-bold ${styles.text}`}>
-              {item.status === 'completed' ? 'COMPLETED' : 
-               item.status === 'current' ? 'IN PROGRESS' : 'UPCOMING'}
+              {item.status === 'completed' ? t('completed') : 
+               item.status === 'current' ? t('inProgress') : t('upcoming')}
             </span>
           </div>
           <div className="text-xs text-gray-300">
-            {item.phase}
+            {translatedItem.phase}
           </div>
           <div className="text-xs text-gray-400 font-mono mt-1">
-            {item.date}
+            {translatedItem.date}
           </div>
           {item.status === 'current' && (
             <div className="mt-2">
               <div className="flex items-center justify-between text-xs text-gray-400 mb-1">
-                <span>Progress</span>
+                <span>{t('progress')}</span>
                 <span>{item.progress}%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-1">
@@ -138,14 +154,14 @@ function TimelinePoint({ item, index, totalItems }: TimelinePointProps) {
       {/* Label */}
       <div className="mt-4 text-center max-w-[120px] relative z-10">
         <div className={`text-sm font-bold mb-1 ${styles.text} ${isActive ? 'animate-pulse' : ''}`}>
-          {item.phase}
+          {translatedItem.phase}
         </div>
         <div className="text-xs text-gray-400 font-mono">
-          {item.date}
+          {translatedItem.date}
         </div>
         {isActive && (
           <div className="mt-1 text-xs text-red-400 font-semibold animate-pulse">
-            ACTIVE
+            {t('active')}
           </div>
         )}
       </div>
@@ -160,13 +176,25 @@ interface MobileTimelineItemProps {
     date: string;
     status: 'completed' | 'current' | 'upcoming';
     progress: number;
-    description: string;
+    description?: string;
+    details?: string[];
   };
   index: number;
   totalItems: number;
 }
 
 function MobileTimelineItem({ item, index, totalItems }: MobileTimelineItemProps) {
+  const t = useTranslations('timeline');
+  const tPhases = useTranslations('timeline.phaseTranslations');
+  
+  // Translate the item data
+  const translatedItem = {
+    ...item,
+    phase: tPhases(item.phase) || item.phase,
+    description: item.description ? (tPhases(item.description) || item.description) : '',
+    details: item.details?.map(detail => tPhases(detail) || detail) || []
+  };
+  
   const getStatusStyles = () => {
     switch (item.status) {
       case 'completed':
@@ -226,28 +254,28 @@ function MobileTimelineItem({ item, index, totalItems }: MobileTimelineItemProps
               <div className="flex items-center gap-2">
                 {styles.icon}
                 <h3 className={`text-base font-bold ${styles.text}`}>
-                  Phase {index + 1}: {item.phase}
+                  {t('phase')} {index + 1}: {translatedItem.phase}
                 </h3>
               </div>
               <span className={`text-xs px-2 py-1 rounded-full border ${styles.badge}`}>
-                {item.status === 'completed' ? 'COMPLETED' : 
-                 item.status === 'current' ? 'ACTIVE' : 'UPCOMING'}
+                {item.status === 'completed' ? t('completed') : 
+                 item.status === 'current' ? t('active') : t('upcoming')}
               </span>
             </div>
             
             <div className={`text-sm mb-2 font-mono ${styles.text}`}>
-              {item.date}
+              {translatedItem.date}
             </div>
             
             <p className="text-sm text-gray-300 mb-3 leading-relaxed">
-              {item.description}
+              {translatedItem.description}
             </p>
             
             {/* Progress for current stage */}
             {item.status === 'current' && (
               <div className="mb-3">
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
-                  <span>Progress</span>
+                  <span>{t('progress')}</span>
                   <span className="font-semibold">{item.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
@@ -260,14 +288,14 @@ function MobileTimelineItem({ item, index, totalItems }: MobileTimelineItemProps
             )}
             
             {/* Details */}
-            {item.details && (
+            {translatedItem.details && translatedItem.details.length > 0 && (
               <div className="mt-3">
                 <h4 className={`font-semibold ${styles.text} mb-2 text-sm`}>
-                  {item.status === 'current' ? 'Current Activities:' : 
-                   item.status === 'completed' ? 'Achievements:' : 'What to Expect:'}
+                  {item.status === 'current' ? t('currentActivities') : 
+                   item.status === 'completed' ? t('achievements') : t('whatToExpect')}
                 </h4>
                 <ul className="text-xs text-gray-300 space-y-1">
-                  {item.details.map((detail, detailIndex) => (
+                  {translatedItem.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-start">
                       <span className="mr-2">•</span>
                       <span>{detail}</span>

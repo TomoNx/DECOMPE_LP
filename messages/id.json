@@ -100,6 +100,18 @@
     "readyToStart": "Ready to Start Your Journey?",
     "readyToStartDesc": "Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0 - tempat di mana mimpi digital menjadi kenyataan.",
     "registerNow": "REGISTER NOW",
+    "projectProgress": "Project Progress",
+    "trackJourney": "Lacak perjalanan kami melalui setiap fase kompetisi",
+    "trackJourneyMobile": "Lacak perjalanan kami melalui setiap fase",
+    "phase": "Fase",
+    "progress": "Progress",
+    "active": "AKTIF",
+    "completed": "SELESAI",
+    "inProgress": "SEDANG BERLANGSUNG",
+    "upcoming": "AKAN DATANG",
+    "currentActivities": "Aktivitas Saat Ini:",
+    "achievements": "Pencapaian:",
+    "whatToExpect": "Yang Dapat Diharapkan:",
     "events": {
       "registrationPeriod": {
         "title": "Registration Period",
@@ -121,6 +133,85 @@
         "date": "05 - 15 January 2025",
         "description": "Seminggu penuh kompetisi desain dengan tantangan real-world dari perusahaan partner."
       }
+    },
+    "phases": {
+      "recruitment": {
+        "title": "Recruitment",
+        "date": "01-30 NOV",
+        "description": "Pembukaan pendaftaran untuk semua agen perubahan digital",
+        "details": [
+          "150+ pendaftar aktif",
+          "20+ institusi pendidikan", 
+          "Early bird sold out dalam 2 minggu"
+        ]
+      },
+      "selection": {
+        "title": "Selection",
+        "date": "05 DEC",
+        "description": "Pengumuman agen yang lolos seleksi digital",
+        "details": [
+          "80 peserta lolos seleksi",
+          "Portfolio review oleh 10+ expert",
+          "Diversifikasi background peserta"
+        ]
+      },
+      "training": {
+        "title": "Training",
+        "date": "10-20 DEC",
+        "description": "Bootcamp intensif dan mentoring dengan master digital",
+        "details": [
+          "UI/UX Design Fundamentals (Selesai)",
+          "User Research & Testing (Sedang Berlangsung)",
+          "Prototyping with Figma (Akan Datang)"
+        ]
+      },
+      "competition": {
+        "title": "Competition",
+        "date": "05-15 JAN",
+        "description": "Babak penyisihan dan final battle of interfaces",
+        "details": [
+          "48-hour design challenge",
+          "Real-world case studies",
+          "Live judging session"
+        ]
+      },
+      "victory": {
+        "title": "Victory",
+        "date": "20 JAN",
+        "description": "Pengumuman pemenang dan penyerahan legacy awards",
+        "details": [
+          "Award presentation ceremony",
+          "Networking with industry leaders",
+          "Alumni induction program"
+        ]
+      }
+    },
+    "phaseTranslations": {
+      "recruitment": "Recruitment",
+      "selection": "Selection",
+      "training": "Training",
+      "competition": "Competition",
+      "victory": "Victory",
+      "recruitment_desc": "Pembukaan pendaftaran untuk semua agen perubahan digital",
+      "selection_desc": "Pengumuman agen yang lolos seleksi digital",
+      "training_desc": "Bootcamp intensif dan mentoring dengan master digital",
+      "competition_desc": "Babak penyisihan dan final battle of interfaces",
+      "victory_desc": "Pengumuman pemenang dan penyerahan legacy awards",
+      "recruitment_detail1": "150+ pendaftar aktif",
+      "recruitment_detail2": "20+ institusi pendidikan",
+      "recruitment_detail3": "Early bird sold out dalam 2 minggu",
+      "selection_detail1": "80 peserta lolos seleksi",
+      "selection_detail2": "Portfolio review oleh 10+ expert",
+      "selection_detail3": "Diversifikasi background peserta",
+      "training_detail1": "UI/UX Design Fundamentals (Selesai)",
+      "training_detail2": "User Research & Testing (Sedang Berlangsung)",
+      "training_detail3": "Prototyping with Figma (Akan Datang)",
+      "competition_detail1": "48-hour design challenge",
+      "competition_detail2": "Real-world case studies",
+      "competition_detail3": "Live judging session",
+      "victory_detail1": "Award presentation ceremony",
+      "victory_detail2": "Networking with industry leaders",
+      "victory_detail3": "Alumni induction program"
     }
   },
   "registration": {
