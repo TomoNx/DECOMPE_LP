@@ -3,17 +3,19 @@
 import { useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import { locales } from '@/routing'
+import { memo, useCallback, useMemo } from 'react'
 
-const languages = [
-  { code: 'en', name: 'EN', flag: '🇺🇸' },
-  { code: 'id', name: 'ID', flag: '🇮🇩' }
-]
-
-export default function LanguageSwitcher() {
+const LanguageSwitcher = memo(() => {
   const locale = useLocale()
   const pathname = usePathname()
 
-  const handleLanguageChange = (newLocale: string) => {
+  // Memoize languages array
+  const languages = useMemo(() => [
+    { code: 'en', name: 'EN', flag: '🇺🇸' },
+    { code: 'id', name: 'ID', flag: '🇮🇩' }
+  ], [])
+
+  const handleLanguageChange = useCallback((newLocale: string) => {
     if (newLocale === locale) return
     
     // Remove current locale from pathname if it exists
@@ -24,7 +26,7 @@ export default function LanguageSwitcher() {
     
     // Use window.location.href for a clean page transition
     window.location.href = newUrl
-  }
+  }, [locale, pathname])
 
   return (
     <div className="relative">
@@ -54,4 +56,6 @@ export default function LanguageSwitcher() {
       </div>
     </div>
   )
-}
+})
+
+export default LanguageSwitcher

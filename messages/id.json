@@ -188,14 +188,22 @@
     },
     "phaseTranslations": {
       "pendaftaran": "Pendaftaran",
+      "bootcamp": "Bootcamp",
       "pengerjaan_karya": "Pengerjaan Karya",
       "penjurian": "Penjurian & Pengumuman",
       "tahap_final": "Tahap Final",
       
       "pendaftaran_desc": "Periode pendaftaran resmi untuk semua peserta",
-      "pengerjaan_karya_desc": "Fase bootcamp intensif dan pengembangan karya", 
+      "bootcamp_desc": "Program pelatihan intensif dan pengembangan skill",
+      "pengerjaan_karya_desc": "Fase pengembangan proyek dan pengumpulan karya", 
       "penjurian_desc": "Proses penjurian dan pengumuman finalis",
       "tahap_final_desc": "Presentasi final dan upacara penghargaan",
+      
+      "pendaftaran_group_desc": "Fase pendaftaran kompetisi DECOMPE 4.0",
+      "bootcamp_group_desc": "Program pelatihan intensif untuk pengembangan skill",
+      "pengerjaan_karya_group_desc": "Periode pengembangan proyek dan pengumpulan karya",
+      "penjurian_group_desc": "Proses penjurian dan fase evaluasi",
+      "tahap_final_group_desc": "Tahap final dengan presentasi dan penghargaan",
       
       "pendaftaran_detail1": "✅ Pendaftaran Tahap 1",
       "pendaftaran_detail2": "✅ Pendaftaran Tahap 2",
@@ -204,10 +212,17 @@
       "pendaftaran_milestone2": "Semua peserta terdaftar",
       "pendaftaran_milestone3": "Dokumentasi terverifikasi",
       
-      "pengerjaan_karya_detail1": "✅ Bootcamp (Pembekalan Peserta)",
-      "pengerjaan_karya_detail2": "✅ Periode Pengumpulan Karya",
+      "bootcamp_detail1": "✅ Pelatihan Dasar UI/UX Design",
+      "bootcamp_detail2": "✅ Sesi Workshop Hands-on",
+      "bootcamp_detail3": "✅ Mentoring dan Review Portfolio",
+      "bootcamp_milestone1": "Modul pelatihan selesai",
+      "bootcamp_milestone2": "Sesi workshop selesai",
+      "bootcamp_milestone3": "Review portfolio dilakukan",
+      
+      "pengerjaan_karya_detail1": "✅ Pembagian Proyek & Brief",
+      "pengerjaan_karya_detail2": "✅ Periode Pengembangan Karya",
       "pengerjaan_karya_detail3": "✅ Batas Akhir Pengumpulan Karya",
-      "pengerjaan_karya_milestone1": "Sesi bootcamp selesai",
+      "pengerjaan_karya_milestone1": "Brief proyek dibagikan",
       "pengerjaan_karya_milestone2": "Semua karya terkumpul",
       "pengerjaan_karya_milestone3": "Review kualitas selesai",
       

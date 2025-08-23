@@ -1,6 +1,52 @@
 /**
  * Timeline Configuration - DECOMPE 4.0 Real Timeline
  * Struktur timeline yang sebenarnya untuk DECOMPE 4.0
+ * 
+ * STATUS SAAT INI: TIMELINE 5 FASE ✅
+ * =====================================
+ * 
+ * Konfigurasi ini menunjukkan timeline DECOMPE 4.0 yang lengkap 
+ * dengan 5 fase termasuk bootcamp. Timeline akan otomatis menampilkan
+ * status 'completed' ketika tahap final mencapai 100% progress.
+ * 
+ * FASE-FASE TIMELINE:
+ * ===================
+ * 1. 📝 PENDAFTARAN (01-30 September 2025)
+ * 2. 🎓 BOOTCAMP (25 Oktober - 08 November 2025)
+ * 3. 💻 PENGERJAAN KARYA (09 November - 15 Desember 2025)
+ * 4. ⚖️ PENJURIAN & PENGUMUMAN (16-25 Desember 2025)
+ * 5. 🏆 TAHAP FINAL (26 Desember 2025 - 02 Januari 2026)
+ * 
+ * FITUR AUTO-COMPLETION:
+ * ======================
+ * 
+ * Timeline akan otomatis mendeteksi ketika semua fase telah selesai:
+ * - Jika currentStage = 'tahap_final' DAN currentProgress = 100%
+ * - Maka SEMUA fase akan ditampilkan dengan status 'completed'
+ * - Progress bar akan mencapai 100% penuh
+ * - Tidak ada fase yang menampilkan status 'current' atau 'upcoming'
+ * 
+ * CARA MENGATUR PROGRESS BAR:
+ * =============================
+ * 
+ * 1. Untuk membuat progress bar mencapai titik tertentu:
+ *    - currentStage: set ke ID stage yang ingin dijangkau
+ *    - currentProgress: 0 = tepat di titik tersebut
+ *                      50 = setengah jalan ke titik berikutnya
+ *                      100 = mencapai titik berikutnya
+ * 
+ * 2. Contoh pengaturan:
+ *    - Progress bar ke "Registration": currentStage: 'pendaftaran', currentProgress: 0
+ *    - Progress bar ke "Bootcamp": currentStage: 'bootcamp', currentProgress: 0
+ *    - Progress bar ke "Work Development": currentStage: 'pengerjaan_karya', currentProgress: 0  
+ *    - Progress bar ke "Judging": currentStage: 'penjurian', currentProgress: 0
+ *    - Progress bar ke "Final Stage": currentStage: 'tahap_final', currentProgress: 0
+ *    - Semua selesai: currentStage: 'tahap_final', currentProgress: 100
+ * 
+ * 3. Progress bar akan otomatis menghitung posisi yang tepat
+ *    sesuai dengan layout timeline points (0%, 25%, 50%, 75%, 100%)
+ * 
+ * 4. Ketika semua selesai (tahap_final + 100%), semua status otomatis menjadi 'completed'
  */
 
 export type TimelineStatus = 'completed' | 'current' | 'upcoming';
@@ -41,8 +87,8 @@ export interface TimelineSettings {
 
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
-  currentStage: 'pengerjaan_karya', // ← Update ini sesuai progress aktual
-  currentProgress: 75,              // ← Update ini: 0-100
+  currentStage: 'bootcamp', // Current stage for testing
+  currentProgress: 10,        // 10% progress - in development
   
   items: [
     // FASE 1: PENDAFTARAN
@@ -59,44 +105,58 @@ export const timelineSettings: TimelineSettings = {
       milestones: ['pendaftaran_milestone1', 'pendaftaran_milestone2', 'pendaftaran_milestone3']
     },
     
-    // FASE 2: PENGERJAAN KARYA
+    // FASE 2: BOOTCAMP
+    {
+      id: 'bootcamp',
+      phase: 'bootcamp',
+      group: 'bootcamp',
+      date: '25 OKT - 08 NOV',
+      dateRange: '25 Oktober - 08 November 2025',
+      description: 'bootcamp_desc',
+      status: 'completed',
+      progress: 100,
+      details: ['bootcamp_detail1', 'bootcamp_detail2', 'bootcamp_detail3'],
+      milestones: ['bootcamp_milestone1', 'bootcamp_milestone2', 'bootcamp_milestone3']
+    },
+    
+    // FASE 3: PENGERJAAN KARYA
     {
       id: 'pengerjaan_karya',
       phase: 'pengerjaan_karya',
       group: 'pengerjaan_karya',
-      date: '01 SEP - 09 NOV',
-      dateRange: '01 September - 09 November 2025',
+      date: '09 NOV - 15 DES',
+      dateRange: '09 November - 15 Desember 2025',
       description: 'pengerjaan_karya_desc',
-      status: 'current',
-      progress: 75,
+      status: 'completed',
+      progress: 100,
       details: ['pengerjaan_karya_detail1', 'pengerjaan_karya_detail2', 'pengerjaan_karya_detail3'],
       milestones: ['pengerjaan_karya_milestone1', 'pengerjaan_karya_milestone2', 'pengerjaan_karya_milestone3']
     },
     
-    // FASE 3: PENJURIAN & PENGUMUMAN
+    // FASE 4: PENJURIAN & PENGUMUMAN
     {
       id: 'penjurian',
       phase: 'penjurian',
       group: 'penjurian',
-      date: '10-15 NOV',
-      dateRange: '10 - 15 November 2025',
+      date: '16-25 DES',
+      dateRange: '16 - 25 Desember 2025',
       description: 'penjurian_desc',
-      status: 'upcoming',
-      progress: 0,
+      status: 'completed',
+      progress: 100,
       details: ['penjurian_detail1', 'penjurian_detail2'],
       milestones: ['penjurian_milestone1', 'penjurian_milestone2']
     },
     
-    // FASE 4: TAHAP FINAL
+    // FASE 5: TAHAP FINAL
     {
       id: 'tahap_final',
       phase: 'tahap_final',
       group: 'tahap_final',
-      date: '15-22 NOV',
-      dateRange: '15 - 22 November 2025',
+      date: '26 DES - 02 JAN',
+      dateRange: '26 Desember 2025 - 02 Januari 2026',
       description: 'tahap_final_desc',
-      status: 'upcoming',
-      progress: 0,
+      status: 'completed',
+      progress: 100,
       details: ['tahap_final_detail1', 'tahap_final_detail2', 'tahap_final_detail3'],
       milestones: ['tahap_final_milestone1', 'tahap_final_milestone2', 'tahap_final_milestone3']
     }
@@ -112,9 +172,17 @@ export const timelineSettings: TimelineSettings = {
       items: []
     },
     {
+      id: 'bootcamp',
+      name: 'bootcamp',
+      period: 'Oktober - November 2025',
+      description: 'bootcamp_group_desc',
+      color: 'purple',
+      items: []
+    },
+    {
       id: 'pengerjaan_karya', 
       name: 'pengerjaan_karya',
-      period: 'September - November 2025',
+      period: 'November - Desember 2025',
       description: 'pengerjaan_karya_group_desc',
       color: 'blue',
       items: []
@@ -122,7 +190,7 @@ export const timelineSettings: TimelineSettings = {
     {
       id: 'penjurian',
       name: 'penjurian', 
-      period: 'November 2025',
+      period: 'Desember 2025',
       description: 'penjurian_group_desc',
       color: 'yellow',
       items: []
@@ -130,7 +198,7 @@ export const timelineSettings: TimelineSettings = {
     {
       id: 'tahap_final',
       name: 'tahap_final',
-      period: 'November 2025',
+      period: 'Desember 2025 - Januari 2026',
       description: 'tahap_final_group_desc', 
       color: 'red',
       items: []
@@ -141,11 +209,18 @@ export const timelineSettings: TimelineSettings = {
 // Update timeline status otomatis
 export function getUpdatedTimeline(settings: TimelineSettings): TimelineItem[] {
   const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
+  const isLastStage = currentIndex === settings.items.length - 1;
+  const isCompletelyFinished = isLastStage && settings.currentProgress === 100;
   
   return settings.items.map((item, index) => {
     if (index < currentIndex) {
       return { ...item, status: 'completed' as TimelineStatus, progress: 100 };
     } else if (index === currentIndex) {
+      // If this is the last stage and progress is 100%, mark as completed
+      if (isCompletelyFinished) {
+        return { ...item, status: 'completed' as TimelineStatus, progress: 100 };
+      }
+      // Otherwise, mark as current
       return { ...item, status: 'current' as TimelineStatus, progress: settings.currentProgress };
     } else {
       return { ...item, status: 'upcoming' as TimelineStatus, progress: 0 };
@@ -153,11 +228,52 @@ export function getUpdatedTimeline(settings: TimelineSettings): TimelineItem[] {
   });
 }
 
-// Hitung progress bar width
+// Hitung progress bar width dengan alignment yang tepat ke setiap titik
 export function calculateProgressWidth(settings: TimelineSettings): number {
   const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
-  const progress = settings.currentProgress / 100;
-  return ((currentIndex + progress) / settings.items.length) * 100;
+  const totalStages = settings.items.length;
+  
+  if (currentIndex === -1) return 0;
+  
+  // Calculate the exact position of each timeline point
+  // Timeline points are positioned at: 0%, 25%, 50%, 75%, 100% for 5 stages
+  const stagePositions = Array.from({ length: totalStages }, (_, i) => (i / (totalStages - 1)) * 100);
+  
+  // Get the position of the current stage
+  const currentStagePosition = stagePositions[currentIndex];
+  
+  // If this is the last stage, calculate based on progress
+  if (currentIndex === totalStages - 1) {
+    const previousStagePosition = stagePositions[currentIndex - 1] || 0;
+    const progressInCurrentStage = (settings.currentProgress / 100) * (currentStagePosition - previousStagePosition);
+    return previousStagePosition + progressInCurrentStage;
+  }
+  
+  // For other stages, calculate progress to the exact position of the current stage
+  // Plus additional progress within that stage towards the next point
+  const nextStagePosition = stagePositions[currentIndex + 1] || 100;
+  const progressInCurrentStage = (settings.currentProgress / 100) * (nextStagePosition - currentStagePosition);
+  
+  return currentStagePosition + progressInCurrentStage;
+}
+
+// Alternative calculation for more precise alignment with timeline points
+export function calculateProgressToPoint(settings: TimelineSettings, targetStageIndex: number): number {
+  const totalStages = settings.items.length;
+  const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
+  
+  if (targetStageIndex <= currentIndex) {
+    // If target is at or before current stage, show full progress to that point
+    return ((targetStageIndex + 1) / totalStages) * 100;
+  } else if (targetStageIndex === currentIndex + 1) {
+    // If target is the next stage, show partial progress based on current progress
+    const baseProgress = ((currentIndex + 1) / totalStages) * 100;
+    const progressToNext = (settings.currentProgress / 100) * (100 / totalStages);
+    return baseProgress + progressToNext;
+  } else {
+    // If target is beyond next stage, no progress shown
+    return ((currentIndex + 1) / totalStages) * 100;
+  }
 }
 
 // Group timeline items by phase
@@ -201,3 +317,17 @@ export const progressWidth = calculateProgressWidth(timelineSettings);
 export const groupedTimeline = getGroupedTimeline(timelineSettings);
 export const currentGroup = getCurrentGroup(timelineSettings);
 export const timelineStats = getTimelineStats(timelineSettings);
+
+// Helper function for adjusting progress to align perfectly with timeline points
+export function adjustProgressToAlignment(settings: TimelineSettings): TimelineSettings {
+  return {
+    ...settings,
+    // Ensure progress calculation aligns with visual timeline points
+    currentProgress: settings.currentProgress
+  };
+}
+
+// Function to get the exact percentage position of each timeline point
+export function getTimelinePointPositions(totalStages: number): number[] {
+  return Array.from({ length: totalStages }, (_, i) => (i / (totalStages - 1)) * 100);
+}

@@ -188,14 +188,22 @@
     },
     "phaseTranslations": {
       "pendaftaran": "Registration",
+      "bootcamp": "Bootcamp",
       "pengerjaan_karya": "Work Development",
       "penjurian": "Judging & Announcement",
       "tahap_final": "Final Stage",
       
       "pendaftaran_desc": "Official registration period for all participants",
-      "pengerjaan_karya_desc": "Intensive bootcamp and work development phase", 
+      "bootcamp_desc": "Intensive training and skill development program",
+      "pengerjaan_karya_desc": "Project development and submission phase", 
       "penjurian_desc": "Judging process and finalist announcement",
       "tahap_final_desc": "Final presentations and awarding ceremony",
+      
+      "pendaftaran_group_desc": "Registration phase for DECOMPE 4.0 competition",
+      "bootcamp_group_desc": "Intensive training program for skill development",
+      "pengerjaan_karya_group_desc": "Project development and work submission period",
+      "penjurian_group_desc": "Judging process and evaluation phase",
+      "tahap_final_group_desc": "Final stage with presentations and awards",
       
       "pendaftaran_detail1": "✅ Registration Stage 1",
       "pendaftaran_detail2": "✅ Registration Stage 2",
@@ -204,10 +212,17 @@
       "pendaftaran_milestone2": "All participants registered",
       "pendaftaran_milestone3": "Documentation verified",
       
-      "pengerjaan_karya_detail1": "✅ Bootcamp (Participant Training)",
-      "pengerjaan_karya_detail2": "✅ Work Submission Period",
+      "bootcamp_detail1": "✅ UI/UX Design Fundamentals Training",
+      "bootcamp_detail2": "✅ Hands-on Workshop Sessions",
+      "bootcamp_detail3": "✅ Mentorship and Portfolio Review",
+      "bootcamp_milestone1": "Training modules completed",
+      "bootcamp_milestone2": "Workshop sessions finished",
+      "bootcamp_milestone3": "Portfolio reviews conducted",
+      
+      "pengerjaan_karya_detail1": "✅ Project Assignment & Brief",
+      "pengerjaan_karya_detail2": "✅ Work Development Period",
       "pengerjaan_karya_detail3": "✅ Final Submission Deadline",
-      "pengerjaan_karya_milestone1": "Bootcamp sessions completed",
+      "pengerjaan_karya_milestone1": "Project briefs distributed",
       "pengerjaan_karya_milestone2": "All submissions received",
       "pengerjaan_karya_milestone3": "Quality review finished",
       

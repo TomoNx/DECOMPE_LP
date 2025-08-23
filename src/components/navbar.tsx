@@ -1,42 +1,172 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useMemo, memo } from 'react'
 import { Menu, X, Zap, Shield, Cpu, Target } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import LanguageSwitcher from '@/components/language-switcher'
 
-export default function Navbar() {
+// Memoized navigation item component for better performance
+const NavItem = memo(({ item, currentPath, locale, router }: { item: any, currentPath: string, locale: string, router: any }) => {
+  const handleClick = useCallback(() => {
+    if (item.path === '/') {
+      // For home navigation, use window.location.href to ensure clean navigation
+      window.location.href = `/${locale}`
+    } else {
+      router.push(`/${locale}${item.path}`)
+    }
+  }, [item.path, locale, router])
+
+  return (
+    <div
+      onClick={handleClick}
+      className={`group relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden cursor-pointer ${
+        currentPath === item.path
+          ? 'text-red-400'
+          : 'text-gray-400 hover:text-red-400'
+      }`}
+    >
+      <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+        currentPath === item.path
+          ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
+          : 'bg-transparent group-hover:bg-red-600/10'
+      }`}></div>
+      <div className="relative flex items-center gap-2">
+        <div className={`transition-all duration-300 ${
+          currentPath === item.path ? 'text-red-400' : 'text-gray-500 group-hover:text-red-400'
+        }`}>
+          {item.icon}
+        </div>
+        <span className="font-medium">{item.label}</span>
+        {currentPath === item.path && (
+          <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
+        )}
+      </div>
+    </div>
+  )
+
+})
+
+// Memoized mobile nav item
+const MobileNavItem = memo(({ item, currentPath, locale, index, isOpen, onClose, router }: { 
+  item: any, currentPath: string, locale: string, index: number, isOpen: boolean, onClose: () => void, router: any
+}) => {
+  const handleClick = useCallback(() => {
+    if (item.path === '/') {
+      // For home navigation, use window.location.href to ensure clean navigation
+      window.location.href = `/${locale}`
+    } else {
+      router.push(`/${locale}${item.path}`)
+    }
+    onClose()
+  }, [item.path, locale, router, onClose])
+
+  return (
+    <div
+      onClick={handleClick}
+      className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-500 overflow-hidden cursor-pointer transform ${
+        isOpen 
+          ? 'translate-x-0 opacity-100' 
+          : 'translate-x-4 opacity-0'
+      } ${
+        currentPath === item.path
+          ? 'text-red-400'
+          : 'text-gray-400 hover:text-red-400'
+      }`}
+      style={{
+        transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+      }}
+    >
+      <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
+        currentPath === item.path
+          ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
+          : 'bg-transparent group-hover:bg-red-600/10'
+      }`}></div>
+      <div className="relative flex items-center gap-3 w-full">
+        <div className={`p-1.5 rounded-lg ${
+          currentPath === item.path 
+            ? 'bg-red-600/20 text-red-400' 
+            : 'bg-gray-800/50 text-gray-500 group-hover:bg-red-600/20 group-hover:text-red-400'
+        } transition-colors duration-300`}>
+          {item.icon}
+        </div>
+        <span className="font-medium flex-1">{item.label}</span>
+        {currentPath === item.path && (
+          <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+        )}
+      </div>
+    </div>
+  )
+
+})
+
+function Navbar() {
   const t = useTranslations('nav')
   const locale = useLocale()
   const pathname = usePathname()
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
-  // Remove locale from pathname for comparison
-  const currentPath = pathname.replace(`/${locale}`, '') || '/'
+  // Memoize current path calculation
+  const currentPath = useMemo(() => {
+    return pathname.replace(`/${locale}`, '') || '/'
+  }, [pathname, locale])
 
-  const navItems = [
+  // Memoize navigation items
+  const navItems = useMemo(() => [
     { path: '/', label: t('home'), icon: <Zap className="w-4 h-4" /> },
     { path: '/about', label: t('about'), icon: <Shield className="w-4 h-4" /> },
     { path: '/timeline', label: t('timeline'), icon: <Cpu className="w-4 h-4" /> },
     { path: '/registration', label: t('registration'), icon: <Target className="w-4 h-4" /> },
-  ]
+  ], [t])
+
+  // Throttled scroll handler for better performance
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY > 20
+    if (scrolled !== isScrolled) {
+      setIsScrolled(scrolled)
+    }
+  }, [isScrolled])
+
+  const handleMenuToggle = useCallback(() => {
+    setIsOpen(prev => !prev)
+  }, [])
+
+  const handleMenuClose = useCallback(() => {
+    setIsOpen(false)
+  }, [])
+
+  const handleMouseEnter = useCallback(() => {
+    setIsHovered(true)
+  }, [])
+
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false)
+  }, [])
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+    let ticking = false
+    
+    const scrollHandler = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', scrollHandler, { passive: true })
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', scrollHandler)
     }
-  }, [])
+  }, [handleScroll])
 
   return (
     <>
@@ -47,8 +177,8 @@ export default function Navbar() {
             ? 'bg-black/80 backdrop-blur-lg border-b border-red-600/20 shadow-lg shadow-red-600/10' 
             : 'bg-transparent'
         }`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {/* Animated Background Effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -61,8 +191,8 @@ export default function Navbar() {
             
             {/* Logo */}
             <div 
-              onClick={() => window.location.href = '/'}
               className="flex items-center group transition-all duration-300 hover:scale-105 cursor-pointer flex-shrink-0"
+              onClick={() => window.location.href = `/${locale}`}
             >
               <Image 
                 src="/logo.svg" 
@@ -84,67 +214,15 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1 flex-1 justify-center">
-                {navItems.map((item, index) => {
-                  if (item.path === '/') {
-                    return (
-                      <div
-                        key={item.path}
-                        onClick={() => window.location.href = '/'}
-                        className={`group relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden cursor-pointer ${
-                          currentPath === item.path
-                            ? 'text-red-400'
-                            : 'text-gray-400 hover:text-red-400'
-                        }`}
-                      >
-                        <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
-                          currentPath === item.path
-                            ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
-                            : 'bg-transparent group-hover:bg-red-600/10'
-                        }`}></div>
-                        <div className="relative flex items-center gap-2">
-                          <div className={`transition-all duration-300 ${
-                            currentPath === item.path ? 'text-red-400' : 'text-gray-500 group-hover:text-red-400'
-                          }`}>
-                            {item.icon}
-                          </div>
-                          <span className="font-medium">{item.label}</span>
-                          {currentPath === item.path && (
-                            <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  }
-                  
-                  return (
-                    <Link
-                      key={item.path}
-                      href={`/${locale}${item.path}`}
-                      className={`group relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden ${
-                        currentPath === item.path
-                          ? 'text-red-400'
-                          : 'text-gray-400 hover:text-red-400'
-                      }`}
-                    >
-                      <div className={`absolute inset-0 rounded-xl transition-all duration-300 ${
-                        currentPath === item.path
-                          ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
-                          : 'bg-transparent group-hover:bg-red-600/10'
-                      }`}></div>
-                      <div className="relative flex items-center gap-2">
-                        <div className={`transition-all duration-300 ${
-                          currentPath === item.path ? 'text-red-400' : 'text-gray-500 group-hover:text-red-400'
-                        }`}>
-                          {item.icon}
-                        </div>
-                        <span className="font-medium">{item.label}</span>
-                        {currentPath === item.path && (
-                          <div className="w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
-                        )}
-                      </div>
-                    </Link>
-                  )
-                })}              
+                {navItems.map((item) => (
+                  <NavItem 
+                    key={item.path} 
+                    item={item} 
+                    currentPath={currentPath} 
+                    locale={locale}
+                    router={router}
+                  />
+                ))}              
             </div>
 
             {/* Language Switcher - Desktop */}
@@ -154,7 +232,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleMenuToggle}
               className="lg:hidden p-2 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-600/10 transition-all duration-300 relative overflow-hidden group flex-shrink-0"
             >
               <div className="absolute inset-0 bg-red-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -180,89 +258,18 @@ export default function Navbar() {
             isOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
           }`}>
             <div className="flex flex-col gap-2">
-              {navItems.map((item, index) => {
-                  if (item.path === '/') {
-                    return (
-                      <div
-                        key={item.path}
-                        onClick={() => {
-                          window.location.href = '/'
-                          setIsOpen(false)
-                        }}
-                        className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-500 overflow-hidden cursor-pointer transform ${
-                          isOpen 
-                            ? 'translate-x-0 opacity-100' 
-                            : 'translate-x-4 opacity-0'
-                        } ${
-                          currentPath === item.path
-                            ? 'text-red-400'
-                            : 'text-gray-400 hover:text-red-400'
-                        }`}
-                        style={{
-                          transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
-                        }}
-                      >
-                        <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                          currentPath === item.path
-                            ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
-                            : 'bg-transparent group-hover:bg-red-600/10'
-                        }`}></div>
-                        <div className="relative flex items-center gap-3 w-full">
-                          <div className={`p-1.5 rounded-lg ${
-                            currentPath === item.path 
-                              ? 'bg-red-600/20 text-red-400' 
-                              : 'bg-gray-800/50 text-gray-500 group-hover:bg-red-600/20 group-hover:text-red-400'
-                          } transition-colors duration-300`}>
-                            {item.icon}
-                          </div>
-                          <span className="font-medium flex-1">{item.label}</span>
-                          {currentPath === item.path && (
-                            <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  }
-                  
-                  return (
-                    <Link
-                      key={item.path}
-                      href={`/${locale}${item.path}`}
-                      onClick={() => setIsOpen(false)}
-                      className={`group relative flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-500 overflow-hidden transform ${
-                        isOpen 
-                          ? 'translate-x-0 opacity-100' 
-                          : 'translate-x-4 opacity-0'
-                      } ${
-                        currentPath === item.path
-                          ? 'text-red-400'
-                          : 'text-gray-400 hover:text-red-400'
-                      }`}
-                      style={{
-                        transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
-                      }}
-                    >
-                      <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                        currentPath === item.path
-                          ? 'bg-red-600/20 border border-red-600/30 shadow-lg shadow-red-600/20'
-                          : 'bg-transparent group-hover:bg-red-600/10'
-                      }`}></div>
-                      <div className="relative flex items-center gap-3 w-full">
-                        <div className={`p-1.5 rounded-lg ${
-                          currentPath === item.path 
-                            ? 'bg-red-600/20 text-red-400' 
-                            : 'bg-gray-800/50 text-gray-500 group-hover:bg-red-600/20 group-hover:text-red-400'
-                        } transition-colors duration-300`}>
-                          {item.icon}
-                        </div>
-                        <span className="font-medium flex-1">{item.label}</span>
-                        {currentPath === item.path && (
-                          <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                        )}
-                      </div>
-                    </Link>
-                  )
-                })}
+              {navItems.map((item, index) => (
+                <MobileNavItem 
+                  key={item.path}
+                  item={item}
+                  currentPath={currentPath}
+                  locale={locale}
+                  index={index}
+                  isOpen={isOpen}
+                  onClose={handleMenuClose}
+                  router={router}
+                />
+              ))}
             </div>
             <div className={`mt-4 pt-4 border-t border-red-600/20 transition-all duration-500 transform ${
               isOpen 
@@ -285,3 +292,5 @@ export default function Navbar() {
     </>
   )
 }
+
+export default memo(Navbar)
