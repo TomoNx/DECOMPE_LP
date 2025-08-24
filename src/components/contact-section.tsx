@@ -1,7 +1,13 @@
+"use client"
+
 import { Phone, User, Mail, Instagram, Globe } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { useTranslations } from "next-intl"
 
 export default function ContactSection() {
+  const tContact = useTranslations("contact")
+  const tFaq = useTranslations("faq")
   const contactPersons = [
     {
       name: "Rayssa Ameyliananda",
@@ -19,7 +25,7 @@ export default function ContactSection() {
       <div className="mb-8 sm:mb-12">
         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8">
           <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-            Contact Person
+            {tContact("personTitle")}
           </span>
         </h3>
         
@@ -50,26 +56,182 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Social Media & Official Contact */}
-      <div className="border-t border-red-900/30 pt-6 sm:pt-8">
-        <h4 className="text-lg sm:text-xl font-semibold text-center mb-4 sm:mb-6 text-red-300">
-          Official Contact
-        </h4>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center text-gray-400">
-          <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
-            <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-            <span className="text-xs sm:text-sm md:text-base break-all">decompe@digitalrevolution.com</span>
+      {/* Social media moved to footer below */}
+
+      {/* FAQ Footer */}
+      <footer className="mt-8 sm:mt-12 border-t border-red-900/30 pt-8 sm:pt-10">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-600/20 border border-red-600/40 text-red-300 text-xs sm:text-sm backdrop-blur-sm mb-3">
+            {tFaq("badge")}
           </div>
-          <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
-            <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-            <span className="text-xs sm:text-sm md:text-base">@decompe_revolution</span>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
-            <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-            <span className="text-xs sm:text-sm md:text-base">www.decompe4-0.id</span>
+          <h4 className="text-2xl sm:text-3xl font-bold mb-2">
+            <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+              {tFaq("title")}
+            </span>
+          </h4>
+          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+            {tFaq("subtitle")}
+          </p>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-3">
+            {/* Item 1 */}
+            <AccordionItem value="item-1" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      01
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.1.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.1.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 2 */}
+            <AccordionItem value="item-2" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      02
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.2.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.2.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 3 */}
+            <AccordionItem value="item-3" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      03
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.3.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.3.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 4 */}
+            <AccordionItem value="item-4" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      04
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.4.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.4.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 5 */}
+            <AccordionItem value="item-5" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      05
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.5.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.5.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 6 */}
+            <AccordionItem value="item-6" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      06
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.6.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.6.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 7 */}
+            <AccordionItem value="item-7" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      07
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.7.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.7.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+
+            {/* Item 8 */}
+            <AccordionItem value="item-8" className="border-none">
+              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                      08
+                    </span>
+                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.8.q")}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                  {tFaq("items.8.a")}
+                </AccordionContent>
+              </div>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        {/* Official Contact Footer (no title) */}
+        <div className="mt-12 sm:mt-14 md:mt-16 border-t border-red-900/30 pt-6 sm:pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center text-gray-400">
+            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+              <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base break-all">decompe@digitalrevolution.com</span>
+            </div>
+            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+              <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base">@decompe_revolution</span>
+            </div>
+            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+              <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base">www.decompe4-0.id</span>
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }

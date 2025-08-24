@@ -340,5 +340,24 @@
     "learnMore": "LEARN MORE", 
     "viewSchedule": "VIEW SCHEDULE",
     "joinRevolutionNow": "JOIN REVOLUTION NOW"
+  },
+  "contact": {
+    "personTitle": "Contact Person",
+    "officialTitle": "Kontak Resmi"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Temukan jawaban atas pertanyaan umum tentang DECOMPE 4.0 dan persiapkan diri Anda untuk revolusi digital",
+    "items": {
+      "1": { "q": "Apa itu DECOMPE 4.0?", "a": "DECOMPE 4.0 adalah kompetisi dan bootcamp berskala nasional yang berfokus pada transformasi digital, inovasi, dan keterampilan masa depan." },
+      "2": { "q": "Siapa saja yang bisa ikut DECOMPE 4.0?", "a": "Siswa, mahasiswa, fresh graduate, dan profesional yang tertarik pada teknologi dan inovasi digital dipersilakan untuk bergabung." },
+      "3": { "q": "Apa saja paket pendaftaran yang tersedia?", "a": "Kami menyediakan paket Early Access, Standard, dan Squad dengan manfaat berbeda yang cocok untuk individu maupun tim." },
+      "4": { "q": "Apakah wajib memiliki portofolio?", "a": "Portofolio disarankan namun tidak wajib. Motivasi yang jelas dan kemauan untuk belajar sama pentingnya." },
+      "5": { "q": "Bagaimana cara mendaftar DECOMPE 4.0?", "a": "Klik tombol Daftar di beranda atau buka halaman Pendaftaran, kemudian isi formulir dan ikuti instruksi pembayaran." },
+      "6": { "q": "Apa saja yang didapat dalam program bootcamp?", "a": "Mentoring, proyek praktis, materi pembelajaran terkurasi, dan sertifikat setelah selesai (bergantung pada paket)." },
+      "7": { "q": "Bagaimana cara menghubungi dukungan DECOMPE?", "a": "Hubungi Contact Person di atas melalui WhatsApp atau email kami melalui bagian Kontak Resmi." },
+      "8": { "q": "Apa saja persyaratan teknis untuk berpartisipasi?", "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran." }
+    }
   }
 }

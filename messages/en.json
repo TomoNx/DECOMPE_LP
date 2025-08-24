@@ -239,106 +239,149 @@
       "tahap_final_milestone3": "Awards ceremony concluded"
     }
   },
-  "registration": {
-    "title": "Registration", 
-    "subtitle": "Investment for your digital career transformation",
-    "badge": "JOIN THE REVOLUTION",
-    "process": "Registration Process",
-    "processDesc": "3 easy steps to join the digital revolution",
-    "investmentPackages": "Investment Packages",
-    "investmentDesc": "Choose an investment package that suits your digital revolution needs",
-    "requirements": "Requirements",
-    "requirementsDesc": "Requirements to join DECOMPE 4.0",
-    "packages": {
-      "earlyAccess": {
-        "title": "Early Access",
-        "price": "75K",
-        "period": "Until 15 NOV 2024",
-        "features": {
-          "bootcamp": "Full bootcamp access",
-          "certificate": "Digital certificate", 
-          "mentorship": "Mentorship opportunity",
-          "resources": "Exclusive resources"
-        },
-        "savings": "SAVE 25K FROM STANDARD PRICE",
-        "button": "Secure Early Access"
+"registration": {
+  "title": "Registration", 
+  "subtitle": "Investment for your digital career transformation",
+  "badge": "JOIN THE REVOLUTION",
+  "process": "Registration Process",
+  "processDesc": "3 easy steps to join the digital revolution",
+  "investmentPackages": "Investment Packages",
+  "investmentDesc": "Choose an investment package that suits your digital revolution needs",
+  "requirements": "Requirements",
+  "requirementsDesc": "Requirements to join DECOMPE 4.0",
+  "packages": {
+    "earlyAccess": {
+      "title": "Early Access",
+      "price": "75K",
+      "period": "Until 15 NOV 2024",
+      "features": {
+        "bootcamp": "Full bootcamp access",
+        "certificate": "Digital certificate", 
+        "mentorship": "Mentorship opportunity",
+        "resources": "Exclusive resources"
       },
-      "standard": {
-        "title": "Standard",
-        "price": "100K",
-        "period": "16 - 30 NOV 2024",
-        "popular": "POPULAR",
-        "features": {
-          "bootcamp": "Full bootcamp access",
-          "certificate": "Premium certificate",
-          "mentorship": "Priority mentorship", 
-          "ebook": "Free UI/UX ebook",
-          "placement": "Job placement assistance"
-        },
-        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
-        "button": "Join Standard"
-      },
-      "squad": {
-        "title": "Squad (3x)",
-        "price": "250K", 
-        "period": "Until 30 NOV 2024",
-        "features": {
-          "allStandard": "All standard benefits",
-          "discount": "Squad discount (save 50K)",
-          "groupMentorship": "Group mentorship sessions",
-          "projectGuidance": "Team project guidance",
-          "squadChannel": "Dedicated squad channel"
-        },
-        "perPerson": "PER PERSON: ~83K ONLY",
-        "button": "Build Squad"
-      }
+      "savings": "SAVE 25K FROM STANDARD PRICE",
+      "button": "Secure Early Access"
     },
-    "steps": {
-      "fillForm": {
-        "title": "Fill Form",
-        "description": "Complete the registration form with personal data and portfolio (if any)",
-        "time": "Estimated time: 15 minutes"
+    "standard": {
+      "title": "Standard",
+      "price": "100K",
+      "period": "16 - 30 NOV 2024",
+      "popular": "POPULAR",
+      "features": {
+        "bootcamp": "Full bootcamp access",
+        "certificate": "Premium certificate",
+        "mentorship": "Priority mentorship", 
+        "ebook": "Free UI/UX ebook",
+        "placement": "Job placement assistance"
       },
-      "payment": {
-        "title": "Payment",
-        "description": "Choose an investment package and make payment through available methods",
-        "time": "Estimated time: 10 minutes"
-      },
-      "confirmation": {
-        "title": "Confirmation",
-        "description": "Wait for confirmation and access to exclusive preparation materials",
-        "time": "Confirmation within 24 hours"
-      }
+      "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+      "button": "Join Standard"
     },
-    "requirementsSections": {
-      "technical": {
-        "title": "Technical Requirements",
-        "items": {
-          "laptop": "Laptop or computer with minimum specifications",
-          "software": "Design software (Figma, Adobe XD, or Sketch)",
-          "internet": "Stable internet connection for online sessions",
-          "equipment": "Webcam and microphone for mentoring sessions"
-        }
+    "squad": {
+      "title": "Squad (3x)",
+      "price": "250K", 
+      "period": "Until 30 NOV 2024",
+      "features": {
+        "allStandard": "All standard benefits",
+        "discount": "Squad discount (save 50K)",
+        "groupMentorship": "Group mentorship sessions",
+        "projectGuidance": "Team project guidance",
+        "squadChannel": "Dedicated squad channel"
       },
-      "participant": {
-        "title": "Participant Requirements", 
-        "items": {
-          "education": "High school/vocational students, university students, or young professionals",
-          "experience": "Less than 2 years experience in UI/UX field",
-          "portfolio": "Portfolio (not mandatory, preferred)",
-          "commitment": "Commitment to follow the entire program"
-        }
-      }
+      "perPerson": "PER PERSON: ~83K ONLY",
+      "button": "Build Squad"
     }
   },
-  "common": {
-    "readyToJoin": "Ready to Join the Revolution?",
-    "readyToTransform": "Ready to Transform Your Future?",
-    "joinDescription": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality and visionaries like you find their stage.",
-    "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
-    "backToHome": "Back to Home",
-    "learnMore": "Learn More",
-    "viewSchedule": "View Schedule",
-    "joinRevolutionNow": "JOIN REVOLUTION NOW"
+  "steps": {
+    "fillForm": {
+      "title": "Fill Form",
+      "description": "Complete the registration form with personal data and portfolio (if any)",
+      "time": "Estimated time: 15 minutes"
+    },
+    "payment": {
+      "title": "Payment",
+      "description": "Choose an investment package and make payment through available methods",
+      "time": "Estimated time: 10 minutes"
+    },
+    "confirmation": {
+      "title": "Confirmation",
+      "description": "Wait for confirmation and access to exclusive preparation materials",
+      "time": "Confirmation within 24 hours"
+    }
+  },
+  "requirementsSections": {
+    "technical": {
+      "title": "Technical Requirements",
+      "items": {
+        "laptop": "Laptop or computer with minimum specifications",
+        "software": "Design software (Figma, Adobe XD, or Sketch)",
+        "internet": "Stable internet connection for online sessions",
+        "equipment": "Webcam and microphone for mentoring sessions"
+      }
+    },
+    "participant": {
+      "title": "Participant Requirements", 
+      "items": {
+        "education": "High school/vocational students, university students, or young professionals",
+        "experience": "Less than 2 years experience in UI/UX field",
+        "portfolio": "Portfolio (not mandatory, preferred)",
+        "commitment": "Commitment to follow the entire program"
+      }
+    }
   }
+},
+"common": {
+  "readyToJoin": "Ready to Join the Revolution?",
+  "readyToTransform": "Ready to Transform Your Future?",
+  "joinDescription": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality and visionaries like you find their stage.",
+  "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
+  "backToHome": "Back to Home",
+  "learnMore": "Learn More",
+  "viewSchedule": "View Schedule",
+  "joinRevolutionNow": "JOIN REVOLUTION NOW"
+},
+"contact": {
+  "personTitle": "Contact Person",
+  "officialTitle": "Official Contact"
+},
+"faq": {
+  "badge": "FAQ",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Get answers to common questions about DECOMPE 4.0 and prepare yourself for the digital revolution",
+  "items": {
+    "1": {
+      "q": "What is DECOMPE 4.0?",
+      "a": "DECOMPE 4.0 is a national-scale competition and bootcamp focused on digital transformation, innovation, and future-ready skills."
+    },
+    "2": {
+      "q": "Who can participate in DECOMPE 4.0?",
+      "a": "Students, fresh graduates, and professionals who are passionate about digital technology and innovation are welcome to join."
+    },
+    "3": {
+      "q": "What registration packages are available?",
+      "a": "We provide Early Access, Standard, and Squad packages with different benefits suitable for individuals or teams."
+    },
+    "4": {
+      "q": "Is portfolio required for registration?",
+      "a": "A portfolio is recommended but not mandatory. Clear motivation and willingness to learn are just as important."
+    },
+    "5": {
+      "q": "How do I register for DECOMPE 4.0?",
+      "a": "Click the Register button on the homepage or open the Registration page, then complete the form and follow the payment instructions."
+    },
+    "6": {
+      "q": "What is included in the bootcamp program?",
+      "a": "Mentorship, hands-on projects, curated learning resources, and certification upon completion depending on your package."
+    },
+    "7": {
+      "q": "How do I contact DECOMPE support?",
+      "a": "Reach out to the Contact Persons above via WhatsApp or email us through the Official Contact section."
+    },
+    "8": {
+      "q": "What are the technical requirements to participate?",
+      "a": "A laptop with stable internet access and basic development tools. Detailed requirements are listed on the Registration page."
+    }
+  }
+}
 }
