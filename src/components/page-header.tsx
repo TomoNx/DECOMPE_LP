@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { useCallback } from 'react'
 
 interface PageHeaderProps {
   title: string
@@ -25,6 +26,13 @@ export default function PageHeader({
   const t = useTranslations('common')
   const params = useParams()
   const locale = params.locale as string
+
+  // Use the same home navigation logic as navbar
+  const handleHomeClick = useCallback(() => {
+    // For home navigation, use window.location.href to ensure clean navigation
+    window.location.href = `/${locale}`
+  }, [locale])
+
   return (
     <section className="relative z-10 overflow-hidden min-h-[60vh] flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-black to-red-600/20"></div>
@@ -48,12 +56,14 @@ export default function PageHeader({
         
         <div className="flex justify-center gap-4 scroll-animate">
           {showBackButton && (
-            <Link href={`/${locale}`}>
-              <Button variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
-                <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
-                {t('backToHome')}
-              </Button>
-            </Link>
+            <Button 
+              variant="outline" 
+              onClick={handleHomeClick}
+              className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border cursor-pointer"
+            >
+              <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
+              {t('backToHome')}
+            </Button>
           )}
           {showRegisterButton && (
             <Link href={`/${locale}/registration`}>

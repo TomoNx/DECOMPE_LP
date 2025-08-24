@@ -12,6 +12,7 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   // Memoize particle count based on device performance
   const particleCount = useMemo(() => {
@@ -56,6 +57,8 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
   }, [])
 
   useEffect(() => {
+    setIsMounted(true)
+    
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     setIsReducedMotion(mediaQuery.matches)
@@ -97,8 +100,24 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
     }
   }, [handleScroll, animateOnScroll])
 
-  // Memoize particles for better performance
+  // Memoize particles for better performance - prevent hydration mismatch
   const particles = useMemo(() => {
+    if (!isMounted) {
+      // Return static fallback values during SSR
+      return Array.from({ length: particleCount }, (_, i) => ({
+        id: i,
+        size: 2,
+        top: (i * 20) % 100,
+        left: (i * 15) % 100,
+        animationDelay: i * 0.5,
+        animationDuration: 5,
+        opacity: 0.3,
+        color: i % 3 === 0 ? '#FF0000' : i % 3 === 1 ? '#DC143C' : '#8B0000',
+        boxShadowSize: 4,
+      }))
+    }
+    
+    // Generate random values only on client after mount
     return Array.from({ length: particleCount }, (_, i) => ({
       id: i,
       size: Math.random() * 2 + 1,
@@ -110,10 +129,23 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
       color: i % 3 === 0 ? '#FF0000' : i % 3 === 1 ? '#DC143C' : '#8B0000',
       boxShadowSize: Math.random() * 6 + 2, // Reduced glow
     }))
-  }, [particleCount])
+  }, [particleCount, isMounted])
 
-  // Memoize matrix columns
+  // Memoize matrix columns - prevent hydration mismatch
   const matrixColumns = useMemo(() => {
+    if (!isMounted) {
+      // Return static fallback values during SSR
+      return Array.from({ length: matrixColumnCount }, (_, i) => ({
+        id: i,
+        left: (i * 25) % 100,
+        animationDuration: 20,
+        animationDelay: i * 0.5,
+        fontSize: 12,
+        content: 'ABCDEFGHIJ'
+      }))
+    }
+    
+    // Generate random values only on client after mount
     return Array.from({ length: matrixColumnCount }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
@@ -124,7 +156,7 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
         String.fromCharCode(Math.random() * 94 + 33)
       ).join('')
     }))
-  }, [matrixColumnCount])
+  }, [matrixColumnCount, isMounted])
 
   if (isReducedMotion) {
     return (
@@ -165,7 +197,7 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-red-900/8 to-transparent"></div>
           
           {/* Optimized particles - significantly reduced count */}
-          <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-0 left-0 w-full h-full" suppressHydrationWarning>
             {particles.map((particle) => (
               <div 
                 key={particle.id}
@@ -186,7 +218,7 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
           </div>
           
           {/* Optimized matrix rain - reduced count and complexity */}
-          <div className="matrix-rain">
+          <div className="matrix-rain" suppressHydrationWarning>
             {matrixColumns.map((column) => (
               <div
                 key={column.id}
