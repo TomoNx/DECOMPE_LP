@@ -14,23 +14,9 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
 
-  // Memoize particle count based on device performance
-  const particleCount = useMemo(() => {
-    if (typeof window === 'undefined') return 8
-    
-    // Reduce particles on mobile devices and lower-end devices
-    const isMobile = window.innerWidth <= 768
-    const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4
-    
-    if (isMobile || isLowEnd) return 5
-    return 8 // Reduced from 15 to 8 for better performance
-  }, [])
-
-  // Memoize matrix column count
-  const matrixColumnCount = useMemo(() => {
-    if (typeof window === 'undefined') return 3
-    return window.innerWidth <= 768 ? 2 : 3 // Reduced from 5 to 3/2
-  }, [])
+  // Stable counts for SSR and first client render; adjust after mount to avoid hydration mismatch
+  const [particleCount, setParticleCount] = useState(8)
+  const [matrixColumnCount, setMatrixColumnCount] = useState(3)
 
   const handleScroll = useCallback(() => {
     const scrollTop = window.scrollY
@@ -58,7 +44,13 @@ const HeavyAnimatedBackground = memo(({ children }: LazyAnimatedBackgroundProps)
 
   useEffect(() => {
     setIsMounted(true)
-    
+
+    // Adjust counts based on device performance AFTER mount to keep SSR/first render identical
+    const isMobile = window.innerWidth <= 768
+    const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4
+    setParticleCount(isMobile || isLowEnd ? 5 : 8)
+    setMatrixColumnCount(isMobile ? 2 : 3)
+
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     setIsReducedMotion(mediaQuery.matches)
