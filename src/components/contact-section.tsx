@@ -4,6 +4,8 @@ import { Phone, User, Mail, Instagram, Globe } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { useTranslations } from "next-intl"
+import SponsorMarquee from "@/components/sponsor-marquee"
+import MediaPartnerMarquee from "@/components/media-partner-marquee"
 
 export default function ContactSection() {
   const tContact = useTranslations("contact")
@@ -212,6 +214,16 @@ export default function ContactSection() {
               </div>
             </AccordionItem>
           </Accordion>
+        </div>
+
+        {/* Sponsor Section */}
+        <div className="mt-12 sm:mt-14 md:mt-16">
+          <SponsorMarquee speed="medium" direction="left" pauseOnHover={true} />
+        </div>
+
+        {/* Media Partner Section */}
+        <div className="mt-8 sm:mt-10 md:mt-12">
+          <MediaPartnerMarquee speed="fast" direction="right" pauseOnHover={true} />
         </div>
 
         {/* Official Contact Footer (no title) */}

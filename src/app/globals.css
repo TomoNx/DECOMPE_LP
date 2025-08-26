@@ -113,13 +113,13 @@
 }
 
 @layer base {
-  /* Performance optimizations */
+  /* Basic optimizations */
   * {
     @apply border-border outline-ring/50;
   }
   
   html {
-    /* Hardware acceleration for better performance */
+    /* Better rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
@@ -128,12 +128,12 @@
   
   body {
     @apply bg-background text-foreground;
-    /* Prevent layout shifts */
+    /* Prevent shifts */
     min-height: 100vh;
     overflow-x: hidden;
   }
   
-  /* Optimize high-frequency animations */
+  /* Animation prep */
   .will-change-transform {
     will-change: transform;
   }
@@ -146,19 +146,19 @@
     will-change: auto;
   }
   
-  /* Force GPU acceleration for animated elements */
+  /* GPU rendering */
   .gpu-accelerated {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
   }
   
-  /* Reduce paint complexity */
+  /* Layout control */
   .contain-layout {
     contain: layout style paint;
   }
   
-  /* Optimize scroll performance */
+  /* Scroll improvements */
   .scroll-optimized {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
@@ -191,12 +191,12 @@
   background: #000000;
 }
 
-/* Smooth Scrolling with performance optimization */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Optimize scroll handling */
+/* Motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -209,7 +209,7 @@ html {
   }
 }
 
-/* Custom Scroll Progress Bar - Optimized */
+/* Progress bar */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -224,7 +224,7 @@ html {
   contain: layout style paint;
 }
 
-/* Scroll to Top Button - Performance optimized */
+/* Back to top button */
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
@@ -266,18 +266,18 @@ html {
   box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
 }
 
-/* Scroll Animations - Performance optimized */
+/* Scroll effects */
 .scroll-animate {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.6s ease, transform 0.6s ease; /* Reduced from 0.8s */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Faster */
   will-change: transform, opacity;
 }
 
 .scroll-animate.visible {
   opacity: 1;
   transform: translateY(0);
-  will-change: auto; /* Remove will-change after animation */
+  will-change: auto; /* Reset */
 }
 
 /* Scroll Indicator Dots */
@@ -311,18 +311,18 @@ html {
   transform: scale(1.1);
 }
 
-/* Parallax Scroll Effect - Optimized */
+/* Parallax effects */
 .parallax-scroll {
   will-change: transform;
   transform: translateZ(0); /* Force GPU acceleration */
   backface-visibility: hidden;
 }
 
-/* Optimized animations with reduced complexity */
+/* Simple animations */
 @keyframes revealUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 30px, 0); /* Use translate3d for GPU acceleration */
+    transform: translate3d(0, 30px, 0); /* GPU rendering */
   }
   to {
     opacity: 1;
@@ -352,9 +352,9 @@ html {
   }
 }
 
-/* Performance-optimized reveal classes */
+/* Reveal animations */
 .reveal-up {
-  animation: revealUp 0.6s ease forwards; /* Reduced from 0.8s */
+  animation: revealUp 0.6s ease forwards; /* Faster */
   will-change: transform, opacity;
 }
 
@@ -368,7 +368,7 @@ html {
   will-change: transform, opacity;
 }
 
-/* Remove will-change after animation completes */
+/* Clean up animations */
 .reveal-up.animation-complete,
 .reveal-left.animation-complete,
 .reveal-right.animation-complete {
@@ -384,13 +384,13 @@ html {
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
-/* Floating animation - Reduced complexity */
+/* Floating effect */
 @keyframes float {
   0%, 100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   25% {
-    transform: translate3d(0, -15px, 0) rotate(45deg); /* Reduced movement and rotation */
+    transform: translate3d(0, -15px, 0) rotate(45deg); /* Move and spin */
   }
   50% {
     transform: translate3d(0, -8px, 0) rotate(90deg);
@@ -401,7 +401,7 @@ html {
 }
 
 .animate-float {
-  animation: float 25s ease-in-out infinite; /* Slower animation */
+  animation: float 25s ease-in-out infinite; /* Slow float */
   will-change: transform;
 }
 
@@ -415,13 +415,13 @@ html {
   }
 }
 
-/* Glitch effect animation - Optimized */
+/* Glitch animation */
 @keyframes glitch {
   0%, 100% {
     transform: translate3d(0, 0, 0);
   }
   20% {
-    transform: translate3d(-1px, 0, 0); /* Reduced intensity */
+    transform: translate3d(-1px, 0, 0); /* Small shake */
   }
   40% {
     transform: translate3d(1px, 0, 0);
@@ -435,24 +435,24 @@ html {
 }
 
 .animate-glitch {
-  animation: glitch 4s ease-in-out infinite; /* Slower animation */
+  animation: glitch 4s ease-in-out infinite; /* Slow glitch */
   will-change: transform;
 }
 
-/* Enhanced hover animations - Optimized */
+/* Hover effects */
 .enhanced-hover {
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Reduced duration */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Smooth */
               box-shadow 0.3s ease;
   will-change: transform;
 }
 
 .enhanced-hover:hover {
-  transform: translate3d(0, -6px, 0) scale(1.02); /* Reduced movement, use translate3d */
-  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.15); /* Reduced shadow */
+  transform: translate3d(0, -6px, 0) scale(1.02); /* Lift up */
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.15); /* Red glow */
 }
 
 .enhanced-hover:not(:hover) {
-  will-change: auto; /* Remove will-change when not hovering */
+  will-change: auto; /* Reset */
 }
 
 /* Cyberpunk text effect */
@@ -505,7 +505,7 @@ html {
   left: 100%;
 }
 
-/* Matrix rain effect - Performance optimized */
+/* Matrix effect */
 .matrix-rain {
   position: absolute;
   top: 0;
@@ -515,15 +515,15 @@ html {
   pointer-events: none;
   overflow: hidden;
   z-index: 1;
-  contain: layout style paint; /* Contain layout changes */
+  contain: layout style paint; /* Performance */
 }
 
 .matrix-column {
   position: absolute;
   top: -100%;
   font-family: monospace;
-  font-size: 12px; /* Slightly smaller font */
-  color: rgba(255, 0, 0, 0.4); /* Reduced opacity */
+  font-size: 12px; /* Smaller text */
+  color: rgba(255, 0, 0, 0.4); /* Faded red */
   animation: matrixFall linear infinite;
   will-change: transform;
   transform: translateZ(0); /* Force GPU acceleration */
@@ -550,21 +550,61 @@ html {
   }
 }
 
-/* Fix for gradient text with descenders */
+/* Text fixes */
 .bg-clip-text {
   line-height: 1.2;
   padding-bottom: 0.1em;
   display: inline-block;
 }
 
-/* Ensure proper spacing for large headings */
+/* Heading spacing */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Specific fix for text with descenders in titles */
+/* Large title fixes */
 h1.text-4xl, h1.text-5xl, h1.text-7xl,
 h2.text-4xl, h2.text-5xl, h2.text-7xl {
   line-height: 1.1;
   padding-bottom: 0.05em;
+}
+
+/* Marquee animations */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-12.5%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-12.5%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Marquee styles */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Pause on hover */
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+
+.hover\:pause:hover * {
+  animation-play-state: paused;
+}
+
+/* Smooth marquee */
+.animate-marquee {
+  will-change: transform;
 }
