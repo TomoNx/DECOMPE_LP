@@ -357,6 +357,8 @@
     "badge": "FAQ",
     "title": "Pertanyaan yang Sering Diajukan",
     "subtitle": "Temukan jawaban atas pertanyaan umum tentang DECOMPE 4.0 dan persiapkan diri Anda untuk revolusi digital",
+    "loadMore": "Muat Lebih Banyak FAQ",
+    "showLess": "Sembunyikan",
     "items": {
       "1": { "q": "Apa itu DECOMPE 4.0?", "a": "DECOMPE 4.0 adalah kompetisi dan bootcamp berskala nasional yang berfokus pada transformasi digital, inovasi, dan keterampilan masa depan." },
       "2": { "q": "Siapa saja yang bisa ikut DECOMPE 4.0?", "a": "Siswa, mahasiswa, fresh graduate, dan profesional yang tertarik pada teknologi dan inovasi digital dipersilakan untuk bergabung." },
@@ -365,7 +367,14 @@
       "5": { "q": "Bagaimana cara mendaftar DECOMPE 4.0?", "a": "Klik tombol Daftar di beranda atau buka halaman Pendaftaran, kemudian isi formulir dan ikuti instruksi pembayaran." },
       "6": { "q": "Apa saja yang didapat dalam program bootcamp?", "a": "Mentoring, proyek praktis, materi pembelajaran terkurasi, dan sertifikat setelah selesai (bergantung pada paket)." },
       "7": { "q": "Bagaimana cara menghubungi dukungan DECOMPE?", "a": "Hubungi Contact Person di atas melalui WhatsApp atau email kami melalui bagian Kontak Resmi." },
-      "8": { "q": "Apa saja persyaratan teknis untuk berpartisipasi?", "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran." }
+      "8": { "q": "Apa saja persyaratan teknis untuk berpartisipasi?", "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran." },
+      "9": { "q": "Kapan DECOMPE 4.0 akan dimulai?", "a": "DECOMPE 4.0 mengikuti timeline yang dipublikasikan di website kami. Cek halaman Timeline untuk informasi jadwal lengkap." },
+      "10": { "q": "Apakah peserta internasional bisa ikut?", "a": "Saat ini DECOMPE 4.0 difokuskan untuk peserta Indonesia, namun kami berencana ekspansi internasional di edisi mendatang." },
+      "11": { "q": "Apakah ada batasan umur?", "a": "Tidak ada batasan umur spesifik, namun peserta minimal berpendidikan SMA dengan kemampuan literasi digital dasar." },
+      "12": { "q": "Apa yang terjadi setelah memenangkan DECOMPE 4.0?", "a": "Pemenang mendapat pengakuan, kesempatan networking, potensi penempatan kerja, dan menjadi bagian jaringan alumni untuk peluang masa depan." },
+      "13": { "q": "Apakah ada kebijakan refund?", "a": "Refund tersedia dalam 3 hari setelah pendaftaran jika belum mengakses materi program apapun. Hubungi tim support untuk bantuan." },
+      "14": { "q": "Bahasa pemrograman apa yang akan dipelajari?", "a": "Meskipun DECOMPE 4.0 fokus pada UI/UX design, kami juga mengcover dasar frontend seperti HTML, CSS, dan JavaScript untuk implementasi desain." },
+      "15": { "q": "Bagaimana cara mempersiapkan diri untuk DECOMPE 4.0?", "a": "Mulai kenali tools desain seperti Figma, pelajari prinsip UI/UX, dan cek materi persiapan kami setelah registrasi." }
     }
   }
 }

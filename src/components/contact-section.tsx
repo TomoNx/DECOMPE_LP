@@ -1,15 +1,20 @@
 "use client"
 
-import { Phone, User, Mail, Instagram, Globe } from "lucide-react"
+import { Phone, User, Mail, Instagram, Globe, ChevronDown, ChevronUp } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
 import { useTranslations } from "next-intl"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import SponsorMarquee from "@/components/sponsor-marquee"
 import MediaPartnerMarquee from "@/components/media-partner-marquee"
 
 export default function ContactSection() {
   const tContact = useTranslations("contact")
   const tFaq = useTranslations("faq")
+  const [showAllFaqs, setShowAllFaqs] = useState(false)
+  
   const contactPersons = [
     {
       name: "Rayssa Ameyliananda",
@@ -78,142 +83,95 @@ export default function ContactSection() {
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full space-y-3">
-            {/* Item 1 */}
-            <AccordionItem value="item-1" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      01
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.1.q")}</span>
+            {/* Always visible first 6 FAQs */}
+            {Array.from({ length: 6 }, (_, index) => {
+              const itemNumber = index + 1
+              const paddedNumber = itemNumber.toString().padStart(2, '0')
+              
+              return (
+                <AccordionItem key={`item-${itemNumber}`} value={`item-${itemNumber}`} className="border-none">
+                  <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                    <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                          {paddedNumber}
+                        </span>
+                        <span className="text-sm sm:text-base text-red-200">{tFaq(`items.${itemNumber}.q`)}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                      {tFaq(`items.${itemNumber}.a`)}
+                    </AccordionContent>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.1.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 2 */}
-            <AccordionItem value="item-2" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      02
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.2.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.2.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 3 */}
-            <AccordionItem value="item-3" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      03
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.3.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.3.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 4 */}
-            <AccordionItem value="item-4" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      04
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.4.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.4.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 5 */}
-            <AccordionItem value="item-5" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      05
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.5.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.5.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 6 */}
-            <AccordionItem value="item-6" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      06
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.6.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.6.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 7 */}
-            <AccordionItem value="item-7" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      07
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.7.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.7.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
-
-            {/* Item 8 */}
-            <AccordionItem value="item-8" className="border-none">
-              <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
-                <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
-                      08
-                    </span>
-                    <span className="text-sm sm:text-base text-red-200">{tFaq("items.8.q")}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
-                  {tFaq("items.8.a")}
-                </AccordionContent>
-              </div>
-            </AccordionItem>
+                </AccordionItem>
+              )
+            })}
+            
+            {/* Conditionally animated additional 6 FAQs */}
+            <AnimatePresence>
+              {showAllFaqs && Array.from({ length: 6 }, (_, index) => {
+                const itemNumber = index + 7 // Start from FAQ 7
+                const paddedNumber = itemNumber.toString().padStart(2, '0')
+                
+                return (
+                  <motion.div
+                    key={`item-${itemNumber}`}
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ 
+                      duration: 0.3,
+                      ease: "easeInOut"
+                    }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    <AccordionItem value={`item-${itemNumber}`} className="border-none">
+                      <div className="rounded-xl border border-red-900/40 bg-black/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300">
+                        <AccordionTrigger className="hover:no-underline px-4 sm:px-5 text-white">
+                          <div className="flex items-center gap-3 sm:gap-4">
+                            <span className="text-[10px] sm:text-xs font-bold text-red-300 px-2 py-1 rounded-md bg-gradient-to-br from-red-900/40 to-red-700/30 border border-red-700/60">
+                              {paddedNumber}
+                            </span>
+                            <span className="text-sm sm:text-base text-red-200">{tFaq(`items.${itemNumber}.q`)}</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 sm:px-5 pb-4 text-gray-300 text-left">
+                          {tFaq(`items.${itemNumber}.a`)}
+                        </AccordionContent>
+                      </div>
+                    </AccordionItem>
+                  </motion.div>
+                )
+              })}
+            </AnimatePresence>
           </Accordion>
+          
+          {/* Simplified Load More / Show Less Button */}
+          <div className="text-center mt-6">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            >
+              <Button
+                onClick={() => setShowAllFaqs(!showAllFaqs)}
+                variant="outline"
+                className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 px-6 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border group"
+              >
+                {showAllFaqs ? (
+                  <>
+                    <ChevronUp className="mr-2 h-4 w-4 group-hover:text-red-300 transition-colors" />
+                    {tFaq("showLess")}
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="mr-2 h-4 w-4 group-hover:text-red-300 transition-colors" />
+                    {tFaq("loadMore")}
+                  </>
+                )}
+              </Button>
+            </motion.div>
+          </div>
         </div>
 
         {/* Sponsor Section */}

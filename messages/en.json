@@ -357,6 +357,8 @@
   "badge": "FAQ",
   "title": "Frequently Asked Questions",
   "subtitle": "Get answers to common questions about DECOMPE 4.0 and prepare yourself for the digital revolution",
+  "loadMore": "Load More FAQs",
+  "showLess": "Show Less",
   "items": {
     "1": {
       "q": "What is DECOMPE 4.0?",
@@ -389,6 +391,34 @@
     "8": {
       "q": "What are the technical requirements to participate?",
       "a": "A laptop with stable internet access and basic development tools. Detailed requirements are listed on the Registration page."
+    },
+    "9": {
+      "q": "When will DECOMPE 4.0 begin?",
+      "a": "DECOMPE 4.0 follows the timeline published on our website. Check the Timeline page for complete schedule information."
+    },
+    "10": {
+      "q": "Can international participants join?",
+      "a": "Currently, DECOMPE 4.0 is focused on Indonesian participants, but we're planning to expand internationally in future editions."
+    },
+    "11": {
+      "q": "Are there any age restrictions?",
+      "a": "No specific age restrictions, but participants should be at least high school level with basic digital literacy skills."
+    },
+    "12": {
+      "q": "What happens after winning DECOMPE 4.0?",
+      "a": "Winners get recognition, networking opportunities, potential job placements, and become part of our alumni network for future opportunities."
+    },
+    "13": {
+      "q": "Is there a refund policy?",
+      "a": "Refunds are available within 3 days of registration if you haven't accessed any program materials. Contact our support team for assistance."
+    },
+    "14": {
+      "q": "What programming languages will be covered?",
+      "a": "While DECOMPE 4.0 focuses on UI/UX design, we also cover frontend basics like HTML, CSS, and JavaScript for design implementation."
+    },
+    "15": {
+      "q": "How can I prepare for DECOMPE 4.0?",
+      "a": "Start familiarizing yourself with design tools like Figma, review UI/UX principles, and check our preparation materials after registration."
     }
   }
 }
