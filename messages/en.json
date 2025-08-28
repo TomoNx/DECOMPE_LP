@@ -325,8 +325,16 @@
       "items": {
         "education": "High school/vocational students, university students, or young professionals",
         "experience": "Less than 2 years experience in UI/UX field",
-        "portfolio": "Portfolio (not mandatory, preferred)",
-        "commitment": "Commitment to follow the entire program"
+        "portfolio": "Portfolio (not mandatory, preferred)"
+      }
+    },
+    "commitment": {
+      "title": "Commitment Requirements",
+      "items": {
+        "fullProgram": "Commitment to follow the entire program",
+        "timeAvailability": "Available for online sessions and mentorship",
+        "activeParticipation": "Active participation in bootcamp activities",
+        "projectCompletion": "Complete all assigned projects and tasks"
       }
     }
   }

@@ -42,9 +42,9 @@ export default function Registration() {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
-              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+              <Card className="bg-black/60 border-red-900/50 backdrop-blur-md hover:border-red-600/70 transition-all duration-300 text-center relative overflow-hidden group scroll-animate shadow-xl shadow-black/50">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-lg sm:text-xl text-white mb-2">{t('packages.earlyAccess.title')}</CardTitle>
                   <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.earlyAccess.price')}</div>
@@ -69,20 +69,20 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.resources')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
+                  <div className="bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
                     <p className="text-xs text-red-400 font-semibold">{t('packages.earlyAccess.savings')}</p>
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base">
+                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.earlyAccess.button')}
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 border-2 border-red-600/50 backdrop-blur-sm hover:border-red-500/70 transition-all duration-300 text-center relative overflow-hidden group scroll-animate sm:col-span-2 lg:col-span-1">
+              <Card className="bg-black/60 border-2 border-red-600/70 backdrop-blur-md hover:border-red-500/90 transition-all duration-300 text-center relative overflow-hidden group scroll-animate shadow-xl shadow-black/50">
                 <div className="absolute top-0 right-0 bg-red-600 text-black px-2 sm:px-3 py-1 text-xs font-bold rounded-bl-lg">
                   {t('packages.standard.popular')}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-lg sm:text-xl text-white mb-2">{t('packages.standard.title')}</CardTitle>
                   <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.standard.price')}</div>
@@ -111,50 +111,11 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.standard.features.placement')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
+                  <div className="bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
                     <p className="text-xs text-red-400 font-semibold">{t('packages.standard.value')}</p>
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base">
+                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.standard.button')}
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center relative overflow-hidden group scroll-animate">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl text-white mb-2">{t('packages.squad.title')}</CardTitle>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent mb-2">{t('packages.squad.price')}</div>
-                  <CardDescription className="text-red-400">{t('packages.squad.period')}</CardDescription>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <ul className="text-left space-y-3 text-sm text-gray-300 mb-6">
-                    <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.squad.features.allStandard')}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.squad.features.discount')}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.squad.features.groupMentorship')}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.squad.features.projectGuidance')}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-red-400" />
-                      {t('packages.squad.features.squadChannel')}
-                    </li>
-                  </ul>
-                  <div className="bg-red-900/10 border border-red-800/30 rounded-lg p-3 mb-4">
-                    <p className="text-xs text-red-400 font-semibold">{t('packages.squad.perPerson')}</p>
-                  </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
-                    {t('packages.squad.button')}
                   </Button>
                 </CardContent>
               </Card>
@@ -243,7 +204,7 @@ export default function Registration() {
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 scroll-animate enhanced-hover neon-border">
                 <CardHeader>
                   <CardTitle className="text-lg text-red-400">{t('requirementsSections.technical.title')}</CardTitle>
@@ -288,9 +249,31 @@ export default function Registration() {
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
                       {t('requirementsSections.participant.items.portfolio')}
                     </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 scroll-animate enhanced-hover neon-border md:col-span-2 lg:col-span-1">
+                <CardHeader>
+                  <CardTitle className="text-lg text-red-400">{t('requirementsSections.commitment.title')}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-gray-300">
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                      {t('requirementsSections.participant.items.commitment')}
+                      {t('requirementsSections.commitment.items.fullProgram')}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                      {t('requirementsSections.commitment.items.timeAvailability')}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                      {t('requirementsSections.commitment.items.activeParticipation')}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                      {t('requirementsSections.commitment.items.projectCompletion')}
                     </li>
                   </ul>
                 </CardContent>

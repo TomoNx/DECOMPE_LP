@@ -325,8 +325,16 @@
         "items": {
           "education": "Siswa SMA/SMK, mahasiswa, atau profesional muda",
           "experience": "Pengalaman kurang dari 2 tahun di bidang UI/UX",
-          "portfolio": "Portfolio (tidak wajib, diutamakan)",
-          "commitment": "Komitmen untuk mengikuti seluruh program"
+          "portfolio": "Portfolio (tidak wajib, diutamakan)"
+        }
+      },
+      "commitment": {
+        "title": "Commitment Requirements",
+        "items": {
+          "fullProgram": "Komitmen untuk mengikuti seluruh program",
+          "timeAvailability": "Tersedia untuk sesi online dan mentorship",
+          "activeParticipation": "Partisipasi aktif dalam kegiatan bootcamp",
+          "projectCompletion": "Menyelesaikan semua proyek dan tugas yang diberikan"
         }
       }
     }
