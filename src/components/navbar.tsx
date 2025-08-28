@@ -12,7 +12,6 @@ import LanguageSwitcher from '@/components/language-switcher'
 const NavItem = memo(({ item, currentPath, locale, router }: { item: any, currentPath: string, locale: string, router: any }) => {
   const handleClick = useCallback(() => {
     if (item.path === '/') {
-      // For home navigation, use window.location.href to ensure clean navigation
       window.location.href = `/${locale}`
     } else {
       router.push(`/${locale}${item.path}`)
@@ -55,7 +54,6 @@ const MobileNavItem = memo(({ item, currentPath, locale, index, isOpen, onClose,
 }) => {
   const handleClick = useCallback(() => {
     if (item.path === '/') {
-      // For home navigation, use window.location.href to ensure clean navigation
       window.location.href = `/${locale}`
     } else {
       router.push(`/${locale}${item.path}`)
@@ -148,6 +146,10 @@ function Navbar() {
     setIsHovered(false)
   }, [])
 
+  const handleHomeClick = useCallback(() => {
+    window.location.href = `/${locale}`
+  }, [locale])
+
   useEffect(() => {
     let ticking = false
     
@@ -192,7 +194,7 @@ function Navbar() {
             {/* Logo */}
             <div 
               className="flex items-center group transition-all duration-300 hover:scale-105 cursor-pointer flex-shrink-0"
-              onClick={() => window.location.href = `/${locale}`}
+              onClick={handleHomeClick}
             >
               <Image 
                 src="/logo.svg" 

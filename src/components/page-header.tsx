@@ -27,9 +27,7 @@ export default function PageHeader({
   const params = useParams()
   const locale = params.locale as string
 
-  // Use the same home navigation logic as navbar
   const handleHomeClick = useCallback(() => {
-    // For home navigation, use window.location.href to ensure clean navigation
     window.location.href = `/${locale}`
   }, [locale])
 

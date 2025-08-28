@@ -2,31 +2,32 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
-import { locales } from '@/routing'
-import { memo, useCallback, useMemo } from 'react'
+import { memo, useCallback } from 'react'
 
 const LanguageSwitcher = memo(() => {
   const locale = useLocale()
   const pathname = usePathname()
 
-  // Memoize languages array
-  const languages = useMemo(() => [
+  const languages = [
     { code: 'en', name: 'EN', flag: '🇺🇸' },
     { code: 'id', name: 'ID', flag: '🇮🇩' }
-  ], [])
+  ] as const
 
   const handleLanguageChange = useCallback((newLocale: string) => {
     if (newLocale === locale) return
     
-    // Remove current locale from pathname if it exists
-    const currentPath = pathname.replace(`/${locale}`, '') || '/'
+    // Get the actual browser URL path
+    const fullPath = window.location.pathname
     
-    // Create new URL with new locale
-    const newUrl = currentPath === '/' ? `/${newLocale}` : `/${newLocale}${currentPath}`
+    // Remove current locale from the full path
+    const pathWithoutLocale = fullPath.replace(/^\/[a-z]{2}(\/.*)?$/, '$1') || '/'
     
-    // Use window.location.href for a clean page transition
+    // Create new URL with the selected locale
+    const newUrl = pathWithoutLocale === '/' ? `/${newLocale}` : `/${newLocale}${pathWithoutLocale}`
+    
+    // Use window.location.href for clean page transition
     window.location.href = newUrl
-  }, [locale, pathname])
+  }, [locale])
 
   return (
     <div className="relative">
@@ -34,8 +35,10 @@ const LanguageSwitcher = memo(() => {
       <div className="relative flex items-center bg-black/40 border border-red-600/30 rounded-full p-1 backdrop-blur-sm">
         {/* Background Slider */}
         <div 
-          className={`absolute top-1 bottom-1 w-10 sm:w-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full transition-all duration-300 ease-in-out shadow-lg shadow-red-600/25 ${
-            locale === 'en' ? 'left-1' : 'left-10 sm:left-12'
+          className={`absolute top-1/2 -translate-y-1/2 bg-gradient-to-r from-red-600 to-red-700 rounded-full transition-all duration-300 ease-in-out shadow-lg shadow-red-600/25 h-6 sm:h-8 ${
+            locale === 'en' 
+              ? 'left-1 w-10 sm:w-12' 
+              : 'left-[2.75rem] sm:left-[3.25rem] w-10 sm:w-12'
           }`}
         />
         
@@ -57,5 +60,7 @@ const LanguageSwitcher = memo(() => {
     </div>
   )
 })
+
+LanguageSwitcher.displayName = 'LanguageSwitcher'
 
 export default LanguageSwitcher
