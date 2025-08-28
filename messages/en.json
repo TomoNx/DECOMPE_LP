@@ -12,6 +12,7 @@
     "subtitle": "Digital Revolution Interface",
     "description": "Enter a new era of digital design where innovation meets the interface of the future. Compete with young visionaries from Indonesia and create designs that will redefine the digital world!",
     "registerButton": "Register Now",
+    "downloadFlyerButton": "Download Flyer",
     "exploreButton": "Explore The Future",
     "nationalCompetition": "NATIONAL UI/UX COMPETITION"
   },
@@ -344,6 +345,7 @@
   "readyToTransform": "Ready to Transform Your Future?",
   "joinDescription": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality and visionaries like you find their stage.",
   "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
+  "downloadFlyer": "Download Flyer",
   "backToHome": "Back to Home",
   "learnMore": "Learn More",
   "viewSchedule": "View Schedule",

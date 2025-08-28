@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, Cpu, Target, Users } from "lucide-react"
+import { ArrowRight, Shield, Cpu, Target, Users, Download } from "lucide-react"
 import Navbar from "@/components/navbar"
 import LazyAnimatedBackground from "@/components/lazy-animated-background"
 import ContactSection from "@/components/contact-section"
@@ -16,7 +16,7 @@ export default function Home() {
   const tSections = useTranslations('sections')
   const tCommon = useTranslations('common')
   const params = useParams()
-  const locale = params.locale as string
+  const locale = (params?.locale as string) || 'en'
 
   return (
     <>
@@ -61,13 +61,12 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center scroll-animate">
-              <Link href={`/${locale}/registration`}>
+              <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105 enhanced-hover neon-border">
-                  <Shield className="mr-2 h-4 w-4" />
-                  {t('registerButton')}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Download className="mr-2 h-4 w-4" />
+                  {t('downloadFlyerButton')}
                 </Button>
-              </Link>
+              </a>
               <Link href={`/${locale}/about`}>
                 <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-8 py-3 rounded-lg backdrop-blur-sm transition-all duration-300 enhanced-hover neon-border">
                   <Target className="mr-2 h-4 w-4" />
@@ -145,13 +144,13 @@ export default function Home() {
                 {tCommon('joinDescription')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 scroll-animate">
-                <Link href={`/${locale}/registration`}>
+                <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
-                    <Shield className="mr-2 h-5 w-5" />
-                    {tCommon('joinRevolutionNow')}
+                    <Download className="mr-2 h-5 w-5" />
+                    {tCommon('downloadFlyer')}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
                 <Link href={`/${locale}/timeline`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-10 py-3 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <Cpu className="mr-2 h-5 w-5" />

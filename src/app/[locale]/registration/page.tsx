@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, Cpu, Target, Sparkles, CalendarDays } from "lucide-react"
+import { ArrowRight, Shield, Cpu, Target, Sparkles, CalendarDays, Download } from "lucide-react"
 import Navbar from "@/components/navbar"
 import LazyAnimatedBackground from "@/components/lazy-animated-background"
 import PageHeader from "@/components/page-header"
@@ -295,13 +295,13 @@ export default function Registration() {
                 {tCommon('transformDescription')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 scroll-animate">
-                <Link href={`/${locale}/registration`}>
+                <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
-                    <Shield className="mr-2 h-6 w-6" />
-                    {tCommon('joinRevolutionNow')}
+                    <Download className="mr-2 h-6 w-6" />
+                    {tCommon('downloadFlyer')}
                     <ArrowRight className="ml-2 h-6 w-6" />
                   </Button>
-                </Link>
+                </a>
                 <Link href={`/${locale}/timeline`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <CalendarDays className="mr-2 h-6 w-6" />
