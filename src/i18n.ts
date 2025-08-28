@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { locales, defaultLocale } from './routing.ts';
+import { locales, defaultLocale } from './routing';
 
 export default getRequestConfig(async ({ locale }) => {
   // Ensure locale is always a string
