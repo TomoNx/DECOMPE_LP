@@ -16,7 +16,7 @@ export default function Registration() {
   const t = useTranslations('registration')
   const tCommon = useTranslations('common')
   const params = useParams()
-  const locale = params.locale as string
+  const locale = (params?.locale as string) || 'en'
   return (
     <>
       <Navbar />
@@ -69,9 +69,12 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.resources')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
-                    <p className="text-xs text-red-400 font-semibold">{t('packages.earlyAccess.savings')}</p>
-                  </div>
+                  <a href="#" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                    <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
+                      <Download className="w-3 h-3" />
+                      {t('packages.earlyAccess.savings')}
+                    </p>
+                  </a>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.earlyAccess.button')}
                   </Button>
@@ -111,9 +114,12 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.standard.features.placement')}</span>
                     </li>
                   </ul>
-                  <div className="bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4">
-                    <p className="text-xs text-red-400 font-semibold">{t('packages.standard.value')}</p>
-                  </div>
+                  <a href="#" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                    <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
+                      <Download className="w-3 h-3" />
+                      {t('packages.standard.value')}
+                    </p>
+                  </a>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.standard.button')}
                   </Button>

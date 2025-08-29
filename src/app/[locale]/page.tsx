@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, Cpu, Target, Users, Download } from "lucide-react"
+import { ArrowRight, Shield, BookOpen, Target, Users, Download } from "lucide-react"
 import Navbar from "@/components/navbar"
 import LazyAnimatedBackground from "@/components/lazy-animated-background"
 import ContactSection from "@/components/contact-section"
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="relative container mx-auto px-4 py-8 md:py-12 text-center flex flex-col justify-center min-h-[75vh]">
             <div className="mb-6 scroll-animate -mt-4">
               <Badge className="mb-3 bg-red-600/20 text-red-400 border-red-600/50 hover:bg-red-600/30 backdrop-blur-sm">
-                <Cpu className="w-4 h-4 mr-2" />
+                <Target className="w-4 h-4 mr-2" />
                 {t('nationalCompetition')}
               </Badge>
             </div>
@@ -49,7 +49,7 @@ export default function Home() {
             
             <div className="relative mb-6 scroll-animate -mt-2">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600/20 to-red-800/20 px-5 py-2 rounded-full border border-red-600/30 backdrop-blur-sm">
-                <Cpu className="w-5 h-5 text-red-400" />
+                <BookOpen className="w-5 h-5 text-red-400" />
                 <p className="text-lg md:text-xl font-light text-red-300">
                   {t('subtitle')}
                 </p>
@@ -89,7 +89,7 @@ export default function Home() {
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 text-center scroll-animate enhanced-hover neon-border">
                 <CardHeader>
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30">
-                    <Cpu className="w-8 h-8 text-red-400" />
+                    <Shield className="w-8 h-8 text-red-400" />
                   </div>
                   <CardTitle className="text-xl text-white">{tSections('innovation.title')}</CardTitle>
                 </CardHeader>
@@ -153,7 +153,7 @@ export default function Home() {
                 </Link>
                 <Link href={`/${locale}/timeline`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-10 py-3 rounded-lg backdrop-blur-sm transition-all duration-300">
-                    <Cpu className="mr-2 h-5 w-5" />
+                    <BookOpen className="mr-2 h-5 w-5" />
                     {tCommon('learnMore')}
                   </Button>
                 </Link>

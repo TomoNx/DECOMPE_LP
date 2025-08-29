@@ -34,12 +34,32 @@
     "title": "Evolution of DECOMPE",
     "subtitle": "The journey of design innovation that inspires Indonesia's digital generation",
     "badge": "ABOUT DECOMPE",
-    "themeTitle": "Empowering Digital Creation",
+    "themeTitle": "DECOMPE 4.0 THEME",
     "themeSubtitle": "Empowering Fintech Through Your Cultures",
     "themeDescription1": "In the midst of an unstoppable digital revolution, the interface becomes the battlefield between humans and technology. DECOMPE 4.0 calls digital pioneers to create designs that are not only visually stunning, but also functionally transformative.",
     "themeDescription2": "This theme challenges us to design the future where every digital interaction becomes an unforgettable experience, every interface becomes a work of art, and every innovation becomes a legacy of civilization.",
-    "targetTitle": "Target Visionaries",
-    "targetSubtitle": "Who is ready to become an agent of digital change?",
+    "subThemesTitle": "Sub Themes",
+    "subThemesSubtitle": "Choose a focus area that aligns with your interests and expertise",
+    "subThemes": {
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Integrating AI to create smarter and more personalized fintech solutions"
+      },
+      "security": {
+        "title": "Digital Security",
+        "description": "Building trust through strong and user-friendly security design"
+      },
+      "innovation": {
+        "title": "Financial Innovation",
+        "description": "Revolutionizing how we interact with financial services through cutting-edge technology"
+      },
+      "literacy": {
+        "title": "Digital Social Literacy",
+        "description": "Improving public understanding and access to financial technology"
+      }
+    },
+    "targetTitle": "Target Participants",
+    "targetSubtitle": "Who is ready to contribute to digital innovation and creativity?",
     "evolution": {
       "decompe1": {
         "title": "DECOMPE 1.0",
@@ -70,25 +90,15 @@
       }
     },
     "targets": {
-      "digitalNatives": {
-        "title": "Digital Natives",
-        "subtitle": "High School Students",
-        "description": "Young generation born in the digital era, ready to explore the boundaries of technological creativity."
+      "academics": {
+        "title": "Academics",
+        "subtitle": "Learners and students",
+        "description": "Learners and students who want to expand their insights and creativity in digital design."
       },
-      "students": {
-        "title": "Students",
-        "subtitle": "D3/D4/S1",
-        "description": "Future professionals who want to sharpen skills and build their dream portfolio."
-      },
-      "professionals": {
-        "title": "Professionals",
-        "subtitle": "Fresh Graduate",
-        "description": "Young professionals who want to improve competence and contribute to the industry."
-      },
-      "hobbyists": {
-        "title": "Hobbyists",
-        "subtitle": "Self-taught",
-        "description": "Design enthusiasts who learn independently and want to measure their abilities in national competitions."
+      "enthusiasts": {
+        "title": "Enthusiasts",
+        "subtitle": "Self-taught creators",
+        "description": "Self-taught creators passionate about design and ready to test their skills on a national stage."
       }
     }
   },
@@ -254,7 +264,7 @@
           "mentorship": "Mentorship opportunity",
           "resources": "Exclusive resources"
         },
-        "savings": "SAVE 25K FROM STANDARD PRICE",
+        "savings": "Download Skill Class Guidebook",
         "button": "Secure Early Access"
       },
       "standard": {
@@ -269,7 +279,7 @@
           "ebook": "Free UI/UX ebook",
           "placement": "Job placement assistance"
         },
-        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+        "value": "Download DECOMPE 4.0 Guidebook",
         "button": "Join Standard"
       },
       "squad": {
@@ -303,33 +313,33 @@
         "description": "Wait for confirmation and access to exclusive preparation materials",
         "time": "Confirmation within 1x24 hours"
       }
-    }
-  },
-  "requirementsSections": {
-    "technical": {
-      "title": "Technical Requirements",
-      "items": {
-        "laptop": "Laptop/PC with minimum specifications",
-        "software": "Design software (Figma, Adobe XD, or Sketch)",
-        "internet": "Stable internet connection for online sessions",
-        "equipment": "Webcam and microphone for mentoring"
-      }
     },
-    "participant": {
-      "title": "Participant Requirements",
-      "items": {
-        "education": "Open to academic circles",
-        "experience": "Have an interest in digital design, UI/UX, or product development",
-        "portfolio": "Commitment to follow the entire program series"
-      }
-    },
-    "commitment": {
-      "title": "Terms and Conditions (DECOMPE 4.0)",
-      "items": {
-        "fullProgram": "Participants can register individually or in teams",
-        "timeAvailability": "Each team consists of a minimum of 1 (one) and a maximum of 3 (three) people",
-        "activeParticipation": "Submitted work must be original and have never been entered in another competition",
-        "projectCompletion": "Participants must follow all stages of the competition, including the mini-bootcamp, submission, and judging sessions"
+    "requirementsSections": {
+      "technical": {
+        "title": "Technical Requirements",
+        "items": {
+          "laptop": "Laptop/PC with minimum specifications",
+          "software": "Design software (Figma, Adobe XD, or Sketch)",
+          "internet": "Stable internet connection for online sessions",
+          "equipment": "Webcam and microphone for mentoring"
+        }
+      },
+      "participant": {
+        "title": "Participant Requirements",
+        "items": {
+          "education": "Open to academic circles",
+          "experience": "Have an interest in digital design, UI/UX, or product development",
+          "portfolio": "Commitment to follow the entire program series"
+        }
+      },
+      "commitment": {
+        "title": "Terms and Conditions (DECOMPE 4.0)",
+        "items": {
+          "fullProgram": "Participants can register individually or in teams",
+          "timeAvailability": "Each team consists of a minimum of 1 (one) and a maximum of 3 (three) people",
+          "activeParticipation": "Submitted work must be original and have never been entered in another competition",
+          "projectCompletion": "Participants must follow all stages of the competition, including the mini-bootcamp, submission, and judging sessions"
+        }
       }
     }
   },
@@ -340,7 +350,7 @@
     "transformDescription": "Join DECOMPE 4.0 and start your journey to become a reliable UI/UX designer ready to create innovations and change the digital world.",
     "downloadFlyer": "Download Flyer",
     "backToHome": "Back to Home",
-    "learnMore": "LEARN MORE",
+    "learnMore": "GUIDE BOOK",
     "viewSchedule": "VIEW SCHEDULE",
     "joinRevolutionNow": "REGISTER NOW"
   },

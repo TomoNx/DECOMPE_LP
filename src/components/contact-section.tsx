@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, User, Mail, Instagram, Globe, ChevronDown, ChevronUp } from "lucide-react"
+import { Phone, User, Mail, Instagram, Linkedin, ChevronDown, ChevronUp } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
@@ -191,13 +191,18 @@ export default function ContactSection() {
               <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
               <span className="text-xs sm:text-sm md:text-base break-all">decompe@digitalrevolution.com</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+            <a 
+              href="https://www.instagram.com/decompeofficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer"
+            >
               <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base">@decompe_revolution</span>
-            </div>
+              <span className="text-xs sm:text-sm md:text-base">@decompeofficial</span>
+            </a>
             <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
-              <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base">www.decompe4-0.id</span>
+              <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base">decompeofficial</span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Users, Zap } from "lucide-react"
+import { Shield, Users, Zap, Brain, Lock, DollarSign, BookOpen } from "lucide-react"
 import Navbar from "@/components/navbar"
 import LazyAnimatedBackground from "@/components/lazy-animated-background"
 import PageHeader from "@/components/page-header"
@@ -21,7 +21,7 @@ export default function About() {
         />
 
         {/* Evolution Content */}
-        <section className="relative z-10 py-16 sm:py-20 bg-black">
+        <section className="relative z-10 py-16 sm:py-20 bg-gradient-to-b from-black to-black">
           <div className="container mx-auto px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 group scroll-animate enhanced-hover neon-border">
@@ -96,8 +96,11 @@ export default function About() {
           </div>
         </section>
 
+        {/* Transition Element */}
+        <div className="relative z-10 h-8 bg-gradient-to-b from-black to-red-900/8"></div>
+
         {/* Theme Section */}
-        <section className="relative z-10 py-20 bg-gradient-to-r from-black via-red-900/10 to-black">
+        <section className="relative z-10 py-16 pb-8 bg-gradient-to-b from-red-900/8 via-red-900/8 to-red-900/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 scroll-animate">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -125,8 +128,92 @@ export default function About() {
           </div>
         </section>
 
+        {/* Sub Themes Section */}
+        <section className="relative z-10 pt-8 pb-20 bg-gradient-to-b from-red-900/5 via-red-900/3 via-red-900/2 to-red-900/1">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16 scroll-animate">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                {t('subThemesTitle')}
+              </h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                {t('subThemesSubtitle')}
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {/* AI Sub Theme */}
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border hover:transform hover:scale-105">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
+                    <Brain className="w-7 h-7 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
+                  </div>
+                  <CardTitle className="text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                    {t('subThemes.ai.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-sm text-gray-300 text-center leading-relaxed">
+                    {t('subThemes.ai.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Security Sub Theme */}
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border hover:transform hover:scale-105">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
+                    <Lock className="w-7 h-7 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
+                  </div>
+                  <CardTitle className="text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                    {t('subThemes.security.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-sm text-gray-300 text-center leading-relaxed">
+                    {t('subThemes.security.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Financial Innovation Sub Theme */}
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border hover:transform hover:scale-105">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
+                    <DollarSign className="w-7 h-7 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
+                  </div>
+                  <CardTitle className="text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                    {t('subThemes.innovation.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-sm text-gray-300 text-center leading-relaxed">
+                    {t('subThemes.innovation.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Digital Literacy Sub Theme */}
+              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border hover:transform hover:scale-105">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
+                    <BookOpen className="w-7 h-7 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
+                  </div>
+                  <CardTitle className="text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                    {t('subThemes.literacy.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-sm text-gray-300 text-center leading-relaxed">
+                    {t('subThemes.literacy.description')}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Target Audience */}
-        <section className="relative z-10 py-20 bg-black">
+        <section className="relative z-10 py-20 bg-gradient-to-b from-red-900/1 via-black to-black">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 scroll-animate">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
@@ -137,18 +224,18 @@ export default function About() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Users className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.digitalNatives.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('targets.digitalNatives.subtitle')}</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.academics.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.academics.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    {t('targets.digitalNatives.description')}
+                    {t('targets.academics.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -158,42 +245,12 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
                     <Zap className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
                   </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.students.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('targets.students.subtitle')}</CardDescription>
+                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.enthusiasts.title')}</CardTitle>
+                  <CardDescription className="text-gray-400">{t('targets.enthusiasts.subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-300 text-center">
-                    {t('targets.students.description')}
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
-                    <Shield className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
-                  </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.professionals.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('targets.professionals.subtitle')}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300 text-center">
-                    {t('targets.professionals.description')}
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-black/40 border-red-900/30 backdrop-blur-sm hover:border-red-600/50 transition-all duration-300 group scroll-animate enhanced-hover neon-border">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 group-hover:scale-110">
-                    <Users className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
-                  </div>
-                  <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors duration-300">{t('targets.hobbyists.title')}</CardTitle>
-                  <CardDescription className="text-gray-400">{t('targets.hobbyists.subtitle')}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300 text-center">
-                    {t('targets.hobbyists.description')}
+                    {t('targets.enthusiasts.description')}
                   </p>
                 </CardContent>
               </Card>

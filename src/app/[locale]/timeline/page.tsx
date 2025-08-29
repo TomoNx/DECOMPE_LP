@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Shield, Cpu, CalendarDays, Download } from "lucide-react";
+import { ArrowRight, Shield, BookOpen, CalendarDays, Download } from "lucide-react";
 import Navbar from "@/components/navbar";
 import LazyAnimatedBackground from "@/components/lazy-animated-background";
 import PageHeader from "@/components/page-header";
@@ -19,7 +19,7 @@ export default function TimelinePage() {
   const t = useTranslations('timeline')
   const tCommon = useTranslations('common')
   const params = useParams()
-  const locale = params.locale as string
+  const locale = params?.locale as string || 'en'
   return (
     <>
       <Navbar />
@@ -133,7 +133,7 @@ export default function TimelinePage() {
                 </Link>
                 <Link href={`/${locale}/about`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
-                    <Cpu className="mr-2 h-6 w-6" />
+                    <BookOpen className="mr-2 h-6 w-6" />
                     {tCommon('learnMore')}
                   </Button>
                 </Link>

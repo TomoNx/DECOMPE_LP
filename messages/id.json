@@ -33,12 +33,33 @@
   "about": {
     "title": "Evolution of DECOMPE",
     "subtitle": "Jejak perjalanan inovasi desain yang menginspirasi generasi digital Indonesia",
-    "badge": "ABOUT DECOMPE",
-    "themeTitle": "Memperdayakan Kreasi Digital",
+    "badge": "TENTANG DECOMPE",
+    "themeTitle": "TEMA DECOMPE 4.0",
     "themeSubtitle": "Empowering Fintech Through Your Cultures",
-    "themeDescription2": "Tema ini menjadi tantangan untuk merancang masa depan fintech yang mampu memperkuat identitas, memberdayakan komunitas, dan melahirkan inovasi yang menjadi warisan budaya.",
-    "targetTitle": "Target Visionaries",
-    "targetSubtitle": "Siapa saja yang siap menjadi agen perubahan digital?",
+    "themeDescription1": "Di era teknologi finansial yang mengubah cara kita berinteraksi dengan uang, desain menjadi jembatan antara sistem keuangan yang kompleks dan kebutuhan manusia. DECOMPE 4.0 menantang para kreator untuk merancang solusi fintech yang tidak hanya memberdayakan komunitas melalui nilai-nilai budaya mereka, tetapi juga menciptakan pengalaman keuangan digital yang inklusif dan inovatif.",
+    "themeDescription2": "Tema ini menantang kita untuk merancang masa depan fintech yang memperkuat identitas budaya, memberdayakan komunitas lokal, dan melahirkan inovasi yang menjadi warisan budaya berkelanjutan untuk generasi mendatang.",
+    "subThemesTitle": "Sub Tema",
+    "subThemesSubtitle": "Pilih fokus area yang sesuai dengan minat dan keahlian Anda",
+    "subThemes": {
+      "ai": {
+        "title": "Kecerdasan Buatan",
+        "description": "Mengintegrasikan AI untuk menciptakan solusi fintech yang lebih cerdas dan personal"
+      },
+      "security": {
+        "title": "Keamanan Digital",
+        "description": "Membangun kepercayaan melalui desain keamanan yang kuat dan user-friendly"
+      },
+      "innovation": {
+        "title": "Inovasi Keuangan",
+        "description": "Merevolusi cara berinteraksi dengan layanan keuangan melalui teknologi terdepan"
+      },
+      "literacy": {
+        "title": "Literasi Sosial Digital",
+        "description": "Meningkatkan pemahaman dan akses masyarakat terhadap teknologi finansial"
+      }
+    },
+    "targetTitle": "Target peserta",
+    "targetSubtitle": "Siapa saja yang siap berkontribusi dalam inovasi dan kreativitas digital?",
     "evolution": {
       "decompe1": {
         "title": "DECOMPE 1.0",
@@ -69,25 +90,15 @@
       }
     },
     "targets": {
-      "digitalNatives": {
-        "title": "Digital Natives",
-        "subtitle": "Siswa SMA/SMK",
-        "description": "Generasi muda yang lahir di era digital, siap menjelajahi batas-batas kreativitas teknologi."
+      "academics": {
+        "title": "Academics",
+        "subtitle": "Pelajar dan mahasiswa",
+        "description": "Pelajar dan mahasiswa yang ingin memperluas wawasan dan kreativitas dalam desain digital."
       },
-      "students": {
-        "title": "Mahasiswa",
-        "subtitle": "D3/D4/S1",
-        "description": "Calon profesional yang ingin mengasah skill dan membangun portfolio impian."
-      },
-      "professionals": {
-        "title": "Profesional",
-        "subtitle": "Fresh Graduate",
-        "description": "Para profesional muda yang ingin meningkatkan kompetensi dan berkontribusi pada industri."
-      },
-      "hobbyists": {
-        "title": "Hobbyist",
-        "subtitle": "Self-taught",
-        "description": "Para penggemar desain yang belajar mandiri dan ingin mengukur kemampuan di kompetisi nasional."
+      "enthusiasts": {
+        "title": "Enthusiasts",
+        "subtitle": "Kreator otodidak",
+        "description": "Kreator otodidak yang passionate terhadap desain dan siap menguji kemampuan di panggung nasional."
       }
     }
   },
@@ -260,7 +271,7 @@
           "mentorship": "Mentorship opportunity",
           "resources": "Exclusive resources"
         },
-        "savings": "SAVE 25K FROM STANDARD PRICE",
+        "savings": "Download Panduan Skill Class",
         "button": "Secure Early Access"
       },
       "standard": {
@@ -275,7 +286,7 @@
           "ebook": "Free UI/UX ebook",
           "placement": "Job placement assistance"
         },
-        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+        "value": "Download Panduan DECOMPE 4.0",
         "button": "Join Standard"
       },
       "squad": {
@@ -346,7 +357,7 @@
     "transformDescription": "Bergabunglah dalam DECOMPE 4.0 dan mulai perjalanan kamu untuk menjadi seorang desainer UI/UX andal yang siap menciptakan inovasi dan mengubah dunia digital.",
     "downloadFlyer": "Unduh Flyer",
     "backToHome": "Back to Home",
-    "learnMore": "LEARN MORE",
+    "learnMore": "GUIDE BOOK",
     "viewSchedule": "LIHAT JADWAL",
     "joinRevolutionNow": "DAFTAR SEKARANG"
   },
