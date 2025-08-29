@@ -175,14 +175,14 @@ export default function ContactSection() {
         </div>
 
         {/* Sponsor Section */}
-        <div className="mt-12 sm:mt-14 md:mt-16">
+        {/*<div className="mt-12 sm:mt-14 md:mt-16">
           <SponsorMarquee speed="medium" direction="left" pauseOnHover={true} />
-        </div>
+        </div> */}
 
         {/* Media Partner Section */}
-        <div className="mt-8 sm:mt-10 md:mt-12">
+        {/*<div className="mt-8 sm:mt-10 md:mt-12">
           <MediaPartnerMarquee speed="fast" direction="right" pauseOnHover={true} />
-        </div>
+        </div>*/}
 
         {/* Official Contact Footer (no title) */}
         <div className="mt-12 sm:mt-14 md:mt-16 border-t border-red-900/30 pt-6 sm:pt-8">

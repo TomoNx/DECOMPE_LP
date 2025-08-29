@@ -2,40 +2,40 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "timeline": "Timeline", 
+    "timeline": "Timeline",
     "registration": "Registration",
     "register": "Register Now",
     "joinNow": "Join Now"
   },
   "hero": {
     "title": "DECOMPE",
-    "subtitle": "Digital Revolution Interface",
-    "description": "Enter a new era of digital design where innovation meets the interface of the future. Compete with young visionaries from Indonesia and create designs that will redefine the digital world!",
+    "subtitle": "Empowering Digital Creation",
+    "description": "DECOMPE 4.0 is a platform for young talents to showcase their best work in creating innovative digital interfaces. More than just a competition, it is a place to learn, collaborate, and contribute to the growth of Indonesia’s digital future.",
     "registerButton": "Register Now",
     "downloadFlyerButton": "Download Flyer",
-    "exploreButton": "Explore The Future",
+    "exploreButton": " Explore This Event",
     "nationalCompetition": "NATIONAL UI/UX COMPETITION"
   },
   "sections": {
     "innovation": {
-      "title": "Innovation",
-      "description": "Revolutionary interface design for the digital future"
+      "title": "Showcase Your Potential",
+      "description": "This is your chance to bring out your best creative ideas in UI/UX design."
     },
     "community": {
-      "title": "Community", 
-      "description": "Join young visionaries from all over Indonesia"
+      "title": "Contribute to the Industry",
+      "description": "Your work isn’t just practice; it can be part of shaping Indonesia’s digital future."
     },
     "impact": {
-      "title": "Impact",
-      "description": "Create real change in the technology industry"
+      "title": "Gain Valuable Experience",
+      "description": "More than a contest, DECOMPE 4.0 is a journey that opens doors to greater opportunities."
     }
   },
   "about": {
     "title": "Evolution of DECOMPE",
     "subtitle": "The journey of design innovation that inspires Indonesia's digital generation",
     "badge": "ABOUT DECOMPE",
-    "themeTitle": "Digital Revolution Interface",
-    "themeSubtitle": "DECOMPE 4.0 Theme",
+    "themeTitle": "Empowering Digital Creation",
+    "themeSubtitle": "Empowering Fintech Through Your Cultures",
     "themeDescription1": "In the midst of an unstoppable digital revolution, the interface becomes the battlefield between humans and technology. DECOMPE 4.0 calls digital pioneers to create designs that are not only visually stunning, but also functionally transformative.",
     "themeDescription2": "This theme challenges us to design the future where every digital interaction becomes an unforgettable experience, every interface becomes a work of art, and every innovation becomes a legacy of civilization.",
     "targetTitle": "Target Visionaries",
@@ -51,7 +51,7 @@
         "mentors": "3 industry mentors"
       },
       "decompe2": {
-        "title": "DECOMPE 2.0", 
+        "title": "DECOMPE 2.0",
         "subtitle": "Business Integration",
         "description": "\"Shaping Creative Business Technology\" - Fusion between design, business strategy, and technology for comprehensive solutions.",
         "achievements": "Key Achievements:",
@@ -61,7 +61,7 @@
       },
       "decompe3": {
         "title": "DECOMPE 3.0",
-        "subtitle": "Complete Ecosystem", 
+        "subtitle": "Complete Ecosystem",
         "description": "Complete ecosystem: intensive bootcamp, tight competition, and inspirational webinars for a full transformation experience.",
         "achievements": "Key Achievements:",
         "participants": "200+ participants",
@@ -93,13 +93,13 @@
     }
   },
   "timeline": {
-    "title": "Mission Timeline",
-    "subtitle": "Operational schedule for your digital revolution",
+    "title": "EVENT AGENDA",
+    "subtitle": "Schedule of DECOMPE 4.0 Events",
     "badge": "MISSION TIMELINE",
     "importantDates": "Important Dates",
     "importantDatesDesc": "Mark these important dates to prepare for your digital revolution",
     "readyToStart": "Ready to Start Your Journey?",
-    "readyToStartDesc": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality.",
+    "readyToStartDesc": "Don't miss the chance to be a part of DECOMPE 4.0 - where digital dreams become reality.",
     "registerNow": "REGISTER NOW",
     "projectProgress": "Project Progress",
     "trackJourney": "Track our journey through each phase of the competition",
@@ -116,44 +116,44 @@
     "events": {
       "registrationPeriod": {
         "title": "Registration Period",
-        "date": "01 - 30 November 2024",
-        "description": "Register now to get early bird discount and access to exclusive preparation materials."
+        "date": "September 1 - October 24, 2025",
+        "description": "Prepare your team and register to get access to exclusive benefits and preparation materials for DECOMPE 4.0."
       },
       "selectionAnnouncement": {
-        "title": "Selection Announcement", 
-        "date": "05 December 2024",
-        "description": "Announcement of participants who passed the selection and group division for bootcamp."
+        "title": "Mini-Bootcamp (Skill Class)",
+        "date": "October 25 - November 8, 2025",
+        "description": "Participate in an intensive 5-day training (every weekend) with experienced mentors to hone your UI/UX skills."
       },
       "bootcampTraining": {
-        "title": "Bootcamp Training",
-        "date": "10 - 20 December 2024", 
-        "description": "Intensive training with expert mentors from leading technology industry."
+        "title": "Submission Period",
+        "date": "October 25 - November 9, 2025",
+        "description": "It's time to pour out your creative ideas! Submit your best work according to the guidelines provided."
       },
       "competitionWeek": {
-        "title": "Competition Week",
-        "date": "05 - 15 January 2025",
-        "description": "A full week of design competition with real-world challenges from partner companies."
+        "title": "Final Event: Judging & Awarding",
+        "date": "November 21 - 22, 2025",
+        "description": "Watch the presentations of the top 5 teams and celebrate the crowning of the DECOMPE 4.0 winners."
       }
     },
     "phases": {
       "recruitment": {
         "title": "Recruitment",
-        "date": "01-30 NOV",
-        "description": "Opening registration for all digital change agents",
+        "date": "01 SEP - 24 OCT",
+        "description": "Opening of registration for all digital change-makers",
         "details": [
           "150+ active registrants",
-          "20+ educational institutions", 
+          "20+ educational institutions",
           "Early bird sold out in 2 weeks"
         ]
       },
       "selection": {
         "title": "Selection",
         "date": "05 DEC",
-        "description": "Announcement of agents who passed digital selection",
+        "description": "Announcement of selected digital change-makers",
         "details": [
-          "80 participants passed selection",
+          "80 participants selected",
           "Portfolio review by 10+ experts",
-          "Diversification of participant backgrounds"
+          "Diversified participant background"
         ]
       },
       "training": {
@@ -169,7 +169,7 @@
       "competition": {
         "title": "Competition",
         "date": "05-15 JAN",
-        "description": "Elimination round and final battle of interfaces",
+        "description": "Preliminary rounds and final battle of interfaces",
         "details": [
           "48-hour design challenge",
           "Real-world case studies",
@@ -190,238 +190,203 @@
     "phaseTranslations": {
       "pendaftaran": "Registration",
       "bootcamp": "Bootcamp",
-      "pengerjaan_karya": "Work Development",
+      "pengerjaan_karya": "Project Work",
       "penjurian": "Judging & Announcement",
       "tahap_final": "Final Stage",
-      
       "pendaftaran_desc": "Official registration period for all participants",
-      "bootcamp_desc": "Intensive training and skill development program",
-      "pengerjaan_karya_desc": "Project development and submission phase", 
-      "penjurian_desc": "Judging process and finalist announcement",
-      "tahap_final_desc": "Final presentations and awarding ceremony",
-      
-      "pendaftaran_group_desc": "Registration phase for DECOMPE 4.0 competition",
+      "bootcamp_desc": "Intensive training program and skill development",
+      "pengerjaan_karya_desc": "Project development and submission phase",
+      "penjurian_desc": "Judging process and finalists announcement",
+      "tahap_final_desc": "Final stage with presentations and awards",
+      "pendaftaran_group_desc": "DECOMPE 4.0 competition registration phase",
       "bootcamp_group_desc": "Intensive training program for skill development",
-      "pengerjaan_karya_group_desc": "Project development and work submission period",
-      "penjurian_group_desc": "Judging process and evaluation phase",
+      "pengerjaan_karya_group_desc": "Project development and submission period",
+      "penjurian_group_desc": "Judging and evaluation phase",
       "tahap_final_group_desc": "Final stage with presentations and awards",
-      
-      "pendaftaran_detail1": "✅ Registration Stage 1",
-      "pendaftaran_detail2": "✅ Registration Stage 2",
-      "pendaftaran_detail3": "✅ Registration Stage 3 & Closure",
-      "pendaftaran_milestone1": "Registration Period Complete",
+      "pendaftaran_detail1": "Phase 1 Registration (September 1 - 15, 2025)",
+      "pendaftaran_detail2": "Phase 2 Registration (September 16 - October 5, 2025)",
+      "pendaftaran_detail3": "Phase 3 Registration & Closing (October 6 - 24, 2025)",
+      "pendaftaran_milestone1": "Registration period completed",
       "pendaftaran_milestone2": "All participants registered",
       "pendaftaran_milestone3": "Documentation verified",
-      
-      "bootcamp_detail1": "✅ UI/UX Design Fundamentals Training",
-      "bootcamp_detail2": "✅ Hands-on Workshop Sessions",
-      "bootcamp_detail3": "✅ Mentorship and Portfolio Review",
+      "bootcamp_detail1": "UI/UX Design Fundamentals Training",
+      "bootcamp_detail2": "Hands-on Workshop Session",
+      "bootcamp_detail3": "Mentoring and Portfolio Review",
       "bootcamp_milestone1": "Training modules completed",
-      "bootcamp_milestone2": "Workshop sessions finished",
-      "bootcamp_milestone3": "Portfolio reviews conducted",
-      
-      "pengerjaan_karya_detail1": "✅ Project Assignment & Brief",
-      "pengerjaan_karya_detail2": "✅ Work Development Period",
-      "pengerjaan_karya_detail3": "✅ Final Submission Deadline",
-      "pengerjaan_karya_milestone1": "Project briefs distributed",
-      "pengerjaan_karya_milestone2": "All submissions received",
-      "pengerjaan_karya_milestone3": "Quality review finished",
-      
-      "penjurian_detail1": "⏳ Stage 1 Judging & Score Compilation",
-      "penjurian_detail2": "⏳ Top 5 Finalist Announcement",
+      "bootcamp_milestone2": "Workshop sessions completed",
+      "bootcamp_milestone3": "Portfolio review conducted",
+      "pengerjaan_karya_detail1": "Project & Brief Distribution",
+      "pengerjaan_karya_detail2": "Work Development Period",
+      "pengerjaan_karya_detail3": "Final Submission Deadline",
+      "pengerjaan_karya_milestone1": "Project brief distributed",
+      "pengerjaan_karya_milestone2": "All works submitted",
+      "pengerjaan_karya_milestone3": "Quality review completed",
+      "penjurian_detail1": "Phase 1 Judging & Score Recapitulation",
+      "penjurian_detail2": "Top 5 Finalists Announcement",
       "penjurian_milestone1": "Initial judging completed",
       "penjurian_milestone2": "Finalists selected",
-      
-      "tahap_final_detail1": "⏳ Presentation Material Submission (Pitchdeck)",
-      "tahap_final_detail2": "⏳ Final Presentation to Judges",
-      "tahap_final_detail3": "🏆 Webinar & Awarding Night",
-      "tahap_final_milestone1": "Final presentations completed",
+      "tahap_final_detail1": "Pitchdeck Material Submission",
+      "tahap_final_detail2": "Final Presentation before the Judges",
+      "tahap_final_detail3": "Webinar & Awarding Ceremony",
+      "tahap_final_milestone1": "Final presentation completed",
       "tahap_final_milestone2": "Winners announced",
-      "tahap_final_milestone3": "Awards ceremony concluded"
+      "tahap_final_milestone3": "Awards ceremony completed"
     }
   },
-"registration": {
-  "title": "Registration", 
-  "subtitle": "Investment for your digital career transformation",
-  "badge": "JOIN THE REVOLUTION",
-  "process": "Registration Process",
-  "processDesc": "3 easy steps to join the digital revolution",
-  "investmentPackages": "Investment Packages",
-  "investmentDesc": "Choose an investment package that suits your digital revolution needs",
-  "requirements": "Requirements",
-  "requirementsDesc": "Requirements to join DECOMPE 4.0",
-  "packages": {
-    "earlyAccess": {
-      "title": "Early Access",
-      "price": "75K",
-      "period": "Until 15 NOV 2024",
-      "features": {
-        "bootcamp": "Full bootcamp access",
-        "certificate": "Digital certificate", 
-        "mentorship": "Mentorship opportunity",
-        "resources": "Exclusive resources"
+  "registration": {
+    "title": "Registration",
+    "subtitle": "Show your potential and win millions of Rupiah in prizes at DECOMPE 4.0!",
+    "badge": "JOIN DECOMPE 4.0",
+    "process": "Registration Process",
+    "processDesc": "3 easy steps to register for DECOMPE 4.0",
+    "investmentPackages": "Package Options",
+    "investmentDesc": "Find the perfect package to support your journey in this event.",
+    "requirements": "Requirements",
+    "requirementsDesc": "Requirements to join DECOMPE 4.0",
+    "packages": {
+      "earlyAccess": {
+        "title": "Skill Class Only",
+        "price": "Rp. 50.000",
+        "period": "Until Oct 24, 2025",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Digital certificate",
+          "mentorship": "Mentorship opportunity",
+          "resources": "Exclusive resources"
+        },
+        "savings": "SAVE 25K FROM STANDARD PRICE",
+        "button": "Secure Early Access"
       },
-      "savings": "SAVE 25K FROM STANDARD PRICE",
-      "button": "Secure Early Access"
-    },
-    "standard": {
-      "title": "Standard",
-      "price": "100K",
-      "period": "16 - 30 NOV 2024",
-      "popular": "POPULAR",
-      "features": {
-        "bootcamp": "Full bootcamp access",
-        "certificate": "Premium certificate",
-        "mentorship": "Priority mentorship", 
-        "ebook": "Free UI/UX ebook",
-        "placement": "Job placement assistance"
+      "standard": {
+        "title": "DECOMPE 4.0 + Skill Class",
+        "price": "Rp. 99.000",
+        "period": "Sep 1 - 15, 2025",
+        "popular": "POPULAR",
+        "features": {
+          "bootcamp": "Full bootcamp access",
+          "certificate": "Premium certificate",
+          "mentorship": "Priority mentorship",
+          "ebook": "Free UI/UX ebook",
+          "placement": "Job placement assistance"
+        },
+        "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
+        "button": "Join Standard"
       },
-      "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
-      "button": "Join Standard"
+      "squad": {
+        "title": "Squad (3x)",
+        "price": "250K",
+        "period": "Until Nov 30, 2024",
+        "features": {
+          "allStandard": "All standard benefits",
+          "discount": "Squad discount (save 50K)",
+          "groupMentorship": "Group mentorship sessions",
+          "projectGuidance": "Team project guidance",
+          "squadChannel": "Dedicated squad channel"
+        },
+        "perPerson": "PER PERSON: ~83K ONLY",
+        "button": "Build Squad"
+      }
     },
-    "squad": {
-      "title": "Squad (3x)",
-      "price": "250K", 
-      "period": "Until 30 NOV 2024",
-      "features": {
-        "allStandard": "All standard benefits",
-        "discount": "Squad discount (save 50K)",
-        "groupMentorship": "Group mentorship sessions",
-        "projectGuidance": "Team project guidance",
-        "squadChannel": "Dedicated squad channel"
+    "steps": {
+      "fillForm": {
+        "title": "Complete the Form",
+        "description": "Fill in the registration form with your personal data",
+        "time": "Estimated time: 15 minutes"
       },
-      "perPerson": "PER PERSON: ~83K ONLY",
-      "button": "Build Squad"
-    }
-  },
-  "steps": {
-    "fillForm": {
-      "title": "Fill Form",
-      "description": "Complete the registration form with personal data and portfolio (if any)",
-      "time": "Estimated time: 15 minutes"
-    },
-    "payment": {
-      "title": "Payment",
-      "description": "Choose an investment package and make payment through available methods",
-      "time": "Estimated time: 10 minutes"
-    },
-    "confirmation": {
-      "title": "Confirmation",
-      "description": "Wait for confirmation and access to exclusive preparation materials",
-      "time": "Confirmation within 24 hours"
+      "payment": {
+        "title": "Payment",
+        "description": "Choose your package and make a payment through the available methods",
+        "time": "Estimated time: 10 minutes"
+      },
+      "confirmation": {
+        "title": "Confirmation",
+        "description": "Wait for confirmation and access to exclusive preparation materials",
+        "time": "Confirmation within 1x24 hours"
+      }
     }
   },
   "requirementsSections": {
     "technical": {
       "title": "Technical Requirements",
       "items": {
-        "laptop": "Laptop or computer with minimum specifications",
+        "laptop": "Laptop/PC with minimum specifications",
         "software": "Design software (Figma, Adobe XD, or Sketch)",
         "internet": "Stable internet connection for online sessions",
-        "equipment": "Webcam and microphone for mentoring sessions"
+        "equipment": "Webcam and microphone for mentoring"
       }
     },
     "participant": {
-      "title": "Participant Requirements", 
+      "title": "Participant Requirements",
       "items": {
-        "education": "High school/vocational students, university students, or young professionals",
-        "experience": "Less than 2 years experience in UI/UX field",
-        "portfolio": "Portfolio (not mandatory, preferred)"
+        "education": "Open to academic circles",
+        "experience": "Have an interest in digital design, UI/UX, or product development",
+        "portfolio": "Commitment to follow the entire program series"
       }
     },
     "commitment": {
-      "title": "Commitment Requirements",
+      "title": "Terms and Conditions (DECOMPE 4.0)",
       "items": {
-        "fullProgram": "Commitment to follow the entire program",
-        "timeAvailability": "Available for online sessions and mentorship",
-        "activeParticipation": "Active participation in bootcamp activities",
-        "projectCompletion": "Complete all assigned projects and tasks"
+        "fullProgram": "Participants can register individually or in teams",
+        "timeAvailability": "Each team consists of a minimum of 1 (one) and a maximum of 3 (three) people",
+        "activeParticipation": "Submitted work must be original and have never been entered in another competition",
+        "projectCompletion": "Participants must follow all stages of the competition, including the mini-bootcamp, submission, and judging sessions"
+      }
+    }
+  },
+  "common": {
+    "readyToJoin": "Ready to Transform Your Digital Future?",
+    "readyToTransform": "Ready to Change the Digital World?",
+    "joinDescription": "Don't miss the opportunity to be a part of DECOMPE 4.0, where innovation meets creativity and visionaries like you find their stage.",
+    "transformDescription": "Join DECOMPE 4.0 and start your journey to become a reliable UI/UX designer ready to create innovations and change the digital world.",
+    "downloadFlyer": "Download Flyer",
+    "backToHome": "Back to Home",
+    "learnMore": "LEARN MORE",
+    "viewSchedule": "VIEW SCHEDULE",
+    "joinRevolutionNow": "REGISTER NOW"
+  },
+  "contact": {
+    "personTitle": "Contact Person",
+    "officialTitle": "Official Contact"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about DECOMPE 4.0",
+    "loadMore": "Load More FAQs",
+    "showLess": "Show Less",
+    "items": {
+      "1": {
+        "q": "What is DECOMPE 4.0?",
+        "a": "DECOMPE 4.0 is a national competition and bootcamp focused on digital transformation, innovation, and future skills."
+      },
+      "2": {
+        "q": "Who can participate in DECOMPE 4.0?",
+        "a": "Students, university students, recent graduates, and professionals interested in digital technology and innovation are welcome to join."
+      },
+      "3": {
+        "q": "What are the available registration packages?",
+        "a": "We provide Early Batch, Standard, and Squad packages with different benefits suitable for individuals and teams."
+      },
+      "4": {
+        "q": "Is a portfolio mandatory?",
+        "a": "A portfolio is recommended but not mandatory. Clear motivation and a willingness to learn are just as important."
+      },
+      "5": {
+        "q": "How to register for DECOMPE 4.0?",
+        "a": "Click the Register button on the homepage or open the Registration page, then fill out the form and follow the payment instructions."
+      },
+      "6": {
+        "q": "What is included in the bootcamp program?",
+        "a": "Mentoring, practical projects, curated learning materials, and a certificate upon completion (depending on the package)."
+      },
+      "7": {
+        "q": "How do I contact DECOMPE support?",
+        "a": "Contact the provided Contact Person via WhatsApp or email us through the Official Contact section."
+      },
+      "8": {
+        "q": "What are the technical requirements to participate?",
+        "a": "A laptop with a stable internet connection and basic development tools. Detailed requirements are on the Registration page."
       }
     }
   }
-},
-"common": {
-  "readyToJoin": "Ready to Join the Revolution?",
-  "readyToTransform": "Ready to Transform Your Future?",
-  "joinDescription": "Don't miss the opportunity to become part of DECOMPE 4.0 - where digital dreams become reality and visionaries like you find their stage.",
-  "transformDescription": "Join DECOMPE 4.0 and start your journey to become a future interface designer who will change the digital world.",
-  "downloadFlyer": "Download Flyer",
-  "backToHome": "Back to Home",
-  "learnMore": "Learn More",
-  "viewSchedule": "View Schedule",
-  "joinRevolutionNow": "JOIN REVOLUTION NOW"
-},
-"contact": {
-  "personTitle": "Contact Person",
-  "officialTitle": "Official Contact"
-},
-"faq": {
-  "badge": "FAQ",
-  "title": "Frequently Asked Questions",
-  "subtitle": "Get answers to common questions about DECOMPE 4.0 and prepare yourself for the digital revolution",
-  "loadMore": "Load More FAQs",
-  "showLess": "Show Less",
-  "items": {
-    "1": {
-      "q": "What is DECOMPE 4.0?",
-      "a": "DECOMPE 4.0 is a national-scale competition and bootcamp focused on digital transformation, innovation, and future-ready skills."
-    },
-    "2": {
-      "q": "Who can participate in DECOMPE 4.0?",
-      "a": "Students, fresh graduates, and professionals who are passionate about digital technology and innovation are welcome to join."
-    },
-    "3": {
-      "q": "What registration packages are available?",
-      "a": "We provide Early Access, Standard, and Squad packages with different benefits suitable for individuals or teams."
-    },
-    "4": {
-      "q": "Is portfolio required for registration?",
-      "a": "A portfolio is recommended but not mandatory. Clear motivation and willingness to learn are just as important."
-    },
-    "5": {
-      "q": "How do I register for DECOMPE 4.0?",
-      "a": "Click the Register button on the homepage or open the Registration page, then complete the form and follow the payment instructions."
-    },
-    "6": {
-      "q": "What is included in the bootcamp program?",
-      "a": "Mentorship, hands-on projects, curated learning resources, and certification upon completion depending on your package."
-    },
-    "7": {
-      "q": "How do I contact DECOMPE support?",
-      "a": "Reach out to the Contact Persons above via WhatsApp or email us through the Official Contact section."
-    },
-    "8": {
-      "q": "What are the technical requirements to participate?",
-      "a": "A laptop with stable internet access and basic development tools. Detailed requirements are listed on the Registration page."
-    },
-    "9": {
-      "q": "When will DECOMPE 4.0 begin?",
-      "a": "DECOMPE 4.0 follows the timeline published on our website. Check the Timeline page for complete schedule information."
-    },
-    "10": {
-      "q": "Can international participants join?",
-      "a": "Currently, DECOMPE 4.0 is focused on Indonesian participants, but we're planning to expand internationally in future editions."
-    },
-    "11": {
-      "q": "Are there any age restrictions?",
-      "a": "No specific age restrictions, but participants should be at least high school level with basic digital literacy skills."
-    },
-    "12": {
-      "q": "What happens after winning DECOMPE 4.0?",
-      "a": "Winners get recognition, networking opportunities, potential job placements, and become part of our alumni network for future opportunities."
-    },
-    "13": {
-      "q": "Is there a refund policy?",
-      "a": "Refunds are available within 3 days of registration if you haven't accessed any program materials. Contact our support team for assistance."
-    },
-    "14": {
-      "q": "What programming languages will be covered?",
-      "a": "While DECOMPE 4.0 focuses on UI/UX design, we also cover frontend basics like HTML, CSS, and JavaScript for design implementation."
-    },
-    "15": {
-      "q": "How can I prepare for DECOMPE 4.0?",
-      "a": "Start familiarizing yourself with design tools like Figma, review UI/UX principles, and check our preparation materials after registration."
-    }
-  }
-}
 }

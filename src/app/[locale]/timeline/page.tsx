@@ -124,13 +124,13 @@ export default function TimelinePage() {
                 {t('readyToStartDesc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
-                    <Download className="mr-2 h-6 w-6" />
-                    {tCommon('downloadFlyer')}
-                    <ArrowRight className="ml-2 h-6 w-6" />
+                <Link href={`/${locale}/registration`}>
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
+                    <Shield className="mr-2 h-5 w-5" />
+                    {tCommon('joinRevolutionNow')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </a>
+                </Link>
                 <Link href={`/${locale}/about`}>
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <Cpu className="mr-2 h-6 w-6" />

@@ -3,48 +3,47 @@
     "home": "Beranda",
     "about": "Tentang",
     "timeline": "Timeline",
-    "registration": "Pendaftaran", 
+    "registration": "Pendaftaran",
     "register": "Daftar Sekarang",
     "joinNow": "Gabung Sekarang"
   },
   "hero": {
     "title": "DECOMPE",
-    "subtitle": "Digital Revolution Interface",
-    "description": "Masuki era baru desain digital di mana inovasi bertemu dengan antarmuka masa depan. Bersainglah dengan para visioner muda Indonesia dan ciptakan desain yang akan mendefinisikan ulang dunia digital!",
+    "subtitle": "Memberdayakan kreasi Digital",
+    "description": "DECOMPE 4.0 adalah ajang bagi para talenta muda untuk menampilkan karya terbaik dalam merancang antarmuka digital yang inovatif.Lebih dari sekadar kompetisi, ini adalah ruang untuk belajar, berkolaborasi, dan berkontribusi bagi perkembangan dunia digital Indonesia.!",
     "registerButton": "Daftar Sekarang",
     "downloadFlyerButton": "Unduh Flyer",
-    "exploreButton": "Explore The Future",
-    "nationalCompetition": "KOMPETISI UI/UX NASIONAL"
+    "exploreButton": " Jelajahi Ajang Ini",
+    "nationalCompetition": "KOMPETISI UI/UX ASEAN"
   },
   "sections": {
     "innovation": {
-      "title": "Innovation",
-      "description": "Desain interface yang revolusioner untuk masa depan digital"
+      "title": "Tunjukkan Potensimu",
+      "description": "Ajang ini jadi kesempatan buat kamu membuktikan ide-ide kreatif di bidang UI/UX."
     },
     "community": {
-      "title": "Community",
-      "description": "Bergabung dengan visioner muda dari seluruh Indonesia"
+      "title": "Berkontribusi untuk Industri",
+      "description": "Karyamu bukan hanya sebatas latihan, tapi bisa jadi bagian dari perkembangan desain digital di Indonesia."
     },
     "impact": {
-      "title": "Impact", 
-      "description": "Ciptakan perubahan nyata di industri teknologi"
+      "title": "Raih Pengalaman Berharga",
+      "description": "Lebih dari sekadar lomba, DECOMPE 4.0 adalah perjalanan yang bisa membuka banyak peluang di masa depan."
     }
   },
   "about": {
     "title": "Evolution of DECOMPE",
     "subtitle": "Jejak perjalanan inovasi desain yang menginspirasi generasi digital Indonesia",
     "badge": "ABOUT DECOMPE",
-    "themeTitle": "Digital Revolution Interface",
-    "themeSubtitle": "Tema DECOMPE 4.0",
-    "themeDescription1": "Di tengah revolusi digital yang tak terbendung, antarmuka menjadi medan perang antara manusia dan teknologi. DECOMPE 4.0 memanggil para pionir digital untuk menciptakan desain yang tidak hanya memukau secara visual, tetapi juga transformatif secara fungsional.",
-    "themeDescription2": "Tema ini menantang kita untuk merancang masa depan di mana setiap interaksi digital menjadi pengalaman yang tak terlupakan, setiap interface menjadi karya seni, dan setiap inovasi menjadi warisan peradaban.",
+    "themeTitle": "Memperdayakan Kreasi Digital",
+    "themeSubtitle": "Empowering Fintech Through Your Cultures",
+    "themeDescription2": "Tema ini menjadi tantangan untuk merancang masa depan fintech yang mampu memperkuat identitas, memberdayakan komunitas, dan melahirkan inovasi yang menjadi warisan budaya.",
     "targetTitle": "Target Visionaries",
     "targetSubtitle": "Siapa saja yang siap menjadi agen perubahan digital?",
     "evolution": {
       "decompe1": {
         "title": "DECOMPE 1.0",
-        "subtitle": "The Beginning",
-        "description": "Genesis era desain digital. Fondasi pertama yang membangun ekosistem kreativitas UI/UX di kalangan mahasiswa Indonesia.",
+        "subtitle": "Teknologi Bisnis Digital yang Smart",
+        "description": "Sebagai langkah awal, DECOMPE 1.0 menghadirkan tema “Teknologi Bisnis Digital yang Smart” dengan fokus pada pemanfaatan UI/UX untuk mendukung bisnis digital yang efisien. Kegiatan ini diikuti oleh 51 peserta dari berbagai universitas.",
         "achievements": "Key Achievements:",
         "participants": "50+ peserta pertama",
         "universities": "5 universitas terlibat",
@@ -52,8 +51,8 @@
       },
       "decompe2": {
         "title": "DECOMPE 2.0",
-        "subtitle": "Business Integration", 
-        "description": "\"Shaping Creative Business Technology\" - Fusi antara desain, strategi bisnis, dan teknologi untuk solusi komprehensif.",
+        "subtitle": "Shaping Creative Business Technology Through Global Challenges",
+        "description": "Pada edisi kedua, tema “Shaping Creative Business Technology Through Global Challenges” mengajak peserta merancang solusi kreatif untuk menjawab tantangan bisnis modern di era digital. Antusiasme meningkat dengan 72 peserta yang turut berkompetisi.",
         "achievements": "Key Achievements:",
         "participants": "120+ peserta",
         "partners": "10+ perusahaan partner",
@@ -61,8 +60,8 @@
       },
       "decompe3": {
         "title": "DECOMPE 3.0",
-        "subtitle": "Complete Ecosystem",
-        "description": "Ekosistem lengkap: bootcamp intensif, kompetisi ketat, dan webinar inspiratif untuk pengalaman transformasi penuh.",
+        "subtitle": "Intersection of Art and Technology in UI/UX",
+        "description": "Di tahun ketiga, DECOMPE mengusung tema “Intersection of Art and Technology in UI/UX” yang menekankan perpaduan seni dan teknologi dalam menciptakan pengalaman digital inspiratif. Kompetisi ini diikuti oleh 69 peserta dari berbagai latar belakang.",
         "achievements": "Key Achievements:",
         "participants": "200+ peserta",
         "mentors": "15+ mentor expert",
@@ -93,8 +92,8 @@
     }
   },
   "timeline": {
-    "title": "Mission Timeline",
-    "subtitle": "Jadwal operasional untuk revolusi digital Anda", 
+    "title": "AGENDA ACARA",
+    "subtitle": "Rangkaian Jadwal Kegiatan DECOMPE 4.0",
     "badge": "MISSION TIMELINE",
     "importantDates": "Important Dates",
     "importantDatesDesc": "Catat tanggal-tanggal penting ini untuk mempersiapkan revolusi digital Anda",
@@ -115,34 +114,34 @@
     "whatToExpect": "Yang Dapat Diharapkan:",
     "events": {
       "registrationPeriod": {
-        "title": "Registration Period",
-        "date": "01 - 30 November 2024",
-        "description": "Daftar sekarang untuk mendapatkan early bird discount dan akses ke materi persiapan eksklusif."
+        "title": "Periode Pendaftaran",
+        "date": "1 September - 24 Oktober 2025",
+        "description": "Siapkan tim Anda dan daftarkan diri untuk mendapatkan akses ke berbagai benefit eksklusif dan materi persiapan DECOMPE 4.0."
       },
       "selectionAnnouncement": {
-        "title": "Selection Announcement",
-        "date": "05 December 2024", 
-        "description": "Pengumuman peserta yang lolos seleksi dan pembagian kelompok untuk bootcamp."
+        "title": "Mini-Bootcamp (Skill Class)",
+        "date": "25 Oktober - 8 November 2025",
+        "description": "Ikuti pelatihan intensif selama 5 hari (setiap akhir pekan) bersama mentor berpengalaman untuk mengasah keterampilan UI/UX Anda."
       },
       "bootcampTraining": {
-        "title": "Bootcamp Training",
-        "date": "10 - 20 December 2024",
-        "description": "Pelatihan intensif dengan mentor expert dari industri teknologi terdepan."
+        "title": "Pengumpulan Karya",
+        "date": "25 Oktober - 9 November 2025",
+        "description": "Waktunya menuangkan ide-ide kreatif Anda! Kirimkan karya terbaik Anda sesuai dengan pedoman yang telah ditentukan."
       },
       "competitionWeek": {
-        "title": "Competition Week",
-        "date": "05 - 15 January 2025",
-        "description": "Seminggu penuh kompetisi desain dengan tantangan real-world dari perusahaan partner."
+        "title": "Acara Puncak: Penjurian & Awarding",
+        "date": "21 - 22 November 2025",
+        "description": "Presentasi karya dari 5 tim terbaik dan rayakan momen penobatan para pemenang DECOMPE 4.0."
       }
     },
     "phases": {
       "recruitment": {
         "title": "Recruitment",
-        "date": "01-30 NOV",
+        "date": "01 SEP - 24 OKT",
         "description": "Pembukaan pendaftaran untuk semua agen perubahan digital",
         "details": [
           "150+ pendaftar aktif",
-          "20+ institusi pendidikan", 
+          "20+ institusi pendidikan",
           "Early bird sold out dalam 2 minggu"
         ]
       },
@@ -193,87 +192,87 @@
       "pengerjaan_karya": "Pengerjaan Karya",
       "penjurian": "Penjurian & Pengumuman",
       "tahap_final": "Tahap Final",
-      
+
       "pendaftaran_desc": "Periode pendaftaran resmi untuk semua peserta",
       "bootcamp_desc": "Program pelatihan intensif dan pengembangan skill",
-      "pengerjaan_karya_desc": "Fase pengembangan proyek dan pengumpulan karya", 
+      "pengerjaan_karya_desc": "Fase pengembangan proyek dan pengumpulan karya",
       "penjurian_desc": "Proses penjurian dan pengumuman finalis",
       "tahap_final_desc": "Presentasi final dan upacara penghargaan",
-      
+
       "pendaftaran_group_desc": "Fase pendaftaran kompetisi DECOMPE 4.0",
       "bootcamp_group_desc": "Program pelatihan intensif untuk pengembangan skill",
       "pengerjaan_karya_group_desc": "Periode pengembangan proyek dan pengumpulan karya",
       "penjurian_group_desc": "Proses penjurian dan fase evaluasi",
       "tahap_final_group_desc": "Tahap final dengan presentasi dan penghargaan",
-      
-      "pendaftaran_detail1": "✅ Pendaftaran Tahap 1",
-      "pendaftaran_detail2": "✅ Pendaftaran Tahap 2",
-      "pendaftaran_detail3": "✅ Pendaftaran Tahap 3 & Penutupan",
+
+      "pendaftaran_detail1": "Pendaftaran Tahap 1 (1 - 15 September 2025)",
+      "pendaftaran_detail2": "Pendaftaran Tahap 2 (16 September - 5 Oktober 2025)",
+      "pendaftaran_detail3": "Pendaftaran Tahap 3 & Penutupan (6 - 24 Oktober 2025)",
       "pendaftaran_milestone1": "Periode pendaftaran selesai",
       "pendaftaran_milestone2": "Semua peserta terdaftar",
       "pendaftaran_milestone3": "Dokumentasi terverifikasi",
-      
-      "bootcamp_detail1": "✅ Pelatihan Dasar UI/UX Design",
-      "bootcamp_detail2": "✅ Sesi Workshop Hands-on",
-      "bootcamp_detail3": "✅ Mentoring dan Review Portfolio",
+
+      "bootcamp_detail1": "Pelatihan Dasar UI/UX Design",
+      "bootcamp_detail2": "Sesi Workshop Hands-on",
+      "bootcamp_detail3": "Mentoring dan Review Portfolio",
       "bootcamp_milestone1": "Modul pelatihan selesai",
       "bootcamp_milestone2": "Sesi workshop selesai",
       "bootcamp_milestone3": "Review portfolio dilakukan",
-      
-      "pengerjaan_karya_detail1": "✅ Pembagian Proyek & Brief",
-      "pengerjaan_karya_detail2": "✅ Periode Pengembangan Karya",
-      "pengerjaan_karya_detail3": "✅ Batas Akhir Pengumpulan Karya",
+
+      "pengerjaan_karya_detail1": "Pembagian Proyek & Brief",
+      "pengerjaan_karya_detail2": "Periode Pengembangan Karya",
+      "pengerjaan_karya_detail3": "Batas Akhir Pengumpulan Karya",
       "pengerjaan_karya_milestone1": "Brief proyek dibagikan",
       "pengerjaan_karya_milestone2": "Semua karya terkumpul",
       "pengerjaan_karya_milestone3": "Review kualitas selesai",
-      
-      "penjurian_detail1": "⏳ Penjurian Tahap 1 & Rekapitulasi Nilai",
-      "penjurian_detail2": "⏳ Pengumuman 5 Besar Finalis",
+
+      "penjurian_detail1": "Penjurian Tahap 1 & Rekapitulasi Nilai",
+      "penjurian_detail2": "Pengumuman 5 Besar Finalis",
       "penjurian_milestone1": "Penjurian awal selesai",
       "penjurian_milestone2": "Finalis terpilih",
-      
-      "tahap_final_detail1": "⏳ Pengumpulan Materi Presentasi (Pitchdeck)",
-      "tahap_final_detail2": "⏳ Presentasi Final di hadapan Juri",
-      "tahap_final_detail3": "🏆 Webinar & Malam Penghargaan (Awarding)",
+
+      "tahap_final_detail1": "Pengumpulan Materi Presentasi (Pitchdeck)",
+      "tahap_final_detail2": "Presentasi Final di hadapan Juri",
+      "tahap_final_detail3": "Webinar & Penghargaan (Awarding)",
       "tahap_final_milestone1": "Presentasi final selesai",
       "tahap_final_milestone2": "Pemenang diumumkan",
       "tahap_final_milestone3": "Upacara penghargaan selesai"
     }
   },
   "registration": {
-    "title": "Registration",
-    "subtitle": "Investasi untuk transformasi karir digital Anda",
-    "badge": "JOIN THE REVOLUTION",
-    "process": "Registration Process",
-    "processDesc": "3 langkah mudah untuk bergabung dengan revolusi digital",
-    "investmentPackages": "Investment Packages", 
-    "investmentDesc": "Pilih paket investasi yang sesuai dengan kebutuhan revolusi digital Anda",
+    "title": "Registrasi",
+    "subtitle": "Tunjukkan potensi Anda dan raih hadiah jutaan Rupiah di DECOMPE 4.0!",
+    "badge": "JOIN DECOMPE 4.0",
+    "process": "Proses Registrasi",
+    "processDesc": "3 langkah mudah untuk mendaftar DECOMPE 4.0",
+    "investmentPackages": " Pilihan Paket ",
+    "investmentDesc": "Temukan paket yang paling cocok untuk mendukung langkahmu di ajang ini.",
     "requirements": "Requirements",
     "requirementsDesc": "Persyaratan untuk bergabung dengan DECOMPE 4.0",
     "packages": {
       "earlyAccess": {
-        "title": "Early Access",
-        "price": "75K",
-        "period": "Until 15 NOV 2024",
+        "title": "Skill Class Only",
+        "price": "Rp. 50.000",
+        "period": "Sampai 24 OKT 2025",
         "features": {
           "bootcamp": "Full bootcamp access",
           "certificate": "Digital certificate",
-          "mentorship": "Mentorship opportunity", 
+          "mentorship": "Mentorship opportunity",
           "resources": "Exclusive resources"
         },
         "savings": "SAVE 25K FROM STANDARD PRICE",
         "button": "Secure Early Access"
       },
       "standard": {
-        "title": "Standard",
-        "price": "100K",
-        "period": "16 - 30 NOV 2024",
+        "title": "DECOMPE 4.0 + Skill Class",
+        "price": "Rp. 99.000",
+        "period": "01 - 15 SEP 2025",
         "popular": "POPULAR",
         "features": {
           "bootcamp": "Full bootcamp access",
           "certificate": "Premium certificate",
           "mentorship": "Priority mentorship",
-          "ebook": "Free UI/UX ebook", 
+          "ebook": "Free UI/UX ebook",
           "placement": "Job placement assistance"
         },
         "value": "BEST VALUE FOR COMPLETE EXPERIENCE",
@@ -296,60 +295,60 @@
     },
     "steps": {
       "fillForm": {
-        "title": "Fill Form",
-        "description": "Lengkapi formulir pendaftaran dengan data diri dan portofolio (jika ada)",
+        "title": "Lengkapi Formulir",
+        "description": "Isi formulir pendaftaran dengan data diri",
         "time": "Estimasi waktu: 15 menit"
       },
       "payment": {
-        "title": "Payment",
+        "title": "Pembayaran",
         "description": "Pilih paket investasi dan lakukan pembayaran melalui metode yang tersedia",
         "time": "Estimasi waktu: 10 menit"
       },
       "confirmation": {
-        "title": "Confirmation",
+        "title": "Konfirmasai",
         "description": "Tunggu konfirmasi dan akses ke materi persiapan eksklusif",
         "time": "Konfirmasi dalam 1x24 jam"
       }
     },
     "requirementsSections": {
       "technical": {
-        "title": "Technical Requirements",
+        "title": "Persyaratan Teknis",
         "items": {
-          "laptop": "Laptop atau komputer dengan spesifikasi minimal",
+          "laptop": "Laptop/PC dengan spesifikasi minimum",
           "software": "Software desain (Figma, Adobe XD, atau Sketch)",
-          "internet": "Koneksi internet stabil untuk online sessions", 
-          "equipment": "Webcam dan microphone untuk mentoring sessions"
+          "internet": "Koneksi internet stabil untuk sesi online",
+          "equipment": "Webcam dan microphone untuk mentoring"
         }
       },
       "participant": {
-        "title": "Participant Requirements",
+        "title": "Persyaratan Peserta",
         "items": {
-          "education": "Siswa SMA/SMK, mahasiswa, atau profesional muda",
-          "experience": "Pengalaman kurang dari 2 tahun di bidang UI/UX",
-          "portfolio": "Portfolio (tidak wajib, diutamakan)"
+          "education": "Terbuka bagi kalangan akademik",
+          "experience": "Memiliki minat di bidang desain digital, UI/UX, atau pengembangan produk",
+          "portfolio": "Komitmen mengikuti seluruh rangkaian program"
         }
       },
       "commitment": {
-        "title": "Commitment Requirements",
+        "title": "Syarat dan Ketentuan (DECOMPE 4.0)",
         "items": {
-          "fullProgram": "Komitmen untuk mengikuti seluruh program",
-          "timeAvailability": "Tersedia untuk sesi online dan mentorship",
-          "activeParticipation": "Partisipasi aktif dalam kegiatan bootcamp",
-          "projectCompletion": "Menyelesaikan semua proyek dan tugas yang diberikan"
+          "fullProgram": "Peserta dapat mendaftar secara individu atau dalam tim",
+          "timeAvailability": "Setiap tim terdiri dari minimal 1 (satu) orang dan maksimal 3 (tiga) orang",
+          "activeParticipation": "Karya yang disubmit harus orisinal dan belum pernah diikutsertakan dalam kompetisi lain",
+          "projectCompletion": "Peserta wajib mengikuti seluruh tahapan kompetisi, termasuk mini-bootcamp, pengumpulan karya, hingga sesi penjurian"
         }
       }
     }
   },
   "common": {
-    "readyToJoin": "Ready to Join the Revolution?",
-    "readyToTransform": "Ready to Transform Your Future?",
-    "joinDescription": "Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0 - tempat di mana mimpi digital menjadi kenyataan dan visioner seperti Anda menemukan panggungnya.",
-    "transformDescription": "Bergabunglah dengan DECOMPE 4.0 dan mulailah perjalanan Anda menjadi desainer interface masa depan yang akan mengubah dunia digital.",
+    "readyToJoin": "Siap Mengubah Masa Depan Digital?",
+    "readyToTransform": "Siap Mengubah Dunia Digital?",
+    "joinDescription": "Jangan lewatkan kesempatan untuk menjadi bagian dari DECOMPE 4.0, tempat di mana inovasi bertemu kreativitas dan para visioner seperti kamu menemukan panggungnya.",
+    "transformDescription": "Bergabunglah dalam DECOMPE 4.0 dan mulai perjalanan kamu untuk menjadi seorang desainer UI/UX andal yang siap menciptakan inovasi dan mengubah dunia digital.",
     "downloadFlyer": "Unduh Flyer",
     "backToHome": "Back to Home",
-    "learnMore": "LEARN MORE", 
-    "viewSchedule": "VIEW SCHEDULE",
-    "joinRevolutionNow": "JOIN REVOLUTION NOW"
+    "learnMore": "LEARN MORE",
+    "viewSchedule": "LIHAT JADWAL",
+    "joinRevolutionNow": "DAFTAR SEKARANG"
   },
   "contact": {
     "personTitle": "Contact Person",
@@ -358,25 +357,42 @@
   "faq": {
     "badge": "FAQ",
     "title": "Pertanyaan yang Sering Diajukan",
-    "subtitle": "Temukan jawaban atas pertanyaan umum tentang DECOMPE 4.0 dan persiapkan diri Anda untuk revolusi digital",
+    "subtitle": "Temukan jawaban atas pertanyaan umum seputar DECOMPE 4.0",
     "loadMore": "Muat Lebih Banyak FAQ",
     "showLess": "Sembunyikan",
     "items": {
-      "1": { "q": "Apa itu DECOMPE 4.0?", "a": "DECOMPE 4.0 adalah kompetisi dan bootcamp berskala nasional yang berfokus pada transformasi digital, inovasi, dan keterampilan masa depan." },
-      "2": { "q": "Siapa saja yang bisa ikut DECOMPE 4.0?", "a": "Siswa, mahasiswa, fresh graduate, dan profesional yang tertarik pada teknologi dan inovasi digital dipersilakan untuk bergabung." },
-      "3": { "q": "Apa saja paket pendaftaran yang tersedia?", "a": "Kami menyediakan paket Early Access, Standard, dan Squad dengan manfaat berbeda yang cocok untuk individu maupun tim." },
-      "4": { "q": "Apakah wajib memiliki portofolio?", "a": "Portofolio disarankan namun tidak wajib. Motivasi yang jelas dan kemauan untuk belajar sama pentingnya." },
-      "5": { "q": "Bagaimana cara mendaftar DECOMPE 4.0?", "a": "Klik tombol Daftar di beranda atau buka halaman Pendaftaran, kemudian isi formulir dan ikuti instruksi pembayaran." },
-      "6": { "q": "Apa saja yang didapat dalam program bootcamp?", "a": "Mentoring, proyek praktis, materi pembelajaran terkurasi, dan sertifikat setelah selesai (bergantung pada paket)." },
-      "7": { "q": "Bagaimana cara menghubungi dukungan DECOMPE?", "a": "Hubungi Contact Person di atas melalui WhatsApp atau email kami melalui bagian Kontak Resmi." },
-      "8": { "q": "Apa saja persyaratan teknis untuk berpartisipasi?", "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran." },
-      "9": { "q": "Kapan DECOMPE 4.0 akan dimulai?", "a": "DECOMPE 4.0 mengikuti timeline yang dipublikasikan di website kami. Cek halaman Timeline untuk informasi jadwal lengkap." },
-      "10": { "q": "Apakah peserta internasional bisa ikut?", "a": "Saat ini DECOMPE 4.0 difokuskan untuk peserta Indonesia, namun kami berencana ekspansi internasional di edisi mendatang." },
-      "11": { "q": "Apakah ada batasan umur?", "a": "Tidak ada batasan umur spesifik, namun peserta minimal berpendidikan SMA dengan kemampuan literasi digital dasar." },
-      "12": { "q": "Apa yang terjadi setelah memenangkan DECOMPE 4.0?", "a": "Pemenang mendapat pengakuan, kesempatan networking, potensi penempatan kerja, dan menjadi bagian jaringan alumni untuk peluang masa depan." },
-      "13": { "q": "Apakah ada kebijakan refund?", "a": "Refund tersedia dalam 3 hari setelah pendaftaran jika belum mengakses materi program apapun. Hubungi tim support untuk bantuan." },
-      "14": { "q": "Bahasa pemrograman apa yang akan dipelajari?", "a": "Meskipun DECOMPE 4.0 fokus pada UI/UX design, kami juga mengcover dasar frontend seperti HTML, CSS, dan JavaScript untuk implementasi desain." },
-      "15": { "q": "Bagaimana cara mempersiapkan diri untuk DECOMPE 4.0?", "a": "Mulai kenali tools desain seperti Figma, pelajari prinsip UI/UX, dan cek materi persiapan kami setelah registrasi." }
+      "1": {
+        "q": "Apa itu DECOMPE 4.0?",
+        "a": "DECOMPE 4.0 adalah kompetisi dan bootcamp berskala nasional yang berfokus pada transformasi digital, inovasi, dan keterampilan masa depan."
+      },
+      "2": {
+        "q": "Siapa saja yang bisa ikut DECOMPE 4.0?",
+        "a": "Siswa, mahasiswa, fresh graduate, dan profesional yang tertarik pada teknologi dan inovasi digital dipersilakan untuk bergabung."
+      },
+      "3": {
+        "q": "Apa saja paket pendaftaran yang tersedia?",
+        "a": "Kami menyediakan paket Early Access, Standard, dan Squad dengan manfaat berbeda yang cocok untuk individu maupun tim."
+      },
+      "4": {
+        "q": "Apakah wajib memiliki portofolio?",
+        "a": "Portofolio disarankan namun tidak wajib. Motivasi yang jelas dan kemauan untuk belajar sama pentingnya."
+      },
+      "5": {
+        "q": "Bagaimana cara mendaftar DECOMPE 4.0?",
+        "a": "Klik tombol Daftar di beranda atau buka halaman Pendaftaran, kemudian isi formulir dan ikuti instruksi pembayaran."
+      },
+      "6": {
+        "q": "Apa saja yang didapat dalam program bootcamp?",
+        "a": "Mentoring, proyek praktis, materi pembelajaran terkurasi, dan sertifikat setelah selesai (bergantung pada paket)."
+      },
+      "7": {
+        "q": "Bagaimana cara menghubungi dukungan DECOMPE?",
+        "a": "Hubungi Contact Person di atas melalui WhatsApp atau email kami melalui bagian Kontak Resmi."
+      },
+      "8": {
+        "q": "Apa saja persyaratan teknis untuk berpartisipasi?",
+        "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran."
+      }
     }
   }
 }
