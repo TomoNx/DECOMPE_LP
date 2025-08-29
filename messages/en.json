@@ -368,8 +368,8 @@
         "a": "We provide Early Batch, Standard, and Squad packages with different benefits suitable for individuals and teams."
       },
       "4": {
-        "q": "Is a portfolio mandatory?",
-        "a": "A portfolio is recommended but not mandatory. Clear motivation and a willingness to learn are just as important."
+        "q": "Is a portfolio required?",
+        "a": "Not necessary. Participants do not need to have a portfolio because what's more important is having an interest in digital design, UI/UX, or product development, along with a strong passion for learning."
       },
       "5": {
         "q": "How to register for DECOMPE 4.0?",
@@ -386,6 +386,22 @@
       "8": {
         "q": "What are the technical requirements to participate?",
         "a": "A laptop with a stable internet connection and basic development tools. Detailed requirements are on the Registration page."
+      },
+      "9": {
+        "q": "Does every participant have to attend the entire DECOMPE 4.0 x SKILL CLASS program?",
+        "a": "Participants are free to choose and participate in one or two series of events at once, namely mini bootcamp and/or competition"
+      },
+      "10": {
+        "q": "Are there any specific laptop specifications required to participate in the Skill Class?",
+        "a": "For the convenience of each participant, we recommend having at least 2 GB of free storage space and 4 GB of RAM."
+      },
+      "11": {
+        "q": "Can beginners join the Skill Class?",
+        "a": "Yes, this Skill Class is open to beginners. There are no specific educational backgrounds or age limits as prerequisites."
+      },
+      "12": {
+        "q": "Are there any specific requirements for graduation and claiming a certificate in the Skill Class?",
+        "a": "For graduation and certificate claims, participants must have a minimum attendance rate of 80% (attending 4 out of 5 meetings) and must complete the tasks given daily by the instructor."
       }
     }
   }

@@ -375,7 +375,7 @@
       },
       "4": {
         "q": "Apakah wajib memiliki portofolio?",
-        "a": "Portofolio disarankan namun tidak wajib. Motivasi yang jelas dan kemauan untuk belajar sama pentingnya."
+        "a": "Tidak Perlu. Peserta tidak perlu memiliki portofolio apapun karena yang lebih penting adalah memiliki minat di bidang desain digital, UI/UX, atau pengembangan produk, serta semangat belajar yang tinggi."
       },
       "5": {
         "q": "Bagaimana cara mendaftar DECOMPE 4.0?",
@@ -392,6 +392,22 @@
       "8": {
         "q": "Apa saja persyaratan teknis untuk berpartisipasi?",
         "a": "Laptop dengan koneksi internet stabil dan alat pengembangan dasar. Persyaratan detail ada di halaman Pendaftaran."
+      },
+      "9": {
+      "q": "Apakah setiap peserta harus mengikuti seluruh rangkaian acara DECOMPE 4.0 x SKILL CLASS?",
+      "a": "Peserta bebas memilih dan boleh mengikuti satu atau dua rangkaian acara sekaligus, yaitu mini bootcamp dan/atau competition."
+      },
+      "10": {
+        "q": "Apakah ada spesifikasi laptop khusus yang diperlukan untuk mengikuti Skill Class?",
+        "a": "Demi kenyamanan setiap peserta, kami menyarankan untuk memiliki setidaknya 2 GB ruang penyimpanan kosong dan RAM 4 GB."
+      },
+      "11": {
+        "q": "Apakah Skill Class dapat diikuti oleh pemula?",
+        "a": "Skill Class ini bisa diikuti oleh pemula kok, jadi tidak ada latar belakang pendidikan tertentu dan batas umur untuk menjadi prasyarat."
+      },
+      "12": {
+        "q": "Apakah ada syarat khusus untuk kelulusan serta klaim sertifikat di Skill Class?",
+        "a": "Syarat khusus untuk kelulusan serta klaim sertifikat, peserta harus memiliki tingkat absensi minimal sebesar 80% (4 kali hadir dalam 5 pertemuan) serta peserta harus mengerjakan task yang diberikan setiap harinya oleh pemateri."
       }
     }
   }
