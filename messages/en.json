@@ -61,33 +61,33 @@
     "targetTitle": "Target Participants",
     "targetSubtitle": "Who is ready to contribute to digital innovation and creativity?",
     "evolution": {
-      "decompe1": {
-        "title": "DECOMPE 1.0",
-        "subtitle": "The Beginning",
-        "description": "Genesis era of digital design. The first foundation that built the UI/UX creativity ecosystem among Indonesian students.",
-        "achievements": "Key Achievements:",
-        "participants": "50+ first participants",
-        "universities": "5 universities involved",
-        "mentors": "3 industry mentors"
-      },
-      "decompe2": {
-        "title": "DECOMPE 2.0",
-        "subtitle": "Business Integration",
-        "description": "\"Shaping Creative Business Technology\" - Fusion between design, business strategy, and technology for comprehensive solutions.",
-        "achievements": "Key Achievements:",
-        "participants": "120+ participants",
-        "partners": "10+ partner companies",
-        "workshops": "8 intensive workshops"
-      },
-      "decompe3": {
-        "title": "DECOMPE 3.0",
-        "subtitle": "Complete Ecosystem",
-        "description": "Complete ecosystem: intensive bootcamp, tight competition, and inspirational webinars for a full transformation experience.",
-        "achievements": "Key Achievements:",
-        "participants": "200+ participants",
-        "mentors": "15+ expert mentors",
-        "alumni": "50+ alumni working in tech"
-      }
+    "decompe1": {
+      "title": "DECOMPE 1.0",
+      "subtitle": "Smart Digital Business Technology",
+      "description": "As a first step, DECOMPE 1.0 featured the theme 'Smart Digital Business Technology' with a focus on leveraging UI/UX to support efficient digital businesses. The event was attended by 51 participants from various universities.",
+      "achievements": "Key Achievements:",
+      "participants": "50+ initial participants",
+      "universities": "5 participating universities",
+      "mentors": "3 industry mentors"
+    },
+    "decompe2": {
+      "title": "DECOMPE 2.0",
+      "subtitle": "Shaping Creative Business Technology Through Global Challenges",
+      "description": "In its second edition, the theme 'Shaping Creative Business Technology Through Global Challenges' invited participants to design creative solutions for modern business challenges in the digital era. Enthusiasm grew, with 72 participants joining the competition.",
+      "achievements": "Key Achievements:",
+      "participants": "120+ participants",
+      "partners": "10+ corporate partners",
+      "workshops": "8 intensive workshops"
+    },
+    "decompe3": {
+      "title": "DECOMPE 3.0",
+      "subtitle": "Intersection of Art and Technology in UI/UX",
+      "description": "In its third year, DECOMPE embraced the theme 'Intersection of Art and Technology in UI/UX,' emphasizing the fusion of art and technology to create inspiring digital experiences. The competition was joined by 69 participants from diverse backgrounds.",
+      "achievements": "Key Achievements:",
+      "participants": "200+ participants",
+      "mentors": "15+ expert mentors",
+      "alumni": "50+ alumni working in tech"
+    }
     },
     "targets": {
       "academics": {

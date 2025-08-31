@@ -131,12 +131,12 @@ export default function TimelinePage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href={`/${locale}/about`}>
-                  <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-lg px-12 py-4 rounded-lg backdrop-blur-sm transition-all duration-300">
-                    <BookOpen className="mr-2 h-6 w-6" />
+                <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-10 py-3 rounded-lg backdrop-blur-sm transition-all duration-300">
+                    <BookOpen className="mr-2 h-5 w-5" />
                     {tCommon('learnMore')}
                   </Button>
-                </Link>
+                </a>
               </div>
               
               <ContactSection />

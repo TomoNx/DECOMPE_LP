@@ -36,14 +36,14 @@ export default function About() {
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe1.description')}
                   </p>
-                  <div className="mt-4">
+                  {/*<div className="mt-4">
                     <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe1.achievements')}</h4>
                     <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe1.participants')}</li>
                       <li>• {t('evolution.decompe1.universities')}</li>
                       <li>• {t('evolution.decompe1.mentors')}</li>
                     </ul>
-                  </div>
+                  </div>*/}
                 </CardContent>
               </Card>
 
@@ -59,14 +59,14 @@ export default function About() {
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe2.description')}
                   </p>
-                  <div className="mt-4">
+                  {/*<div className="mt-4">
                     <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe2.achievements')}</h4>
                     <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe2.participants')}</li>
                       <li>• {t('evolution.decompe2.partners')}</li>
                       <li>• {t('evolution.decompe2.workshops')}</li>
                     </ul>
-                  </div>
+                  </div>*/}
                 </CardContent>
               </Card>
 
@@ -82,14 +82,14 @@ export default function About() {
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {t('evolution.decompe3.description')}
                   </p>
-                  <div className="mt-4">
+                  {/*<div className="mt-4">
                     <h4 className="font-semibold text-red-400 mb-2 text-sm sm:text-base">{t('evolution.decompe3.achievements')}</h4>
                     <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                       <li>• {t('evolution.decompe3.participants')}</li>
                       <li>• {t('evolution.decompe3.mentors')}</li>
                       <li>• {t('evolution.decompe3.alumni')}</li>
                     </ul>
-                  </div>
+                  </div>*/}
                 </CardContent>
               </Card>
             </div>

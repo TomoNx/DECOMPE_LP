@@ -69,15 +69,17 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.resources')}</span>
                     </li>
                   </ul>
-                  <a href="#" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                  <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
                     <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
                       <Download className="w-3 h-3" />
                       {t('packages.earlyAccess.savings')}
                     </p>
                   </a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekeC2wIH9BYCDqMadAldBHiIIOlXzboDOSzshMr9TMKBB2iw/viewform?usp=sharing&ouid=113865289417627549328" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.earlyAccess.button')}
                   </Button>
+                </a>
                 </CardContent>
               </Card>
 
@@ -114,15 +116,17 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.standard.features.placement')}</span>
                     </li>
                   </ul>
-                  <a href="#" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                  <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
                     <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
                       <Download className="w-3 h-3" />
                       {t('packages.standard.value')}
                     </p>
                   </a>
+                  <a href="https://forms.gle/SxHmzNipJufS6Chc6" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
                     {t('packages.standard.button')}
                   </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -301,7 +305,7 @@ export default function Registration() {
                 {tCommon('transformDescription')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 scroll-animate">
-                <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="https://s.id/FlyerDecompe4" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12 py-4 rounded-lg border border-red-500/50 shadow-lg shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105">
                     <Download className="mr-2 h-6 w-6" />
                     {tCommon('downloadFlyer')}

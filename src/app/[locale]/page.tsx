@@ -61,7 +61,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center scroll-animate">
-              <a href="https://example.com/flyer.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://s.id/FlyerDecompe4" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-3 rounded-lg border border-red-500/50 shadow-md shadow-red-600/25 hover:shadow-red-600/40 transition-all duration-300 transform hover:scale-105 enhanced-hover neon-border">
                   <Download className="mr-2 h-4 w-4" />
                   {t('downloadFlyerButton')}
@@ -151,12 +151,12 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href={`/${locale}/timeline`}>
+                <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-red-600/50 text-red-400 hover:bg-red-600/20 hover:text-red-300 text-base px-10 py-3 rounded-lg backdrop-blur-sm transition-all duration-300">
                     <BookOpen className="mr-2 h-5 w-5" />
                     {tCommon('learnMore')}
                   </Button>
-                </Link>
+                </a>
               </div>
               
               <ContactSection />
