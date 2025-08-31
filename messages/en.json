@@ -265,7 +265,8 @@
           "resources": "Exclusive resources"
         },
         "savings": "Download Skill Class Guidebook",
-        "button": "Secure Early Access"
+        "buttonAsean": "Join for ASEAN",
+        "buttonIndonesian": "Join for Indonesian"
       },
       "standard": {
         "title": "DECOMPE 4.0 + Skill Class",
@@ -280,7 +281,8 @@
           "placement": "Job placement assistance"
         },
         "value": "Download DECOMPE 4.0 Guidebook",
-        "button": "Join Standard"
+        "buttonAsean": "Join for ASEAN",
+        "buttonIndonesian": "Join for Indonesian"
       },
       "squad": {
         "title": "Squad (3x)",

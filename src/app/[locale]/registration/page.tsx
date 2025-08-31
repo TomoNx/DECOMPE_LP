@@ -75,11 +75,18 @@ export default function Registration() {
                       {t('packages.earlyAccess.savings')}
                     </p>
                   </a>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekeC2wIH9BYCDqMadAldBHiIIOlXzboDOSzshMr9TMKBB2iw/viewform?usp=sharing&ouid=113865289417627549328" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
-                    {t('packages.earlyAccess.button')}
-                  </Button>
-                </a>
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <a href="https://docs.google.com/forms/d/1eGj5PllTWN33CvGkEILhKT5lljjv4n1z9V7mrd82B98/viewform" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-xs sm:text-sm shadow-lg">
+                        {t('packages.earlyAccess.buttonAsean')}
+                      </Button>
+                    </a>
+                    <a href="https://docs.google.com/forms/d/12G5yyoTCcSzwg_PGL1Lv94-0SMe_NQ_0Px_tsH3zaQE/viewform" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-xs sm:text-sm shadow-lg">
+                        {t('packages.earlyAccess.buttonIndonesian')}
+                      </Button>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -122,11 +129,18 @@ export default function Registration() {
                       {t('packages.standard.value')}
                     </p>
                   </a>
-                  <a href="https://forms.gle/SxHmzNipJufS6Chc6" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-sm sm:text-base shadow-lg">
-                    {t('packages.standard.button')}
-                  </Button>
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <a href="https://docs.google.com/forms/d/1xhuVXuo968qKVYG1NwhYTkfs-ywhnJ7WiB8q4sJ4L8Y/viewform" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-xs sm:text-sm shadow-lg">
+                        {t('packages.standard.buttonAsean')}
+                      </Button>
+                    </a>
+                    <a href="https://docs.google.com/forms/d/16mWxOebI8wdSnU6DQwmQxyamvB91kh8mMIhS9wp5ZnQ/viewform" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white border border-red-500/50 text-xs sm:text-sm shadow-lg">
+                        {t('packages.standard.buttonIndonesian')}
+                      </Button>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>
