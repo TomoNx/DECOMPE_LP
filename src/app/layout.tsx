@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getBaseUrl } from "@/config/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getBaseUrl()),
   title: "DECOMPE 4.0 | UI/UX Design Competition",
   description:
     "Kompetisi desain UI/UX yang diselenggarakan UKM Coding Cyber University. Ikuti DECOMPE 4.0 dan tunjukkan karya inovatifmu!",
@@ -33,7 +35,6 @@ export const metadata: Metadata = {
     title: "DECOMPE 4.0 | UI/UX Design Competition",
     description:
       "Kompetisi desain UI/UX untuk pelajar dan mahasiswa se-Indonesia. Tunjukkan inovasi desainmu di DECOMPE 4.0!",
-    url: "https://decompe4.cyber-univ.ac.id", // ganti ke domain resmi
     siteName: "DECOMPE 4.0",
     type: "website",
   },
@@ -44,7 +45,6 @@ export const metadata: Metadata = {
       "Ikuti DECOMPE 4.0, kompetisi desain UI/UX untuk pelajar dan mahasiswa se-Indonesia.",
   },
 };
-
 
 export default function RootLayout({
   children,
