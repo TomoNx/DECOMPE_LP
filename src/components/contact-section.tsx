@@ -187,10 +187,14 @@ export default function ContactSection() {
         {/* Official Contact Footer (no title) */}
         <div className="mt-12 sm:mt-14 md:mt-16 border-t border-red-900/30 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center text-gray-400">
-            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+            <a 
+              href="mailto:uiuxdesigncompetition@cyber-univ.ac.id" 
+              className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
               <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base break-all">decompe@digitalrevolution.com</span>
-            </div>
+              <span className="text-xs sm:text-sm md:text-base break-all">
+                uiuxdesigncompetition@cyber-univ.ac.id
+              </span>
+            </a>
             <a 
               href="https://www.instagram.com/decompeofficial/"
               target="_blank"
@@ -200,10 +204,14 @@ export default function ContactSection() {
               <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
               <span className="text-xs sm:text-sm md:text-base">@decompeofficial</span>
             </a>
-            <div className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
+            <a
+              href="https://www.linkedin.com/in/ui-ux-design-competition-713385379/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 sm:gap-3 hover:text-red-300 transition-colors cursor-pointer">
               <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base">decompeofficial</span>
-            </div>
+              <span className="text-xs sm:text-sm md:text-base">UI/UX Design Competition</span>
+            </a>
           </div>
         </div>
       </footer>
