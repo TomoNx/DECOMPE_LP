@@ -1,32 +1,84 @@
 import type { MetadataRoute } from 'next';
-import { getBaseUrl } from '@/config/seo';
+import { siteName } from '@/config/seo';
 import { locales, defaultLocale } from '@/routing';
 
-// Minimal sitemap with localized homepage entries and priority.
-// Extend by adding more paths if needed.
+/**
+ * Generates a comprehensive sitemap for DECOMPE 4.0 website
+ * 
+ * This sitemap includes:
+ * - All available pages in the application
+ * - Support for all configured locales
+ * - Proper priority settings based on page importance
+ * - Appropriate change frequencies for different content types
+ * - Language alternates for each page
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = getBaseUrl();
+  // Use the provided domain for production
+  const baseUrl = 'https://decompeofficial.site';
 
-  // Known localized routes to include; add new paths here when pages exist
-  const paths = ['']; // '' represents the locale root e.g. /en, /id
+  // All available routes in the application
+  const paths = [
+    '', // Home page
+    'about', // About page
+    'registration', // Registration page
+    'timeline', // Timeline page
+  ];
 
   const entries: MetadataRoute.Sitemap = [];
 
+  // Define page priorities and change frequencies
+  const pagePriorities: Record<string, { priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = {
+    '': { priority: 1.0, changeFrequency: 'daily' }, // Homepage has highest priority
+    'about': { priority: 0.8, changeFrequency: 'monthly' },
+    'registration': { priority: 0.9, changeFrequency: 'weekly' },
+    'timeline': { priority: 0.9, changeFrequency: 'weekly' },
+    // API routes tidak perlu ditambahkan ke sitemap karena tidak diakses langsung oleh pengguna
+  };
+  
+  // Exclude API routes and other non-page routes
+  const excludePatterns = [
+    /^\/api\//,      // API routes
+    /^\/admin\//,    // Admin routes (jika ada)
+    /^\/_/,          // Next.js internal routes
+  ];
+
+  // Current date for lastModified
+  const lastModified = new Date();
+  
+  // Generate entries for each locale and path
   for (const locale of locales) {
     for (const path of paths) {
-      const loc = `${baseUrl}/${locale}${path ? `/${path}` : ''}`;
+      const relativePath = path ? `/${path}` : '';
+      const fullPath = `/${locale}${relativePath}`;
+      
+      // Skip paths that match exclude patterns
+      if (excludePatterns.some(pattern => pattern.test(fullPath))) {
+        continue;
+      }
+      
+      const loc = `${baseUrl}${fullPath}`;
+      const { priority: basePriority, changeFrequency } = pagePriorities[path];
+      
+      // Slightly lower priority for non-default locales
+      const priority = locale === defaultLocale ? basePriority : Math.max(0.1, basePriority - 0.1);
+      
       entries.push({
         url: loc,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: locale === defaultLocale ? 1.0 : 0.9,
+        lastModified,
+        changeFrequency,
+        priority,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((l) => [l, `${baseUrl}/${l}${path ? `/${path}` : ''}`])
+            locales.map((l) => [l, `${baseUrl}/${l}${relativePath}`])
           ),
         },
       });
     }
+  }
+
+  // Validasi entries sebelum mengembalikan
+  if (entries.length === 0) {
+    console.warn('Sitemap: No entries generated. Check configuration.');
   }
 
   return entries;
