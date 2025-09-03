@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   title: "DECOMPE 4.0 | UI/UX Design Competition",
   description:
     "Kompetisi desain UI/UX yang diselenggarakan UKM Coding Cyber University. Ikuti DECOMPE 4.0 dan tunjukkan karya inovatifmu!",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   keywords: [
     "DECOMPE 4.0",
     "UI/UX Design Competition",
@@ -37,12 +41,14 @@ export const metadata: Metadata = {
       "Kompetisi desain UI/UX untuk pelajar dan mahasiswa se-Indonesia. Tunjukkan inovasi desainmu di DECOMPE 4.0!",
     siteName: "DECOMPE 4.0",
     type: "website",
+    images: [{ url: "/favicon.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "DECOMPE 4.0 | UI/UX Design Competition",
     description:
       "Ikuti DECOMPE 4.0, kompetisi desain UI/UX untuk pelajar dan mahasiswa se-Indonesia.",
+    images: [{ url: "/favicon.png" }],
   },
 };
 

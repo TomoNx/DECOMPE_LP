@@ -33,6 +33,6 @@ export const config = {
     // - favicon.ico (favicon file)
     // - public folder files
     // - sitemap.xml and robots.txt
-    '/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\..*|api).*)',
+    '/((?!_next/static|_next/image|favicon.png|sitemap.xml|robots.txt|.*\..*|api).*)',
   ],
 };
