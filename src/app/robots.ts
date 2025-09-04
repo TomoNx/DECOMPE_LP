@@ -11,7 +11,7 @@ import { siteName } from '@/config/seo';
  * - Sets the host domain
  */
 export default function robots(): MetadataRoute.Robots {
-  const base = 'https://decompeofficial.site';
+  const base = 'https://www.decompeofficial.site';
   
   return {
     rules: [

@@ -35,6 +35,13 @@ export const metadata: Metadata = {
     "Kompetisi Mahasiswa",
   ],
   authors: [{ name: "UKM Coding Cyber University" }],
+  alternates: {
+    canonical: "https://www.decompeofficial.site/en",
+    languages: {
+      'en': 'https://www.decompeofficial.site/en',
+      'id': 'https://www.decompeofficial.site/id'
+    },
+  },
   openGraph: {
     title: "DECOMPE 4.0 | UI/UX Design Competition",
     description:
@@ -42,6 +49,7 @@ export const metadata: Metadata = {
     siteName: "DECOMPE 4.0",
     type: "website",
     images: [{ url: "/favicon.png" }],
+    url: "https://www.decompeofficial.site/en",
   },
   twitter: {
     card: "summary_large_image",

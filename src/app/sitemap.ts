@@ -14,7 +14,7 @@ import { locales, defaultLocale } from '@/routing';
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use the provided domain for production
-  const baseUrl = 'https://decompeofficial.site';
+  const baseUrl = 'https://www.decompeofficial.site';
 
   // All available routes in the application
   const paths = [
