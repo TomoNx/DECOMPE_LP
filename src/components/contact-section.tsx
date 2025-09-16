@@ -174,6 +174,79 @@ export default function ContactSection() {
           </div>
         </div>
 
+        {/* Supported By Section */}
+        <div className="mt-12 sm:mt-14 md:mt-16">
+          <div className="text-center mb-6 sm:mb-8">
+            <h4 className="text-xl sm:text-2xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                {tContact("supportedByTitle") || "Supported By"}
+              </span>
+            </h4>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
+              {/* Cyber University Logo */}
+              <div className="flex flex-col items-center">
+                <div className="bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl p-4 border border-red-600/30 backdrop-blur-sm">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
+                    <img 
+                      src="/images/kampus/CyberUniversity.webp" 
+                      alt="Cyber University" 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <span className="mt-3 text-sm sm:text-base text-gray-300 font-medium">
+                  Cyber University
+                </span>
+              </div>
+              
+              {/* BEM Logo */}
+              <div className="flex flex-col items-center">
+                <div className="bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl p-4 border border-red-600/30 backdrop-blur-sm">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
+                    <img 
+                      src="/images/kampus/BEM.png" 
+                      alt="BEM" 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <span className="mt-3 text-sm sm:text-base text-gray-300 font-medium">
+                  BEM Cyber University
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Organized By Section */}
+        <div className="mt-12 sm:mt-14 md:mt-16">
+          <div className="text-center mb-6 sm:mb-8">
+            <h4 className="text-xl sm:text-2xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                 Organized By UKM Coding
+              </span>
+            </h4>
+            
+            <div className="flex flex-col items-center justify-center">
+              {/* UKM Coding Logo */}
+              <div className="flex flex-col items-center">
+                <div className="bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl p-4 border border-red-600/30 backdrop-blur-sm">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
+                    {/* Logo akan ditambahkan nanti */}
+                    <div className="w-full h-full flex items-center justify-center border border-dashed border-red-400/50 rounded-lg">
+                      <span className="text-red-400/70 text-xs sm:text-sm text-center px-2">Logo UKM Coding</span>
+                    </div>
+                  </div>
+                </div>
+                <span className="mt-3 text-sm sm:text-base text-gray-300 font-medium">
+                  UKM Coding
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Sponsor Section */}
         {/*<div className="mt-12 sm:mt-14 md:mt-16">
           <SponsorMarquee speed="medium" direction="left" pauseOnHover={true} />

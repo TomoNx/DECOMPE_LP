@@ -365,7 +365,8 @@
   },
   "contact": {
     "personTitle": "Contact Person",
-    "officialTitle": "Kontak Resmi"
+    "officialTitle": "Kontak Resmi",
+    "supportedByTitle": "Didukung Oleh"
   },
   "faq": {
     "badge": "FAQ",

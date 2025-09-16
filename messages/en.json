@@ -358,7 +358,8 @@
   },
   "contact": {
     "personTitle": "Contact Person",
-    "officialTitle": "Official Contact"
+    "officialTitle": "Official Contact",
+    "supportedByTitle": "Supported By"
   },
   "faq": {
     "badge": "FAQ",
