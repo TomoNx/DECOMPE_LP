@@ -224,7 +224,7 @@ export default function ContactSection() {
           <div className="text-center mb-6 sm:mb-8">
             <h4 className="text-xl sm:text-2xl font-bold mb-4">
               <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-                 Organized By UKM Coding
+                 Organized By
               </span>
             </h4>
             
