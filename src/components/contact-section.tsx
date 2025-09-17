@@ -233,10 +233,11 @@ export default function ContactSection() {
               <div className="flex flex-col items-center">
                 <div className="bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl p-4 border border-red-600/30 backdrop-blur-sm">
                   <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
-                    {/* Logo akan ditambahkan nanti */}
-                    <div className="w-full h-full flex items-center justify-center border border-dashed border-red-400/50 rounded-lg">
-                      <span className="text-red-400/70 text-xs sm:text-sm text-center px-2">Logo UKM Coding</span>
-                    </div>
+                    <img 
+                      src="/images/kampus/UKMCODING.png" 
+                      alt="BEM" 
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                 </div>
                 <span className="mt-3 text-sm sm:text-base text-gray-300 font-medium">
