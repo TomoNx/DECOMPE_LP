@@ -272,8 +272,8 @@
           "resources": "Exclusive resources"
         },
         "savings": "Download Panduan Skill Class",
-        "buttonAsean": "Join for ASEAN",
-        "buttonIndonesian": "join for indonesian"
+        "buttonAsean": "Daftar Untuk ASEAN",
+        "buttonIndonesian": "Daftar Untuk Indonesia"
       },
       "standard": {
         "title": "DECOMPE 4.0 + Skill Class",
@@ -288,8 +288,8 @@
           "placement": "Job placement assistance"
         },
         "value": "Download Panduan DECOMPE 4.0",
-        "buttonAsean": "Join for ASEAN",
-        "buttonIndonesian": "join for indonesian"
+        "buttonAsean": "Daftar Untuk ASEAN",
+        "buttonIndonesian": "Daftar Untuk Indonesia"
       },
       "squad": {
         "title": "Squad (3x)",
@@ -366,7 +366,8 @@
   "contact": {
     "personTitle": "Contact Person",
     "officialTitle": "Kontak Resmi",
-    "supportedByTitle": "Didukung Oleh"
+    "supportedByTitle": "Didukung Oleh",
+    "organizedByTitle": "Diselenggarakan Oleh"
   },
   "faq": {
     "badge": "FAQ",

@@ -359,7 +359,8 @@
   "contact": {
     "personTitle": "Contact Person",
     "officialTitle": "Official Contact",
-    "supportedByTitle": "Supported By"
+    "supportedByTitle": "Supported By",
+    "organizedByTitle": "Organized By"
   },
   "faq": {
     "badge": "FAQ",
