@@ -69,7 +69,7 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.earlyAccess.features.resources')}</span>
                     </li>
                   </ul>
-                  <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                  <a href="https://drive.google.com/file/d/1UqpMHc8mF5oAlqI2WrAcIvKP5Wu9n5QN/view?usp=sharing" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
                     <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
                       <Download className="w-3 h-3" />
                       {t('packages.earlyAccess.savings')}
@@ -123,7 +123,7 @@ export default function Registration() {
                       <span className="text-xs sm:text-sm">{t('packages.standard.features.placement')}</span>
                     </li>
                   </ul>
-                  <a href="https://drive.google.com/uc?export=download&id=1jdOrM_-ZlgjRxwcw3dX5x5_5o3yczHI6" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
+                  <a href="https://drive.google.com/file/d/1UqpMHc8mF5oAlqI2WrAcIvKP5Wu9n5QN/view?usp=sharing" className="block bg-red-900/20 border border-red-800/50 rounded-lg p-2 sm:p-3 mb-3 sm:mb-4 hover:bg-red-800/30 hover:border-red-700/60 transition-all duration-300 cursor-pointer">
                     <p className="text-xs text-red-400 font-semibold flex items-center justify-center gap-2">
                       <Download className="w-3 h-3" />
                       {t('packages.standard.value')}
