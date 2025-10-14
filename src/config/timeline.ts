@@ -88,7 +88,7 @@ export interface TimelineSettings {
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
   currentStage: 'pendaftaran', // Current stage for testing
-  currentProgress: 44,        // 10% progress - in development
+  currentProgress: 81,        // 10% progress - in development
   
   items: [
     // FASE 1: PENDAFTARAN
