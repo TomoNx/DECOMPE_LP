@@ -12,9 +12,34 @@ interface MediaPartnerMarqueeProps {
 
 const mediaPartners = [
   {
-    name: "Sample",
-    image: "/images/media-partners/LH.jpg",
-    description: "sample"
+    name: "Kabar Lomba",
+    image: "/images/media-partners/Logo KabarLomba.png",
+    description: "Media Partner"
+  },
+  {
+    name: "Lomba Tekno",
+    image: "/images/media-partners/Logo LombaTekno.png",
+    description: "Media Partner"
+  },
+  {
+    name: "Lomba UI UX",
+    image: "/images/media-partners/Logo LombaUIUX.png",
+    description: "Media Partner"
+  },
+  {
+    name: "Tekno Event Academy 25",
+    image: "/images/media-partners/Logo TeknoEventAcademy25.png",
+    description: "Media Partner"
+  },
+  {
+    name: "Tekno Event Campus 25",
+    image: "/images/media-partners/Logo TeknoEventCampus25.png",
+    description: "Media Partner"
+  },
+  {
+    name: "Edaran Event",
+    image: "/images/media-partners/Edaran event.png",
+    description: "Media Partner"
   },
 ]
 

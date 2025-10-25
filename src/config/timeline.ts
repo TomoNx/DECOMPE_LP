@@ -87,8 +87,8 @@ export interface TimelineSettings {
 
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
-  currentStage: 'pendaftaran', // Current stage for testing
-  currentProgress: 81,        // 10% progress - in development
+  currentStage: 'bootcamp', // Current stage set to bootcamp
+  currentProgress: 1,        // 75% progress in bootcamp phase
   
   items: [
     // FASE 1: PENDAFTARAN
@@ -113,13 +113,13 @@ export const timelineSettings: TimelineSettings = {
       date: '25 OKT - 08 NOV',
       dateRange: '25 Oktober - 08 November 2025',
       description: 'bootcamp_desc',
-      status: 'completed',
-      progress: 100,
+      status: 'current',
+      progress: 1,
       details: ['bootcamp_detail1', 'bootcamp_detail2', 'bootcamp_detail3'],
       milestones: ['bootcamp_milestone1', 'bootcamp_milestone2', 'bootcamp_milestone3']
     },
     
-    // FASE 3: PENGERJAAN KARYA
+    // FASE 3: PENGERJAAN KARYA (PROJECT WORK)
     {
       id: 'pengerjaan_karya',
       phase: 'pengerjaan_karya',
@@ -127,8 +127,8 @@ export const timelineSettings: TimelineSettings = {
       date: '25 OKT - 09 NOV',
       dateRange: '25 Oktober - 09 November 2025',
       description: 'pengerjaan_karya_desc',
-      status: 'completed',
-      progress: 100,
+      status: 'upcoming',  // Both bootcamp and project work are current
+      progress: 30,       // Project work at 30% progress
       details: ['pengerjaan_karya_detail1', 'pengerjaan_karya_detail2', 'pengerjaan_karya_detail3'],
       milestones: ['pengerjaan_karya_milestone1', 'pengerjaan_karya_milestone2', 'pengerjaan_karya_milestone3']
     },
@@ -141,8 +141,8 @@ export const timelineSettings: TimelineSettings = {
       date: '10 -15 NOV',
       dateRange: '10 - 15 November 2025',
       description: 'penjurian_desc',
-      status: 'completed',
-      progress: 100,
+      status: 'upcoming',
+      progress: 0,
       details: ['penjurian_detail1', 'penjurian_detail2'],
       milestones: ['penjurian_milestone1', 'penjurian_milestone2']
     },
@@ -155,8 +155,8 @@ export const timelineSettings: TimelineSettings = {
       date: '16 NOV - 22 NOV',
       dateRange: '16 November 2025 - 22 November 2026',
       description: 'tahap_final_desc',
-      status: 'completed',
-      progress: 100,
+      status: 'upcoming',
+      progress: 0,
       details: ['tahap_final_detail1', 'tahap_final_detail2', 'tahap_final_detail3'],
       milestones: ['tahap_final_milestone1', 'tahap_final_milestone2', 'tahap_final_milestone3']
     }
