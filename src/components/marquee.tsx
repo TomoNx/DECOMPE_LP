@@ -33,6 +33,13 @@ export default function Marquee({
     fast: '15s'
   }[speed]
 
+  const MINIMUM_ITEMS_FOR_SEAMLESS_LOOP = 12;
+  let displayItems = [...items];
+  if (items.length > 0 && items.length < MINIMUM_ITEMS_FOR_SEAMLESS_LOOP) {
+    const repeatCount = Math.ceil(MINIMUM_ITEMS_FOR_SEAMLESS_LOOP / items.length);
+    displayItems = Array(repeatCount).fill(items).flat();
+  }
+
   return (
     <section className={cn("relative py-12 overflow-hidden rounded-xl", className)}>
       <div className="mx-auto px-4 mb-8 max-w-6xl">
@@ -67,7 +74,7 @@ export default function Marquee({
                 : `marquee-reverse ${animationDuration} linear infinite`
             }}
           >
-            {items.map((item, index) => (
+            {displayItems.map((item, index) => (
               <div
                 key={`item-${index}`}
                 className="flex-shrink-0 group cursor-pointer"
@@ -84,7 +91,7 @@ export default function Marquee({
                 </div>
               </div>
             ))}
-             {items.map((item, index) => (
+             {displayItems.map((item, index) => (
               <div
                 key={`item-${index}-clone`}
                 className="flex-shrink-0 group cursor-pointer"
