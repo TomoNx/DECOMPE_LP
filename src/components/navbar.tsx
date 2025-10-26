@@ -115,12 +115,11 @@ function Navbar() {
   }, [pathname, locale])
 
   // Memoize navigation items
-  const navItems = useMemo(() => [
+  const navItems = [
     { path: '/', label: t('home'), icon: <Zap className="w-4 h-4" /> },
     { path: '/about', label: t('about'), icon: <Shield className="w-4 h-4" /> },
     { path: '/timeline', label: t('timeline'), icon: <Cpu className="w-4 h-4" /> },
-    { path: '/registration', label: t('registration'), icon: <Target className="w-4 h-4" /> },
-  ], [t])
+  ]
 
   // Throttled scroll handler for better performance
   const handleScroll = useCallback(() => {
