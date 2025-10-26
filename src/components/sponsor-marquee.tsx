@@ -8,6 +8,11 @@ const sponsors = [
     image: "/images/sponsors/LH.jpg",
     description: "LH"
   },
+  {
+    name: "Gipsy AI",
+    image: "/sponsors/GipsyAI Basic - Dark Background.png",
+    description: "Gipsy AI"
+  },
 ]
 
 export default function SponsorMarquee({ 
