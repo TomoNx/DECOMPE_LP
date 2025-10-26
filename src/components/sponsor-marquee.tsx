@@ -4,11 +4,6 @@ import Marquee from "./marquee"
 
 const sponsors = [
   {
-    name: "Cyber University",
-    image: "/images/sponsors/LH.jpg",
-    description: "LH"
-  },
-  {
     name: "Gipsy AI",
     image: "/sponsors/GipsyAI Basic - Dark Background.png",
     description: "Gipsy AI"
