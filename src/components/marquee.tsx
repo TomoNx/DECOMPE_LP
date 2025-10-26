@@ -72,13 +72,13 @@ export default function Marquee({
                 key={`item-${index}`}
                 className="flex-shrink-0 group cursor-pointer"
               >
-                <div className="min-w-[140px] max-w-[240px] h-[90px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-transparent px-4">
+                <div className="min-w-[140px] max-w-[240px] h-[90px] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-transparent px-4">
                   <Image
                     src={item.image}
                     alt={item.name}
                     width={220}
                     height={90}
-                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100"
+                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-[filter,opacity] duration-500 opacity-70 hover:opacity-100"
                     priority={index < 8}
                   />
                 </div>
@@ -90,13 +90,13 @@ export default function Marquee({
                 className="flex-shrink-0 group cursor-pointer"
                 aria-hidden="true"
               >
-                <div className="min-w-[140px] max-w-[240px] h-[90px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-transparent px-4">
+                <div className="min-w-[140px] max-w-[240px] h-[90px] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-transparent px-4">
                   <Image
                     src={item.image}
                     alt={item.name}
                     width={220}
                     height={90}
-                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100"
+                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-[filter,opacity] duration-500 opacity-70 hover:opacity-100"
                     priority={index < 8}
                   />
                 </div>

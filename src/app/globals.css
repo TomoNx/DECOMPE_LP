@@ -197,7 +197,7 @@ html {
 }
 
 /* Motion preferences */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
@@ -207,7 +207,7 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
+} */
 
 /* Progress bar */
 .scroll-progress {
