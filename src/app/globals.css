@@ -572,27 +572,20 @@ h2.text-4xl, h2.text-5xl, h2.text-7xl {
 /* Marquee animations */
 @keyframes marquee {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(-12.5%, 0, 0);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes marquee-reverse {
   0% {
-    transform: translate3d(-12.5%, 0, 0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
-}
-
-/* Marquee styles */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
 }
 
 /* Pause on hover */
