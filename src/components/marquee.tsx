@@ -65,7 +65,7 @@ export default function Marquee({
         >
           <div
             className={cn(
-              "flex animate-marquee space-x-8 shrink-0",
+              "flex animate-marquee space-x-8 shrink-0 will-change-transform",
               pauseOnHover && "hover:pause"
             )}
             style={{
@@ -85,7 +85,7 @@ export default function Marquee({
                     alt={item.name}
                     width={220}
                     height={90}
-                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-[filter,opacity] duration-500 opacity-70 hover:opacity-100"
+                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain opacity-70 group-hover:opacity-100"
                     priority={index < 8}
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function Marquee({
                     alt={item.name}
                     width={220}
                     height={90}
-                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain filter grayscale hover:grayscale-0 transition-[filter,opacity] duration-500 opacity-70 hover:opacity-100"
+                    className="w-auto h-auto max-w-[220px] max-h-[85px] object-contain opacity-70 group-hover:opacity-100"
                     priority={index < 8}
                   />
                 </div>
