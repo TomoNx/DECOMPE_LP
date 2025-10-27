@@ -10,22 +10,22 @@ const mediaPartners = [
   },
   {
     name: "Lomba Tekno",
-    image: "/images/media-partners/Logo LombaTekno.png",
+    image: "/images/media-partners/Logo_LombaTekno_optimized.webp",
     description: "Media Partner"
   },
   {
     name: "Lomba UI UX",
-    image: "/images/media-partners/Logo LombaUIUX.png",
+    image: "/images/media-partners/Logo_LombaUIUX_optimized.webp",
     description: "Media Partner"
   },
   {
     name: "Tekno Event Academy 25",
-    image: "/images/media-partners/Logo TeknoEventAcademy25.png",
+    image: "/images/media-partners/Logo_TeknoEventAcademy25_optimized.webp",
     description: "Media Partner"
   },
   {
     name: "Tekno Event Campus 25",
-    image: "/images/media-partners/Logo TeknoEventCampus25.png",
+    image: "/images/media-partners/Logo_TeknoEventCampus25_optimized.webp",
     description: "Media Partner"
   },
   {

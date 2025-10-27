@@ -5,7 +5,7 @@ import Marquee from "./marquee"
 const sponsors = [
   {
     name: "Gipsy AI",
-    image: "/sponsors/GipsyAI Basic - Dark Background.png",
+    image: "/sponsors/GipsyAI_optimized.webp",
     description: "Gipsy AI"
   },
 ]
