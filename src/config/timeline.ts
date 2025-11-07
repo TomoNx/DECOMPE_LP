@@ -88,7 +88,7 @@ export interface TimelineSettings {
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
   currentStage: 'bootcamp', // Current stage set to bootcamp
-  currentProgress: 1,        // 75% progress in bootcamp phase
+  currentProgress: 96,        // 96% progress in bootcamp phase
   
   items: [
     // FASE 1: PENDAFTARAN
@@ -152,8 +152,8 @@ export const timelineSettings: TimelineSettings = {
       id: 'tahap_final',
       phase: 'tahap_final',
       group: 'tahap_final',
-      date: '16 NOV - 22 NOV',
-      dateRange: '16 November 2025 - 22 November 2026',
+      date: '16 NOV - 23 NOV',
+      dateRange: '16 November 2025 - 23 November 2025',
       description: 'tahap_final_desc',
       status: 'upcoming',
       progress: 0,
