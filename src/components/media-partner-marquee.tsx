@@ -36,7 +36,7 @@ const mediaPartners = [
 ]
 
 export default function MediaPartnerMarquee({ 
-  speed = 'fast',
+  speed = 'medium',
   direction = 'right',
   pauseOnHover = true
 }: {

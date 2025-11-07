@@ -28,9 +28,9 @@ export default function Marquee({
   subtitle,
 }: MarqueeProps) {
   const animationDuration = {
-    slow: '40s',
-    medium: '20s',
-    fast: '15s'
+    slow: '80s',
+    medium: '40s',
+    fast: '30s'
   }[speed]
 
   const MINIMUM_ITEMS_FOR_SEAMLESS_LOOP = 12;
