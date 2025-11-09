@@ -87,7 +87,7 @@ export interface TimelineSettings {
 
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
-  currentStage: 'selection', // Current stage set to bootcamp
+  currentStage: 'penjurian', // Current stage set to bootcamp
   currentProgress: 10,        // 96% progress in bootcamp phase
   
   items: [
