@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "timeline": "Timeline",
+    "hall-of-fame": "Hall of Fame",
     "registration": "Registration",
     "register": "Register Now",
     "joinNow": "Join Now"
@@ -361,6 +362,13 @@
     "officialTitle": "Official Contact",
     "supportedByTitle": "Supported By",
     "organizedByTitle": "Organized By"
+  },
+  "HallOfFamePage": {
+    "title": "Hall of Fame",
+    "description": "Celebrating the Winners of Decomp 4",
+    "generalWinners": "General Winners",
+    "favoriteWinner": "Favorite Winner",
+    "finalists": "Finalists"
   },
   "faq": {
     "badge": "FAQ",

@@ -3,6 +3,7 @@
     "home": "Beranda",
     "about": "Tentang",
     "timeline": "Timeline",
+    "hall-of-fame": "Hall of Fame",
     "registration": "Pendaftaran",
     "register": "Daftar Sekarang",
     "joinNow": "Gabung Sekarang"
@@ -368,6 +369,13 @@
     "officialTitle": "Kontak Resmi",
     "supportedByTitle": "Didukung Oleh",
     "organizedByTitle": "Diselenggarakan Oleh"
+  },
+  "HallOfFamePage": {
+    "title": "Hall of Fame",
+    "description": "Merayakan Para Pemenang Decomp 4",
+    "generalWinners": "Pemenang Umum",
+    "favoriteWinner": "Pemenang Favorit",
+    "finalists": "Finalis"
   },
   "faq": {
     "badge": "FAQ",
