@@ -441,7 +441,7 @@
         "subtitle": "Tim-tim dengan pencapaian istimewa"
       },
       "finalists": {
-        "title": "Finalis",
+        "title": "Runner Up",
         "subtitle": "Tim-tim hebat yang mencapai babak final"
       }
     },
@@ -449,7 +449,7 @@
       "champion": "Juara",
       "favorite": "Pemenang Favorit",
       "bestPresentation": "Best Presentation",
-      "finalist": "Finalis"
+      "finalist": "Runner Up"
     },
     "labels": {
       "project": "Project",

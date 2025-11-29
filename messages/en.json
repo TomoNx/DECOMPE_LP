@@ -434,7 +434,7 @@
         "subtitle": "Teams with exceptional achievements"
       },
       "finalists": {
-        "title": "Finalists",
+        "title": "Runner Up",
         "subtitle": "Great teams that reached the final round"
       }
     },
@@ -442,7 +442,7 @@
       "champion": "Champion",
       "favorite": "Favorite Winner",
       "bestPresentation": "Best Presentation",
-      "finalist": "Finalist"
+      "finalist": "Runner Up"
     },
     "labels": {
       "project": "Project",

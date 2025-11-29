@@ -17,8 +17,9 @@ interface TeamData {
   teamName: string
   university: string
   members: TeamMember[]
-  logoPath: string
+  logoPath?: string
   projectTitle?: string
+  customTitle?: string
 }
 
 export default function HallOfFame() {
@@ -33,7 +34,7 @@ export default function HallOfFame() {
         { name: "Salsabiila Bazaluna Febriadini" },
         { name: "Mumtaz Aaliyah Fasya" }
       ],
-      logoPath: "/winners/team1-logo.png",
+      // logoPath: "/winners/team1-logo.png",
       projectTitle: "MALA"
     },
     {
@@ -44,7 +45,7 @@ export default function HallOfFame() {
         { name: "Daffa Kisstanta Taufik" },
         { name: "Jasmine Varsha Ananda" }
       ],
-      logoPath: "/winners/team2-logo.png",
+      // logoPath: "/winners/team2-logo.png",
       projectTitle: "SafeZone"
     },
     {
@@ -55,7 +56,7 @@ export default function HallOfFame() {
         { name: "Naufal Dzaki Al Thaafah" },
         { name: "Moh. Aliiffil Qodri VanozaAraby" }
       ],
-      logoPath: "/winners/team3-logo.png",
+      // logoPath: "/winners/team3-logo.png",
       projectTitle: "Circle Pay"
     }
   ]
@@ -68,7 +69,7 @@ export default function HallOfFame() {
       { name: "Naufal Dzaki Al Thaafah" },
       { name: "Moh. Aliiffil Qodri VanozaAraby" }
     ],
-    logoPath: "/winners/favorite-logo.png",
+    // logoPath: "/winners/favorite-logo.png",
     projectTitle: "Circle Pay"
   }
 
@@ -93,8 +94,9 @@ export default function HallOfFame() {
         { name: "Muhammad Rizel Al fikri" },
         { name: "Muhammad Hilmansyah Lukman" }
       ],
-      logoPath: "/winners/finalist1-logo.png",
-      projectTitle: "Good Jobs"
+      // logoPath: "/winners/finalist1-logo.png",
+      projectTitle: "Good Jobs",
+      customTitle: "Runner Up 1"
     },
     {
       teamName: "Pixellote",
@@ -102,8 +104,9 @@ export default function HallOfFame() {
       members: [
         { name: "Elgi Nabil Ramadhan" }
       ],
-      logoPath: "/winners/finalist2-logo.png",
-      projectTitle: "Hematize"
+      // logoPath: "/winners/finalist2-logo.png",
+      projectTitle: "Hematize",
+      customTitle: "Runner Up 2"
     }
   ]
 
@@ -128,18 +131,20 @@ export default function HallOfFame() {
         <div className="w-32 h-32 bg-gradient-to-br from-red-900/20 to-red-700/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-red-600/30 group-hover:border-red-500/50 transition-all duration-300 overflow-hidden">
           <div className="relative w-full h-full flex items-center justify-center">
             {/* Placeholder - Replace with actual logo */}
-            <Image
-              src={team.logoPath}
-              alt={`${team.teamName} logo`}
-              width={128}
-              height={128}
-              className="object-contain"
-              onError={(e) => {
-                // Fallback to icon if image not found
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
-            />
+            {team.logoPath && (
+              <Image
+                src={team.logoPath}
+                alt={`${team.teamName} logo`}
+                width={128}
+                height={128}
+                className="object-contain"
+                onError={(e) => {
+                  // Fallback to icon if image not found
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
+              />
+            )}
             <div className="absolute inset-0 flex items-center justify-center">
               <Users className="w-12 h-12 text-red-400 group-hover:text-red-300 transition-colors duration-300" />
             </div>
@@ -168,7 +173,7 @@ export default function HallOfFame() {
         {isFinalist && (
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-600/50 text-blue-400 bg-black/50 mb-3">
             <Award className="w-5 h-5" />
-            <span className="font-bold">{t('badges.finalist')}</span>
+            <span className="font-bold">{team.customTitle || t('badges.finalist')}</span>
           </div>
         )}
 
