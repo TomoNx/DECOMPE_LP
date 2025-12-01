@@ -3,6 +3,7 @@
     "home": "Beranda",
     "about": "Tentang",
     "timeline": "Timeline",
+    "hallOfFame": "Hall of Fame",
     "registration": "Pendaftaran",
     "register": "Daftar Sekarang",
     "joinNow": "Gabung Sekarang"
@@ -424,6 +425,40 @@
         "q": "Apakah ada syarat khusus untuk kelulusan serta klaim sertifikat di Skill Class?",
         "a": "Syarat khusus untuk kelulusan serta klaim sertifikat, peserta harus memiliki tingkat absensi minimal sebesar 80% (4 kali hadir dalam 5 pertemuan) serta peserta harus mengerjakan task yang diberikan setiap harinya oleh pemateri."
       }
+    }
+  },
+  "hallOfFame": {
+    "title": "Hall of Fame",
+    "subtitle": "Merayakan Inovasi dan Prestasi Tim DECOMPE 4.0",
+    "badge": "Pemenang DECOMPE 4.0",
+    "sections": {
+      "champions": {
+        "title": "Pemenang Umum",
+        "subtitle": "Tim-tim terbaik yang telah menunjukkan inovasi luar biasa"
+      },
+      "specialAwards": {
+        "title": "Penghargaan Khusus",
+        "subtitle": "Tim-tim dengan pencapaian istimewa"
+      },
+      "finalists": {
+        "title": "Runner Up",
+        "subtitle": "Tim-tim hebat yang mencapai babak final"
+      }
+    },
+    "badges": {
+      "champion": "Juara",
+      "favorite": "Pemenang Favorit",
+      "bestPresentation": "Best Presentation",
+      "finalist": "Runner Up"
+    },
+    "labels": {
+      "project": "Project",
+      "teamMembers": "Anggota Tim",
+      "chosenByPublic": "Dipilih langsung oleh masyarakat"
+    },
+    "congratulations": {
+      "title": "Selamat untuk Semua Pemenang!",
+      "message": "Terima kasih atas dedikasi, inovasi, dan semangat luar biasa yang telah ditunjukkan. Kalian semua adalah inspirasi bagi generasi inovator selanjutnya."
     }
   }
 }

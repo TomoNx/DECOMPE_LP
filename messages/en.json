@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "timeline": "Timeline",
+    "hallOfFame": "Hall of Fame",
     "registration": "Registration",
     "register": "Register Now",
     "joinNow": "Join Now"
@@ -417,6 +418,40 @@
         "q": "Are there any specific requirements for graduation and claiming a certificate in the Skill Class?",
         "a": "For graduation and certificate claims, participants must have a minimum attendance rate of 80% (attending 4 out of 5 meetings) and must complete the tasks given daily by the instructor."
       }
+    }
+  },
+  "hallOfFame": {
+    "title": "Hall of Fame",
+    "subtitle": "Celebrating Innovation and Achievement of DECOMPE 4.0 Teams",
+    "badge": "DECOMPE 4.0 Winners",
+    "sections": {
+      "champions": {
+        "title": "Overall Winners",
+        "subtitle": "The best teams that have shown extraordinary innovation"
+      },
+      "specialAwards": {
+        "title": "Special Awards",
+        "subtitle": "Teams with exceptional achievements"
+      },
+      "finalists": {
+        "title": "Runner Up",
+        "subtitle": "Great teams that reached the final round"
+      }
+    },
+    "badges": {
+      "champion": "Champion",
+      "favorite": "Favorite Winner",
+      "bestPresentation": "Best Presentation",
+      "finalist": "Runner Up"
+    },
+    "labels": {
+      "project": "Project",
+      "teamMembers": "Team Members",
+      "chosenByPublic": "Chosen directly by the public"
+    },
+    "congratulations": {
+      "title": "Congratulations to All Winners!",
+      "message": "Thank you for your dedication, innovation, and extraordinary spirit. You are all an inspiration for the next generation of innovators."
     }
   }
 }

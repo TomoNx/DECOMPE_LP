@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, memo } from 'react'
-import { Menu, X, Zap, Shield, Cpu, Target } from 'lucide-react'
+import { Menu, X, Zap, Shield, Cpu, Target, Trophy } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
@@ -119,6 +119,7 @@ function Navbar() {
     { path: '/', label: t('home'), icon: <Zap className="w-4 h-4" /> },
     { path: '/about', label: t('about'), icon: <Shield className="w-4 h-4" /> },
     { path: '/timeline', label: t('timeline'), icon: <Cpu className="w-4 h-4" /> },
+    { path: '/hall-of-fame', label: t('hallOfFame'), icon: <Trophy className="w-4 h-4" /> },
   ]
 
   // Throttled scroll handler for better performance
