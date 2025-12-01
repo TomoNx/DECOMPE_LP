@@ -87,9 +87,9 @@ export interface TimelineSettings {
 
 // Settings default - Timeline DECOMPE 4.0 yang disederhanakan
 export const timelineSettings: TimelineSettings = {
-  currentStage: 'penjurian', // Current stage set to bootcamp
-  currentProgress: 10,        // 96% progress in bootcamp phase
-  
+  currentStage: 'tahap_final',
+  currentProgress: 100,
+
   items: [
     // FASE 1: PENDAFTARAN
     {
@@ -104,7 +104,7 @@ export const timelineSettings: TimelineSettings = {
       details: ['pendaftaran_detail1', 'pendaftaran_detail2', 'pendaftaran_detail3'],
       milestones: ['pendaftaran_milestone1', 'pendaftaran_milestone2', 'pendaftaran_milestone3']
     },
-    
+
     // FASE 2: BOOTCAMP
     {
       id: 'bootcamp',
@@ -118,7 +118,7 @@ export const timelineSettings: TimelineSettings = {
       details: ['bootcamp_detail1', 'bootcamp_detail2', 'bootcamp_detail3'],
       milestones: ['bootcamp_milestone1', 'bootcamp_milestone2', 'bootcamp_milestone3']
     },
-    
+
     // FASE 3: PENGERJAAN KARYA (PROJECT WORK)
     {
       id: 'pengerjaan_karya',
@@ -132,7 +132,7 @@ export const timelineSettings: TimelineSettings = {
       details: ['pengerjaan_karya_detail1', 'pengerjaan_karya_detail2', 'pengerjaan_karya_detail3'],
       milestones: ['pengerjaan_karya_milestone1', 'pengerjaan_karya_milestone2', 'pengerjaan_karya_milestone3']
     },
-    
+
     // FASE 4: PENJURIAN & PENGUMUMAN
     {
       id: 'penjurian',
@@ -146,7 +146,7 @@ export const timelineSettings: TimelineSettings = {
       details: ['penjurian_detail1', 'penjurian_detail2'],
       milestones: ['penjurian_milestone1', 'penjurian_milestone2']
     },
-    
+
     // FASE 5: TAHAP FINAL
     {
       id: 'tahap_final',
@@ -161,7 +161,7 @@ export const timelineSettings: TimelineSettings = {
       milestones: ['tahap_final_milestone1', 'tahap_final_milestone2', 'tahap_final_milestone3']
     }
   ],
-  
+
   groups: [
     {
       id: 'pendaftaran',
@@ -180,7 +180,7 @@ export const timelineSettings: TimelineSettings = {
       items: []
     },
     {
-      id: 'pengerjaan_karya', 
+      id: 'pengerjaan_karya',
       name: 'pengerjaan_karya',
       period: 'November - Desember 2025',
       description: 'pengerjaan_karya_group_desc',
@@ -189,7 +189,7 @@ export const timelineSettings: TimelineSettings = {
     },
     {
       id: 'penjurian',
-      name: 'penjurian', 
+      name: 'penjurian',
       period: 'Desember 2025',
       description: 'penjurian_group_desc',
       color: 'yellow',
@@ -199,7 +199,7 @@ export const timelineSettings: TimelineSettings = {
       id: 'tahap_final',
       name: 'tahap_final',
       period: 'Desember 2025 - Januari 2026',
-      description: 'tahap_final_group_desc', 
+      description: 'tahap_final_group_desc',
       color: 'red',
       items: []
     }
@@ -211,7 +211,7 @@ export function getUpdatedTimeline(settings: TimelineSettings): TimelineItem[] {
   const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
   const isLastStage = currentIndex === settings.items.length - 1;
   const isCompletelyFinished = isLastStage && settings.currentProgress === 100;
-  
+
   return settings.items.map((item, index) => {
     if (index < currentIndex) {
       return { ...item, status: 'completed' as TimelineStatus, progress: 100 };
@@ -232,28 +232,28 @@ export function getUpdatedTimeline(settings: TimelineSettings): TimelineItem[] {
 export function calculateProgressWidth(settings: TimelineSettings): number {
   const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
   const totalStages = settings.items.length;
-  
+
   if (currentIndex === -1) return 0;
-  
+
   // Calculate the exact position of each timeline point
   // Timeline points are positioned at: 0%, 25%, 50%, 75%, 100% for 5 stages
   const stagePositions = Array.from({ length: totalStages }, (_, i) => (i / (totalStages - 1)) * 100);
-  
+
   // Get the position of the current stage
   const currentStagePosition = stagePositions[currentIndex];
-  
+
   // If this is the last stage, calculate based on progress
   if (currentIndex === totalStages - 1) {
     const previousStagePosition = stagePositions[currentIndex - 1] || 0;
     const progressInCurrentStage = (settings.currentProgress / 100) * (currentStagePosition - previousStagePosition);
     return previousStagePosition + progressInCurrentStage;
   }
-  
+
   // For other stages, calculate progress to the exact position of the current stage
   // Plus additional progress within that stage towards the next point
   const nextStagePosition = stagePositions[currentIndex + 1] || 100;
   const progressInCurrentStage = (settings.currentProgress / 100) * (nextStagePosition - currentStagePosition);
-  
+
   return currentStagePosition + progressInCurrentStage;
 }
 
@@ -261,7 +261,7 @@ export function calculateProgressWidth(settings: TimelineSettings): number {
 export function calculateProgressToPoint(settings: TimelineSettings, targetStageIndex: number): number {
   const totalStages = settings.items.length;
   const currentIndex = settings.items.findIndex(item => item.id === settings.currentStage);
-  
+
   if (targetStageIndex <= currentIndex) {
     // If target is at or before current stage, show full progress to that point
     return ((targetStageIndex + 1) / totalStages) * 100;
@@ -279,7 +279,7 @@ export function calculateProgressToPoint(settings: TimelineSettings, targetStage
 // Group timeline items by phase
 export function getGroupedTimeline(settings: TimelineSettings): TimelineGroup[] {
   const updatedItems = getUpdatedTimeline(settings);
-  
+
   return settings.groups.map(group => ({
     ...group,
     items: updatedItems.filter(item => item.group === group.id)
@@ -290,7 +290,7 @@ export function getGroupedTimeline(settings: TimelineSettings): TimelineGroup[] 
 export function getCurrentGroup(settings: TimelineSettings): TimelineGroup | null {
   const currentItem = settings.items.find(item => item.id === settings.currentStage);
   if (!currentItem) return null;
-  
+
   const groups = getGroupedTimeline(settings);
   return groups.find(group => group.id === currentItem.group) || null;
 }
@@ -301,7 +301,7 @@ export function getTimelineStats(settings: TimelineSettings) {
   const completed = items.filter(item => item.status === 'completed').length;
   const current = items.filter(item => item.status === 'current').length;
   const upcoming = items.filter(item => item.status === 'upcoming').length;
-  
+
   return {
     total: items.length,
     completed,
